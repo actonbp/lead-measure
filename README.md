@@ -1,36 +1,79 @@
-# Lead Measure Embedding
-# Improving Leadership Measurement with Embeddings
+# Leadership Measurement Analysis
 
 ## Project Overview
-This repository contains research materials, code, and analyses for improving leadership measurement through embedding-based approaches. The project explores the relationships between various leadership constructs by analyzing the semantic similarity in their measurement scales using natural language processing techniques.
 
-Leadership research has seen a proliferation of constructs (ethical leadership, abusive leadership, transformational leadership, etc.) with potential redundancy among them. Traditional psychometric approaches have limitations in detecting semantic similarities between these measures. This project leverages recent advancements in NLP and embedding models to provide new insights into construct relationships.
+This project explores the semantic structure of leadership measurement using natural language processing and embedding techniques. The central research question is: **Do leadership constructs represent genuinely distinct dimensions, or are they largely redundant in how they are measured?**
 
-## Repository Structure
-- [`data/`](data/README.md): Contains raw and processed leadership measurement scales and related datasets
-  - [`data/raw/`](data/raw/README.md): Original, unmodified data sources
-  - [`data/processed/`](data/processed/README.md): Cleaned and prepared datasets
-  - [`data/metadata/`](data/metadata/README.md): Information about the datasets and measures
-- [`analyses/`](analyses/README.md): Code for data analysis and modeling
-  - [`analyses/python/`](analyses/python/README.md): Python scripts and notebooks for embedding generation and analysis
-  - [`analyses/r/`](analyses/r/README.md): R scripts for statistical analysis and visualization
-- [`docs/`](docs/README.md): Documentation and research outputs
-  - [`docs/quarto/`](docs/quarto/README.md): Quarto documents for reproducible research reports
+## Research Approach
+
+This project follows a multi-stage approach to analyzing leadership measurement:
+
+### Phase 1: Data Preprocessing and Initial Exploration (Completed)
+
+- Collecting leadership measurement items from multiple constructs (transformational, ethical, servant, etc.)
+- Preprocessing texts to remove leader references (stems) and neutralize gendered language
+- Generating embeddings using transformer-based models
+- Visualizing semantic relationships through dimensionality reduction
+- Calculating similarity metrics between constructs
+
+Initial findings suggest substantial overlap between leadership constructs in semantic space, raising questions about their distinctiveness.
+
+### Phase 2: Comparative Analysis with Triplet Loss Training (Planned)
+
+The next phase will use triplet loss training to directly compare:
+1. **Big Five Personality Constructs** (extraversion, neuroticism, agreeableness, conscientiousness, openness)
+2. **Leadership Constructs** (transformational, ethical, servant, authentic, etc.)
+
+Triplet loss training will teach models to distinguish between items from different constructs. Our hypothesis is that:
+- Triplet loss will successfully separate Big Five personality constructs
+- Triplet loss will fail to separate leadership constructs
+
+This will provide a rigorous test of whether leadership constructs represent meaningfully distinct dimensions.
+
+### Phase 3: Alternative Linguistic Properties (Planned)
+
+If leadership constructs don't separate items effectively, what does? The final phase will explore:
+- What linguistic properties distinguish leadership items if not construct membership
+- Alternative taxonomies based on linguistic features like:
+  - Linguistic complexity
+  - Positive vs. negative framing
+  - Agency vs. communion themes
+  - Abstraction levels
+  - Target of behavior (leader, follower, organization)
+  - Temporal orientation
+
+## Directory Structure
+
+- `analyses/`: Analysis scripts and code
+- `data/`: Raw and processed datasets
+  - `raw/`: Original data files
+  - `processed/`: Preprocessed datasets
+  - `embeddings/`: Generated embedding files
+  - `visualizations/`: Output visualizations
+- `docs/`: Documentation and reports
+- `scripts/`: Utility scripts
 
 ## Getting Started
+
 1. Clone this repository
-2. Set up the Python environment (see requirements.txt)
-3. Explore the data directory for available leadership measures
-4. Run analyses to explore semantic relationships between measures
+2. Install dependencies: `pip install -r requirements.txt`
+3. Create a `.env` file with any required API keys
+4. Run preprocessing: `python analyses/generate_leadership_datasets.py`
+5. Generate embeddings: `python analyses/generate_leadership_embeddings.py`
 
-## Research Questions
-- How semantically similar are items across different leadership construct measures?
-- Which leadership constructs show redundancy based on their linguistic content?
-- Can embedding-based approaches improve how we understand and measure leadership constructs?
-- How do different embedding models (commercial APIs vs. open-source models) compare in capturing leadership construct relationships?
+## Results and Implications
 
-## Contributing
-This is a research project led by [Your Name/Institution]. Contributions are welcome through discussions and pull requests.
+The results of this analysis will have important implications for:
+- Leadership theory development
+- Measurement practices in leadership research
+- Potential redundancies in leadership constructs
+- Future directions for leadership assessment
+
+## Contributors
+
+- Your Name
+- Research Team Members
 
 ## License
-[Specify license information here]
+
+[Specify license information]
