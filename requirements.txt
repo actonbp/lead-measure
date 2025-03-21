@@ -1,0 +1,22 @@
+# Core data science packages
+numpy>=1.22.0
+pandas>=1.4.0
+scikit-learn>=1.0.2
+
+# Visualization
+matplotlib>=3.5.1
+seaborn>=0.11.2
+
+# Embedding models
+sentence-transformers>=2.2.0
+torch>=1.11.0
+
+# Dimensionality reduction
+umap-learn>=0.5.3
+
+# Progress bars and utilities
+tqdm>=4.63.0
+
+# Optional - for additional analyses
+# openai>=0.27.0  # For OpenAI embedding API
+# hdbscan>=0.8.29  # For density-based clustering 
