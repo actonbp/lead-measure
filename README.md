@@ -71,9 +71,9 @@ The results of this analysis will have important implications for:
 
 ## Contributors
 
-- Your Name
-- Research Team Members
+- Bryan Acton
+- Steven Zhou
 
 ## License
 
-[Specify license information]
+MIT License
