@@ -1,0 +1,341 @@
+leadership_construct,text,predicted_ipip,confidence
+Transformational,Has a clear understanding of where we are going,Imagination,0.0425
+Transformational,Paints an interesting picture of the future for our group.,Interest in Social Media,0.05
+Transformational,Is always seeking new opportunities for the organization.,Creativity/Originality,0.33850216450216436
+Transformational,Inspires others with their plans for the future.,Achievement-striving,0.11283333333333333
+Transformational,Is able to get others committed to their dream.,Responsibility,0.4471666666666666
+Transformational,"Leads by ""doing,"" rather than simply by ""telling.",Gregariousness,0.64
+Transformational,Provides a good model for me to follow.,Conformity/Dependence/Need for approval,0.09399999999999999
+Transformational,Leads by example.,Dutifulness,0.02144213241650709
+Transformational,Fosters collaboration among work groups.,Perfectionism,0.16753261457324917
+Transformational,"Encourages employees to be ""team players.",Dutifulness,0.02144213241650709
+Transformational,Gets the group to work together for the same goal.,Teamwork/Citizenship,0.1706666666666667
+Transformational,Develops a team attitude and spirit among employees.,Dutifulness,0.02144213241650709
+Transformational,Shows us that they expects a lot from us.,Expressiveness,0.12
+Transformational,Insists on only the best performance.,Achievement-striving,0.06333333333333334
+Transformational,Will not settle for second best.,Achievement-striving,0.06333333333333334
+Transformational,Acts without considering my feelings.,Gregariousness,0.20482539682539677
+Transformational,Shows respect for my personal feelings.,Understanding,0.66
+Transformational,Behaves in a manner thoughtful of my personal needs,Responsibility,0.32590476190476186
+Transformational,Treats me without considering my personal feelings.,Gregariousness,0.20482539682539677
+Transformational,Challenges me to think about old problems in new ways.,Creativity/Originality,0.21218795093795095
+Transformational,Asks questions that prompt me to think.,Self-confidence,0.47947619047619056
+Transformational,Has stimulated me to rethink the way I do things.,Rigidity,0.09
+Transformational,Has ideas that have challenged me to reexamine some of basic assumptions about my work.,Industriousness/Perseverance/Persistence,0.09180891330891332
+Transformational,proud of them,Dutifulness,0.02144213241650709
+Transformational,goes beyond self-interest,Dutifulness,0.02144213241650709
+Transformational,has my respect,Pleasantness,0.4286666666666667
+Transformational,display power and confidence,Irrational Beliefs,0.4321666666666667
+Transformational,talks of values,Dutifulness,0.02144213241650709
+Transformational,models ethical standards,Dutifulness,0.02144213241650709
+Transformational,considers the moral/ethical,Dutifulness,0.02144213241650709
+Transformational,emphasizes the collective mission,Dutifulness,0.02144213241650709
+Transformational,talks optimistically,Dutifulness,0.02144213241650709
+Transformational,expresses confidence,Dutifulness,0.02144213241650709
+Transformational,talks enthusiastically,Dutifulness,0.02144213241650709
+Transformational,arouses awareness about important issues,Dissociation,0.2775
+Transformational,re-examines assumptions,Dutifulness,0.02144213241650709
+Transformational,seeks different views,Curiosity,0.6
+Transformational,suggests new ways,Creativity/Originality,0.19708874458874454
+Transformational,suggests different angles,Curiosity,0.6
+Transformational,individualizes attention,Physical Attractiveness,0.12
+Transformational,focuses your strengths,Dutifulness,0.02144213241650709
+Transformational,teaches and coaches,Dutifulness,0.02144213241650709
+Transformational,differentiates among us,Dutifulness,0.02144213241650709
+Servant,I would seek help from my manager if I had a personal problem.,Leadership,0.0315
+Servant,Cares about my personal well-being.,Dutifulness,0.02144213241650709
+Servant,Takes time to talk to me on a personal level.,Self-disclosure,0.053388888888888895
+Servant,Can recognize when I'm down without asking me.,Dutifulness,0.02144213241650709
+Servant,Emphasizes the importance of giving back to the community.,Construction/Mechanical Interests,0.030366972477064217
+Servant,Is always interested in helping people in our community.,Warmth,0.22042857142857136
+Servant,Is involved in community activities.,Dutifulness,0.02144213241650709
+Servant,I am encouraged by my manager to volunteer in the community.,Dutifulness,0.02144213241650709
+Servant,Can tell if something is going wrong.,Sociability,0.04570765027322404
+Servant,Is able to effectively think through complex problems.,Dissociation,0.07200000000000001
+Servant,Has a thorough understanding of our organization and its goals.,Gregariousness,0.044000000000000004
+Servant,Can solve work problems with new or creative ideas.,Creativity/Originality,0.07101190476190475
+Servant,Gives me the responsibility to make important decisions about my job.,Judgment/Open-mindedness,0.15
+Servant,Encourages me to handle important work decisions on my own.,Leadership,0.0525
+Servant,Gives me the freedom to handle difficult situations in the way that I feel is best.,Humor/Playfulness,0.06
+Servant,"When I have to make an important decision at work, I do not have to consult my manager first.",Industriousness/Perseverance/Persistence,0.1251948051948052
+Servant,Makes my career development a priority.,Dutifulness,0.02144213241650709
+Servant,Is interested in making sure that I achieve my career goals.,Warmth,0.07775
+Servant,Provides me with work experiences that enable me to develop new skills.,Creativity/Originality,0.18398556998556997
+Servant,Wants to know about my career goals.,Unlikely Virtues,0.18347707126035295
+Servant,Seems to care more about my success than their own.,Callousness,0.14166666666666666
+Servant,Puts my best interests ahead of their own.,Rebelliousness,0.09916666666666668
+Servant,Sacrifices their own interests to meet my needs.,Responsibility,0.32590476190476186
+Servant,Does what she/he can do to make my job easier.,Agreeableness,0.14685048285048277
+Servant,Holds high ethical standards.,Achievement-striving,0.44883333333333325
+Servant,Is always honest.,Dutifulness,0.02144213241650709
+Servant,Would not compromise ethical principles in order to achieve success.,Organization,0.07301587301587299
+Servant,Values honesty more than profits.,Dutifulness,0.02144213241650709
+Ethical,Is interested in how I feel and how I am doing,Dissociation,0.05
+Ethical,Takes time for personal contact,Anxiety,0.1429959623709623
+Ethical,Pays attention to my personal needs.,Physical Attractiveness,0.09
+Ethical,Takes time to talk about work-related emotions,Industriousness/Perseverance/Persistence,0.08410714285714287
+Ethical,Is genuinely concerned about my personal development,Sympathy,0.36163095238095233
+Ethical,Sympathizes with me when I have problems,Resourcefulness,0.585356829161177
+Ethical,Cares about their followers.,Dutifulness,0.02144213241650709
+Ethical,Holds me accountable for problems over which I have no control.,Dissociation,0.09
+Ethical,Holds me responsible for work that I gave no control over.,Industriousness/Perseverance/Persistence,0.06995238095238095
+Ethical,Holds me responsible for things that are not my fault,Belligerence,0.09373908453052174
+Ethical,Pursues their own success at the expense of others,Hypomanic Exhibitionism,0.64
+Ethical,Is focused mainly on reaching their own goals,Dutifulness,0.02144213241650709
+Ethical,Manipulates subordinates,Dutifulness,0.02144213241650709
+Ethical,Allows subordinates to influence critical decisions,Self-discipline,0.45483333333333326
+Ethical,Does not allow others to participate in decision making,Extraversion,0.04959523809523809
+Ethical,Seeks advice from subordinates concerning organizational strategy,Dutifulness,0.02144213241650709
+Ethical,Will reconsider decisions on the basis of recommendations by those who report to them,Self-discipline,0.45483333333333326
+Ethical,Delegates challenging responsibilities to subordinates,Liveliness,0.05750000000000001
+Ethical,Permits me to play a key role in setting my own performance goals,Cooperation,0.6873018867924529
+Ethical,Would like to work in an environmentally friendly manner,Industriousness/Perseverance/Persistence,0.12282190032190032
+Ethical,Shows concern for sustainability issues,Dutifulness,0.02144213241650709
+Ethical,Stimulates recycling of items and materials in our department,Dutifulness,0.02144213241650709
+Ethical,Clearly explains integrity related codes of conduct,Dutifulness,0.02144213241650709
+Ethical,Explains what is expected from employees in terms of behaving with integrity.,Dutifulness,0.02144213241650709
+Ethical,Clarifies integrity guidelines.,Dutifulness,0.02144213241650709
+Ethical,Ensures that employees follow codes of integrity,Conformity/Dependence/Need for approval,0.5219126984126984
+Ethical,Clarifies the likely consequences of possible unethical behavior by myself and my colleagues,Dutifulness,0.02144213241650709
+Ethical,Stimulates the discussion of integrity issues among employees,Dutifulness,0.02144213241650709
+Ethical,Compliments employees who behave according to the integrity guidelines,Conservatism,0.052000000000000005
+Ethical,Indicates what the performance expectations of each group member are,Interest in Social Media,0.61
+Ethical,Explains what is expected of each group member,Interest in Social Media,0.61
+Ethical,Explains what is expected of me and my colleagues,Dutifulness,0.02144213241650709
+Ethical,Clarifies priorities,Dutifulness,0.02144213241650709
+Ethical,Clarifies who is responsible for what,Dutifulness,0.02144213241650709
+Ethical,Keeps their promises,Dutifulness,0.02144213241650709
+Ethical,Can be trusted to do the things they says,Belligerence,0.09373908453052174
+Ethical,Can be relied on to honor their commitments,Dutifulness,0.02144213241650709
+Ethical,Always keeps their words,Extraversion,0.42983333333333335
+Ethical,Makes sure that their actions are always ethical,Self-confidence,0.04833333333333333
+Ethical,"Means what they says, is earnest",Dutifulness,0.02144213241650709
+Ethical,"Deserves trust, can be believed and relied upon to keep their word",Love of Learning,0.08
+Ethical,Can be trusted to serve the interests of their subordinates rather than him/herself,Dutifulness,0.02144213241650709
+Ethical,Does not criticize subordinates without good reason,Kindness/Generosity,0.1793704906204905
+Ethical,Pursues own best interest at the expense of others,Achievement-striving,0.06333333333333334
+Ethical,Explains who is responsible for what,Dutifulness,0.02144213241650709
+Ethical,Explains what is expected of each member of the group,Interest in Social Media,0.61
+Ethical,Explains each individual group members' scope of authority,Teamwork/Citizenship,0.098
+Ethical,Communicates their performance expectations for group members,Interest in Social Media,0.61
+Ethical,Clarifies priorities,Dutifulness,0.02144213241650709
+Ethical,Allows subordinates to have influence on critical decisions,Self-discipline,0.45483333333333326
+Ethical,Will reconsider decisions on the basis of recommendations by those who report to them,Self-discipline,0.45483333333333326
+Ethical,Delegates challenging responsibilities to subordinates,Liveliness,0.05750000000000001
+Ethical,Does not allow others to participate in decision making,Extraversion,0.04959523809523809
+Ethical,Seeks advice concerning organizational strategy from subordinates,Dutifulness,0.02144213241650709
+Ethical,Allows subordinates to take a strong hand in setting their performance goals,Assertiveness,0.33758333333333324
+Ethical,Conducts their personal life in an ethical manner,Achievement-striving,0.21565079365079362
+Ethical,Defines success not just by results but also the way that they are obtained,Conscientiousness,0.04866666666666667
+Ethical,Listens to what employees have to say,Self-control/Self-regulation,0.44749999999999995
+Ethical,Disciplines employees who violate ethical standards,Dutifulness,0.02144213241650709
+Ethical,Makes fair and balanced decisions,Self-discipline,0.45483333333333326
+Ethical,Can be trusted,Dutifulness,0.02144213241650709
+Ethical,Discusses business ethics or values with employees,Dutifulness,0.02144213241650709
+Ethical,Sets an example of how to do things the right way in terms of ethics,Cool-headedness,0.05
+Ethical,Has the best interests of employees in mind,Industriousness/Perseverance/Persistence,0.09
+Ethical,"When making decisions, asks “what is the right thing to do?”",Teamwork/Citizenship,0.06
+Servant,"Uses power in service to others, not for their or their ambition",Irrational Beliefs,0.4321666666666667
+Servant,Gives me the right to question their or their actions and decisions,Perfectionism,0.054000000000000006
+Servant,"Respects me for who I am, not how much I make them or their feel",Empathy,0.18145238095238095
+Servant,Enhances my capacity for moral actions,Morality,0.10746451320792166
+Servant,Lps me to generate a sense of meaning out of everyday life at work,Industriousness/Perseverance/Persistence,0.08974252821414394
+Servant,Contributes to my personal and professional growth,Dutifulness,0.02144213241650709
+Empowering,Gives me the authority I need to make decisions that improve work processes and procedures,Leadership,0.08899999999999998
+Empowering,Gives me the authority to make changes necessary to improve things,Leadership,0.074
+Empowering,Delegates authority to me that is equal to the level of responsibility that I am assigned,Unconventionality,0.1
+Empowering,Holds me accountable for the work I am assigned,Perfectionism,0.16753261457324917
+Empowering,I am held accountable for performance and results,Dutifulness,0.02144213241650709
+Empowering,Holds people in the department accountable for customer satisfaction,Forgiveness/Mercy,0.09480863982174594
+Empowering,"Tries to help me arrive at my own solutions when problems arise, rather than telling me what they would do.",Conformity/Dependence/Need for approval,0.035
+Empowering,Relies on me to make my own decisions about issues that affect how work gets done,Judgment/Open-mindedness,0.12
+Empowering,Encourages me to develop my own solutions to problems I encounter in my work,Resourcefulness,0.05333333333333333
+Empowering,Shares information that I need to ensure high quality results.,Achievement-striving,0.04516666666666667
+Empowering,Provides me with the information I need to meet customers’ needs,Risk-taking/Sensation-Seeking/Thrill-Seeking,0.035946428571428574
+Empowering,"Encourages me to use systematic problem-solving methods (e.g., the seven-step problem-solving model)",Humor/Playfulness,0.55
+Empowering,Provides me with frequent opportunities to develop new skills,Insight,0.26
+Empowering,Ensures that continuous learning and skill development are priorities in our department,Dutifulness,0.02144213241650709
+Empowering,"Is willing to risk mistakes on my part if, over the long term, I will learn and develop as a result of the experience.",Dissociation,0.16
+Empowering,I am encouraged to try out new ideas even if there is a chance they may not succeed,Variety-seeking,0.08883333333333333
+Empowering,Focuses on corrective action rather than placing blame when I make a mistake,Agreeableness,0.14685048285048277
+Charismatic,Exciting public speaker,Dutifulness,0.02144213241650709
+Charismatic,Appears to be a skillful performer when presenting to a group,Interest in Social Media,0.61
+Charismatic,"Inspirational, able to motivate by articulating effectively the importance of what organizational members are doing",Dissociation,0.09666666666666668
+Charismatic,"Has vision, often brings up ideas about possibilities for the future",Intellect,0.0626388888888889
+Charismatic,Provides inspiring strategic and organizational goals,Dutifulness,0.02144213241650709
+Charismatic,Consistently generates new ideas for the future of the organization,Culture,0.1925
+Charismatic,"Readily recognizes constraints in the organization's social and cultural environment (cultural norms, lack of grass roots support, etc) that may stand in the way of achieving organizational objectives",Modesty/Humility,0.041060606060606054
+Charismatic,"Readily recognizes constraints in the physical environment (technological limitations, lack of resources, etc) that may stand in the way of achieving organizational objectives",Hostile Aggression,0.07
+Charismatic,Readily recognizes barriers/forces within the organization that may block or hinder achievement of their goals,Dutifulness,0.02144213241650709
+Charismatic,Recognizes the abilities and skills of other members in the organization,Dutifulness,0.02144213241650709
+Charismatic,Recognizes the limitations of other members in the organization,Dutifulness,0.02144213241650709
+Charismatic,Readily recognizes new environmental opportunities (favorable physical and social conditions) that may facilitate achievement or organizational objectives,Insight,0.2
+Charismatic,Entrepreneurial; seizes new opportunities to achieve goals,Creativity/Originality,0.33850216450216436
+Charismatic,Engages in unconventional behavior to achieve organizational goals,Dutifulness,0.02144213241650709
+Charismatic,Uses non-traditional means to achieve organizational goals,Dutifulness,0.02144213241650709
+Charismatic,Often exhibits very unique behavior that surprises other members of the organization,Dutifulness,0.02144213241650709
+Charismatic,"In pursuing organizational objectives, engages in activities involving considerable personal risk",Dutifulness,0.02144213241650709
+Charismatic,"In pursuing organizational objectives, engages in activities involving considerable self-sacrifice",Dutifulness,0.02144213241650709
+Charismatic,Takes high personal risk for the sake of the organization,Achievement-striving,0.44883333333333325
+Charismatic,Often incurs high personal costs for the good of the organization,Kindness/Generosity,0.03131746031746032
+Charismatic,Shows sensitivity for the needs and feelings of other members in the organization,Understanding,0.14116666666666666
+Charismatic,Influences others by developing mutual liking and respect,Pleasantness,0.4286666666666667
+Charismatic,Often expresses personal concern for the needs and feelings of other members of the organization,Understanding,0.14116666666666666
+Charismatic,Tries to maintain the status quo or the normal way of doing things,Hope/Optimism,0.10285714285714284
+Charismatic,Advocates following non-risky well-established courses of action to achieve organizational goals,Dutifulness,0.02144213241650709
+Authentic,Describes accurately the way that others view their abilities.,Rigidity,0.11
+Authentic,Shows that they understands their strengths and weaknesses.,Dutifulness,0.02144213241650709
+Authentic,Is clearly aware of the impact they has on others.,Dutifulness,0.02144213241650709
+Authentic,Clearly states what they means.,Dutifulness,0.02144213241650709
+Authentic,Openly shares information with others.,Interest in Computing,0.3297142857142856
+Authentic,Expresses their ideas and thoughts clearly to others.,Cognitive Problems,0.049523809523809526
+Authentic,Shows consistency between their beliefs and actions.,Morality,0.10746451320792166
+Authentic,Uses their core beliefs to make decisions.,Judgment/Open-mindedness,0.66
+Authentic,Resists pressures on them to do things contrary to their beliefs.,Belligerence,0.09373908453052174
+Authentic,Is guided in their actions by internal moral standards.,Morality,0.10746451320792166
+Authentic,Asks for ideas that challenge their core beliefs.,Intellect,0.06538095238095237
+Authentic,Carefully listens to alternative perspectives before reaching a conclusion.,Dutifulness,0.02144213241650709
+Authentic,Objectively analyzes relevant data before making a decision,Extraversion,0.04959523809523809
+Authentic,Encourages others to voice opposing points of view.,Introspection/Private Self-Consciousness,0.68
+Servant,Spends the time to form quality relationships with department employees.,Anxiety,0.1429959623709623
+Servant,Creates a sense of community among department employees.,Empathy,0.7140000000000001
+Servant,'s decisions are influenced by department employees' input.,Self-discipline,0.45483333333333326
+Servant,Tries to reach consensus among department employees on important decisions.,Judgment/Open-mindedness,0.13
+Servant,Is sensitive to department employees' responsibilities outside the work place.,Teamwork/Citizenship,0.09
+Servant,Makes the personal development of department employees a priority.,Dutifulness,0.02144213241650709
+Servant,Holds department employees to high ethical standards.,Achievement-striving,0.44883333333333325
+Servant,Does what they or they promises to do.,Dutifulness,0.02144213241650709
+Servant,Balances concern for day-to-day details with projections for the future.,Leadership,0.05
+Servant,Displays wide-ranging knowledge and interests in finding solutions to work problems.,Orderliness,0.043125
+Servant,"Makes me feel like I work with them, not for them.",Mistrust,0.07
+Servant,Works hard at finding ways to help others be the best they can be.,Ambition/Drive,0.04733333333333333
+Servant,Encourages department employees to be involved in community service and volunteer activities outside of work.,Perfectionism,0.16753261457324917
+Servant,Emphasizes the importance of giving back to the community.,Construction/Mechanical Interests,0.030366972477064217
+Transformational,Fosters collaboration among their subordinates.,Dutifulness,0.02144213241650709
+Transformational,Encourages employees to be “team players”,Dutifulness,0.02144213241650709
+Transformational,Develops a team attitude and spirit among their subordinates,Dutifulness,0.02144213241650709
+Transformational,Inspires us with their plans for the future,Achievement-striving,0.11283333333333333
+Transformational,Provides us with a compelling vision to work toward,Perfectionism,0.16753261457324917
+Transformational,Has a clear understanding of where we are going,Imagination,0.0425
+Transformational,Our supervisor gets the group to work together for the same goal,Teamwork/Citizenship,0.1706666666666667
+Transformational,Is able to get others to commit to what we need to accomplish in our unit,Dissociation,0.13499999999999998
+Transformational,Shows respect for personal feelings,Understanding,0.66
+Transformational,"Behaves in a manner, which is thoughtful of my personal needs",Responsibility,0.32590476190476186
+Transformational,Sees that my interests are given due consideration,Dutifulness,0.02144213241650709
+Transformational,Challenges me to think about old problems in new ways,Creativity/Originality,0.21218795093795095
+Transformational,Stimulates me to rethink some things that I have never questioned before,Belligerence,0.09373908453052174
+Transformational,Challenges me to re-examine some of my basic assumptions about work,Perfectionism,0.16753261457324917
+Servant,This person puts my best interests ahead of their own.,Intellect,0.035386904761904765
+Servant,This person does everything they can to serve me.,Callousness,0.12947071353998596
+Servant,This person sacrifices their own interests to meet my needs.,Patience,0.07
+Servant,This person goes above and beyond the call of duty to meet my needs.,Patience,0.07
+Servant,This person is one I would turn to if I had a personal trauma.,Wisdom/Perspective,0.08
+Servant,This person is good at helping me with my emotional issues.,Emotionality,0.05416666666666666
+Servant,This person is talented at helping me to heal emotionally.,Callousness,0.12947071353998596
+Servant,This person is one that could help me mend my hard feelings.,Capacity for Love,0.05
+Servant,This person seems alert to what's happening.,Callousness,0.12947071353998596
+Servant,This person is good at anticipating the consequences of decisions.,Leadership,0.07583333333333334
+Servant,This person has great awareness of what is going on.,Depression,0.04
+Servant,This person seems in touch with what's happening.,Callousness,0.12947071353998596
+Servant,This person seems to know what is going to happen.,Competence,0.0765
+Servant,This person offers compelling reasons to get me to do things.,Intellect,0.07233333333333333
+Servant,"This person encourages me to dream ""big dreams"" about the organization.",Callousness,0.12947071353998596
+Servant,This person is very persuasive.,Callousness,0.12947071353998596
+Servant,This person is good at convincing me to do things.,Intellect,0.13758333333333334
+Servant,This person is gifted when it comes to persuading me.,Callousness,0.12947071353998596
+Servant,This person believes that the organization needs to play a moral role in society.,Grandiosity,0.05
+Servant,This person believes that our organization needs to function as a community.,Patience,0.07
+Servant,This person sees the organization for its potential to contribute to society.,Callousness,0.12947071353998596
+Servant,This person encourages me to have a community spirit in the workplace.,Callousness,0.12947071353998596
+Servant,This person is preparing the organization to make a positive difference in the future.,Humor/Playfulness,0.09
+Ethical,Shows a strong concern for ethical and moral values.,Assertiveness,0.33758333333333324
+Ethical,Communicates clear ethical standards for members.,Dutifulness,0.02144213241650709
+Ethical,Sets an example of ethical behavior in their decisions and actions.,Locus of Control,0.09083333333333332
+Ethical,Is honest and can be trusted to tell the truth.,Impression-Management,0.47080952380952373
+Ethical,Keeps their actions consistent with their stated values (“walks the talk”).,Complexity,0.19
+Ethical,Is fair and unbiased when assigning tasks to members.,Non-Perseverance,0.61
+Ethical,Can be trusted to carry out promises and commitments.,Openness To Experience,0.34204761904761904
+Ethical,Insists on doing what is fair and ethical even when it is not easy.,Dissociation,0.141
+Ethical,Acknowledges mistakes and takes responsibility for them.,Perfectionism,0.06337270341207349
+Ethical,Regards honesty and integrity as important personal values.,Dissociation,0.2775
+Ethical,Sets an example of dedication and self-sacrifice for the organization.,Dutifulness,0.02144213241650709
+Ethical,Opposes the use of unethical practices to increase performance.,Humor/Playfulness,0.55
+Ethical,Is fair and objective when evaluating member performance and providing rewards.,Dutifulness,0.02144213241650709
+Ethical,Puts the needs of others above their own self-interest.,Responsibility,0.32590476190476186
+Ethical,Holds members accountable for using ethical practices in their work.,Perfectionism,0.16753261457324917
+Transformational,Encourages me to set high goals for myself.,Achievement-striving,0.44883333333333325
+Transformational,Communicates high performance expectations to me.,Achievement-striving,0.44883333333333325
+Transformational,Shows confidence in my ability to meet performance expectations.,Dutifulness,0.02144213241650709
+Transformational,Demonstrates total confidence in me.,Dutifulness,0.02144213241650709
+Transformational,Encourages me to live up to my potential.,Self-harm,0.58
+Transformational,Lps me develop my strengths.,Dutifulness,0.02144213241650709
+Transformational,Suggests training to improve my ability to carry out my job.,Openness To Experience,0.34204761904761904
+Transformational,Provides me with developmental experiences.,Dutifulness,0.02144213241650709
+Transformational,Provides feedback to help me develop my abilities.,Conformity/Dependence/Need for approval,0.06252380952380952
+Transformational,Provides coaching to help me improve my job performance.,Conformity/Dependence/Need for approval,0.06252380952380952
+Transformational,Gets me to look at problems from many different angles.,Curiosity,0.0440395256916996
+Transformational,Challenges me to think about old problems in new ways.,Creativity/Originality,0.21218795093795095
+Transformational,Challenges me to be innovative in my approach to work assignments.,Diligence,0.10179761904761903
+Transformational,Encourages me to be an independent thinker.,Dutifulness,0.02144213241650709
+Transformational,Commends me when I achieve my goals.,Dutifulness,0.02144213241650709
+Transformational,Gives me positive feedback when I perform well.,Dutifulness,0.02144213241650709
+Transformational,Gives me special recognition when my work is very good.,Industriousness/Perseverance/Persistence,0.06106782106782107
+Transformational,Acknowledges improvement in my quality of work.,Perfectionism,0.16753261457324917
+Transformational,Encourages team members to take pride in our team.,Dutifulness,0.02144213241650709
+Transformational,Says things that make us feel proud to be members of this team.,Warmth,0.07026190476190476
+Transformational,Says positive things about the team.,Belligerence,0.09373908453052174
+Transformational,Encourages others to place the interests of the team ahead of their own interests.,Rebelliousness,0.12616666666666665
+Transformational,Emphasizes the uniqueness of the team.,Dutifulness,0.02144213241650709
+Transformational,Articulates a compelling vision of the future for our team.,Joyfulness,0.34930952380952385
+Transformational,Talks optimistically about the future of our team.,Joyfulness,0.34930952380952385
+Transformational,Talks enthusiastically about what needs to be accomplished by our team.,Responsibility,0.32590476190476186
+Transformational,Communicates a clear direction of where our team is going.,Language Mastery,0.035
+Transformational,Fosters collaboration among team members.,Dutifulness,0.02144213241650709
+Transformational,Encourages group members to be “team players.”,Interest in Social Media,0.61
+Transformational,Develops a team attitude and spirit among team members.,Dutifulness,0.02144213241650709
+Transformational,Gets the team to work together for the same goal.,Perfectionism,0.16753261457324917
+Transformational,Resolves friction among team members in the interest of teamwork.,Dutifulness,0.02144213241650709
+Abusive,I ridiculed an employee.,Dutifulness,0.02144213241650709
+Abusive,I gave an employee the silent treatment.,Dutifulness,0.02144213241650709
+Abusive,I put an employee down in front of others.,Dutifulness,0.02144213241650709
+Abusive,I reminded an employee of their past mistakes and failures.,Perfectionism,0.449
+Abusive,I expressed anger at an employee when I was mad for another reason.,Calmness,0.11759523809523807
+Abusive,I made negative comments about an employee to others.,Dutifulness,0.02144213241650709
+Abusive,I was rude to an employee.,Dutifulness,0.02144213241650709
+Abusive,I told an employee that they is incompetent.,Dutifulness,0.02144213241650709
+Instrumental,Understands the constraints of our organization,Dutifulness,0.02144213241650709
+Instrumental,Senses what needs to be changed in our organization,Responsibility,0.32590476190476186
+Instrumental,Recognizes the strengths of our organization,Dutifulness,0.02144213241650709
+Instrumental,Capitalizes on opportunities presented by the external environment,Dutifulness,0.02144213241650709
+Instrumental,Develops specific policies to support their vision,Interest in Gambling,0.08048967699232684
+Instrumental,Sets specific objectives so that the mission can be accomplished,Dutifulness,0.02144213241650709
+Instrumental,Ensures that their vision is understood in specific terms,Dutifulness,0.02144213241650709
+Instrumental,Translates the mission into specific goals,Dutifulness,0.02144213241650709
+Instrumental,Removes obstacles to my goal attainment,Dutifulness,0.02144213241650709
+Instrumental,Ensures that I have sufficient resources to reach my goals,Dutifulness,0.02144213241650709
+Instrumental,Clarifies the path to my goal attainment,Dutifulness,0.02144213241650709
+Instrumental,Facilitates my goal achievement,Dutifulness,0.02144213241650709
+Instrumental,Lps me correct my mistakes,Perfectionism,0.449
+Instrumental,Assists me to learn from my mistakes,Organization,0.08666666666666666
+Instrumental,Provides me with information concerning how mistakes can be avoided,Organization,0.0655
+Instrumental,Provides me with constructive feedback about my mistakes,Perfectionism,0.449
+Transformational,(s) of this alliance: treat others as individuals rather than just members of the teams,Social/Personal/Emotional Intelligence,0.1
+Transformational,(s) of this alliance: help others to develop their strengths,Conformity/Dependence/Need for approval,0.06252380952380952
+Transformational,(s) of this alliance: spend time teaching and coaching others,Introspection/Private Self-Consciousness,0.10619047619047618
+Transformational,"(s) of this alliance: consider everyone as having different needs, abilities, and aspirations from others",Perfectionism,0.04308733624454149
+Transformational,(s) of this alliance: instill pride in others for being associated with them or their,Dutifulness,0.02144213241650709
+Transformational,(s) of this alliance: go beyond self interest for the good of the alliance team,Kindness/Generosity,0.1793704906204905
+Transformational,(s) of this alliance: act in ways that build respect,Morality,0.061166666666666675
+Transformational,(s) of this alliance: display a sense of power and confidence,Morality,0.08833333333333333
+Transformational,(s) of this alliance: talk about the most important values and beliefs,Dissociation,0.07
+Transformational,(s) of this alliance: specify the importance of having a strong sense of purpose,Assertiveness,0.05735714285714286
+Transformational,(s) of this alliance: consider the moral and ethical consequences of decisions,Locus of Control,0.0875
+Transformational,(s) of this alliance: emphasize the importance of having a collective sense of mission,Empathy,0.05333333333333334
+Transformational,(s) of this alliance: talk optimistically about the future,Complexity,0.12
+Transformational,(s) of this alliance: express confidence that goals will be achieved,Cheerfulness,0.19225
+Transformational,(s) of this alliance: talk enthusiastic about what needs to be accomplished,Complexity,0.14833333333333334
+Transformational,(s) of this alliance: articulate a compelling vision of the future,Joyfulness,0.34930952380952385
+Transformational,(s) of this alliance: re-examine critical assumptions to question whether the assumptions are appropriate,Dutifulness,0.02144213241650709
+Transformational,(s) of this alliance: seek differing perspectives when solving problems,Resourcefulness,0.1716666666666667
+Transformational,(s) of this alliance: suggest new ways of looking at how to complete assignments,Creativity/Originality,0.12562698412698414
+Transformational,(s) of this alliance: get others to look at problems from many different angles,Curiosity,0.0440395256916996
