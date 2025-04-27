@@ -34,12 +34,14 @@ MeasureID,Behavior,Dimensions,Item,Xnum,Text
 4,Transformational,Charisma/Inspirational,Item5,33,talks of values
 4,Transformational,Charisma/Inspirational,Item6,34,models ethical standards
 4,Transformational,Charisma/Inspirational,Item7,35,considers the moral/ethical
-4,Transformational,Charisma/Inspirational,Item8,36,"emphasizes the
+4,Transformational,Charisma/Inspirational,Item8,36,"emphasizes the
+
 collective mission"
 4,Transformational,Charisma/Inspirational,Item9,37,talks optimistically
 4,Transformational,Charisma/Inspirational,Item10,38,expresses confidence
 4,Transformational,Charisma/Inspirational,Item11,39,talks enthusiastically
-4,Transformational,Intellectual Stimulation,Item1,40,"arouses awareness
+4,Transformational,Intellectual Stimulation,Item1,40,"arouses awareness
+
 about important issues"
 4,Transformational,Intellectual Stimulation,Item2,41,re-examines assumptions
 4,Transformational,Intellectual Stimulation,Item3,42,seeks different views
@@ -71,7 +73,8 @@ about important issues"
 5,LMX,Loyalty,Item1,68,"My supervisor defends my work actions to a superior, even without complete knowledge of the issue in question."
 5,LMX,Loyalty,Item2,69,"My supervisor would come to my defense if I were ""attacked"" by others."
 5,LMX,Loyalty,Item3,70,My supervisor would defend me to others in the organization if I made an honest mistake.
-5,LMX,Contribution,Item1,71,"
+5,LMX,Contribution,Item1,71,"
+
 I do work for my supervisor that goes beyond what is specified in my job description."
 5,LMX,Contribution,Item2,72,"I am willing to apply extra efforts, beyond those normally required, to further the interests of my work group."
 5,LMX,Professional Respect,Item1,73,I am impressed with my supervisor's knowledge of his/her job.
@@ -91,28 +94,41 @@ I do work for my supervisor that goes beyond what is specified in my job descrip
 6,Servant,Conceptual Skills,Item4,87,My manager can solve work problems with new or creative ideas.
 6,Servant,Empowering,Item1,88,My manager gives me the responsibility to make important decisions about my job.
 6,Servant,Empowering,Item2,89,My manager encourages me to handle important work decisions on my own.
-6,Servant,Empowering,Item3,90,"My manager gives me the freedom to
-handle difficult situations in the way that I
+6,Servant,Empowering,Item3,90,"My manager gives me the freedom to
+
+handle difficult situations in the way that I
+
 feel is best."
-6,Servant,Empowering,Item4,91,"When I have to make an important
-decision at work, I do not have to consult
+6,Servant,Empowering,Item4,91,"When I have to make an important
+
+decision at work, I do not have to consult
+
 my manager first."
-6,Servant,Helping subordinates grow and succeed,Item1,92,"My manager makes my career
+6,Servant,Helping subordinates grow and succeed,Item1,92,"My manager makes my career
+
 development a priority."
-6,Servant,Helping subordinates grow and succeed,Item2,93,"My manager is interested in making sure
+6,Servant,Helping subordinates grow and succeed,Item2,93,"My manager is interested in making sure
+
 that I achieve my career goals."
-6,Servant,Helping subordinates grow and succeed,Item3,94,"My manager provides me with work
-experiences that enable me to develop
+6,Servant,Helping subordinates grow and succeed,Item3,94,"My manager provides me with work
+
+experiences that enable me to develop
+
 new skills."
-6,Servant,Helping subordinates grow and succeed,Item4,95,"My manager wants to know about my
+6,Servant,Helping subordinates grow and succeed,Item4,95,"My manager wants to know about my
+
 career goals."
-6,Servant,Putting subordinates first,Item1,96,"My manager seems to care more about
+6,Servant,Putting subordinates first,Item1,96,"My manager seems to care more about
+
 my success than his/her own."
-6,Servant,Putting subordinates first,Item2,97,"My manager puts my best interests ahead
+6,Servant,Putting subordinates first,Item2,97,"My manager puts my best interests ahead
+
 of his/her own."
-6,Servant,Putting subordinates first,Item3,98,"My manager sacrifices his/her own
+6,Servant,Putting subordinates first,Item3,98,"My manager sacrifices his/her own
+
 interests to meet my needs."
-6,Servant,Putting subordinates first,Item4,99,"My manager does what she/he can do to
+6,Servant,Putting subordinates first,Item4,99,"My manager does what she/he can do to
+
 make my job easier."
 6,Servant,Behaving ethically,Item1,100,My manager holds high ethical standards.
 6,Servant,Behaving ethically,Item2,101,My manager is always honest.
@@ -188,7 +204,7 @@ make my job easier."
 24,Ethical,NA,Item7,171,Discusses business ethics or values with employees
 24,Ethical,NA,Item8,172,Sets an example of how to do things the right way in terms of ethics
 24,Ethical,NA,Item9,173,Has the best interests of employees in mind
-24,Ethical,NA,Item10,174,"When making decisions, asks “what is the right thing to do?”"
+24,Ethical,NA,Item10,174,"When making decisions, asks "what is the right thing to do?""
 19,Servant,NA,Item1,175,"Uses power in service to others, not for his or her ambition"
 19,Servant,NA,Item2,176,Gives me the right to question his or her actions and decisions
 19,Servant,NA,Item3,177,"Respects me for who I am, not how much I make him or her feel"
@@ -205,7 +221,7 @@ make my job easier."
 15,Empowering Behavior,Self-directed decision making,Item2,188,My manager relies on me to make my own decisions about issues that affect how work gets done
 15,Empowering Behavior,Self-directed decision making,Item3,189,My manager encourages me to develop my own solutions to problems I encounter in my work
 15,Empowering Behavior,Information sharing,Item1,190,My manager shares information that I need to ensure high quality results.
-15,Empowering Behavior,Information sharing,Item2,191,My manager provides me with the information I need to meet customers’ needs
+15,Empowering Behavior,Information sharing,Item2,191,My manager provides me with the information I need to meet customers' needs
 15,Empowering Behavior,Skill development,Item1,192,"My manager encourages me to use systematic problem-solving methods (e.g., the seven-step problem-solving model)"
 15,Empowering Behavior,Skill development,Item2,193,My manager provides me with frequent opportunities to develop new skills
 15,Empowering Behavior,Skill development,Item3,194,My manager ensures that continuous learning and skill development are priorities in our department
@@ -314,14 +330,17 @@ make my job easier."
 9,Servant,Creating values for those outside of the organization,Item1,297,My department manager encourages department employees to be involved in community service and volunteer activities outside of work.
 9,Servant,Creating values for those outside of the organization,Item2,298,My department manager emphasizes the importance of giving back to the community.
 26,Group-Focused Transformational Leadership,Team-building,Item1,299,Our supervisor fosters collaboration among his/her subordinates.
-26,Group-Focused Transformational Leadership,Team-building,Item2,300,"Our supervisor encourages employees to be “team
-players”"
-26,Group-Focused Transformational Leadership,Team-building,Item3,301,"Our supervisor develops a team attitude and spirit
+26,Group-Focused Transformational Leadership,Team-building,Item2,300,"Our supervisor encourages employees to be "team
+
+players""
+26,Group-Focused Transformational Leadership,Team-building,Item3,301,"Our supervisor develops a team attitude and spirit
+
 among his/her subordinates"
 26,Group-Focused Transformational Leadership,Articulating a group vision,Item1,302,Our supervisor inspires us with his/her plans for the future
 26,Group-Focused Transformational Leadership,Articulating a group vision,Item2,303,Our supervisor provides us with a compelling vision to work toward
 26,Group-Focused Transformational Leadership,Articulating a group vision,Item3,304,Our supervisor has a clear understanding of where we are going
-26,Group-Focused Transformational Leadership,Fostering acceptance of group goals,Item1,305,"
+26,Group-Focused Transformational Leadership,Fostering acceptance of group goals,Item1,305,"
+
 Our supervisor gets the group to work together for the same goal"
 26,Group-Focused Transformational Leadership,Fostering acceptance of group goals,Item2,306,Our supervisor is able to get others to commit to what we need to accomplish in our unit
 26,Individual-Focused Transformational Leadership,Individualized support,Item1,307,My supervisor shows respect for personal feelings
@@ -384,37 +403,46 @@ Our supervisor gets the group to work together for the same goal"
 31,Agentic Leadership,Dedicated,Item1,364,Worked late all week in order to finish the project.
 31,Agentic Leadership,Dedicated,Item2,365,Works on projects outside of working hours.
 31,Agentic Leadership,Charismatic,Item1,366,"When speaking, motivates employees."
-31,Agentic Leadership,Charismatic,Item2,367,"Talks enthusiastically to the employees about what
+31,Agentic Leadership,Charismatic,Item2,367,"Talks enthusiastically to the employees about what
+
 needs to be accomplished."
-31,Agentic Leadership,Intelligent,Item1,368,"Displays extraordinary talent and competence in every
+31,Agentic Leadership,Intelligent,Item1,368,"Displays extraordinary talent and competence in every
+
 project."
-31,Agentic Leadership,Intelligent,Item2,369,"Consistently contributes good ideas during group
+31,Agentic Leadership,Intelligent,Item2,369,"Consistently contributes good ideas during group
+
 discussions."
 31,Agentic Leadership,Determined,Item1,370,Does not give up on a project when complications arise.
 31,Agentic Leadership,Determined,Item2,371,Works relentlessly to solve difficult problems.
 31,Agentic Leadership,Aggressive,Item1,372,Argues until co-workers see the ideas.
 31,Agentic Leadership,Aggressive,Item2,373,Fights to get the work group necessary resources.
 31,Agentic Leadership,Competitive,Item1,374,Emphasizes that the team needs to be number one.
-31,Agentic Leadership,Competitive,Item2,375,"Wants own ideas to be heard before other employees’
+31,Agentic Leadership,Competitive,Item2,375,"Wants own ideas to be heard before other employees'
+
 ideas are heard."
 31,Communal Leadership,Caring,Item1,376,Always shows concern for the well being of the team.
 31,Communal Leadership,Caring,Item2,377,Goes beyond self-interest for the good of the employees.
-31,Communal Leadership,Sensitive,Item1,378,"Even when the employees do not communicate that
-they’re upset, it is still perceived."
+31,Communal Leadership,Sensitive,Item1,378,"Even when the employees do not communicate that
+
+they're upset, it is still perceived."
 31,Communal Leadership,Sensitive,Item2,379,Is responsive to the feelings of employees at work.
-31,Communal Leadership,Honest,Item1,380,"Always makes sure that credit is not taken for
-employee’s good ideas."
+31,Communal Leadership,Honest,Item1,380,"Always makes sure that credit is not taken for
+
+employee's good ideas."
 31,Communal Leadership,Honest,Item2,381,Is always upfront with subordinates.
 31,Communal Leadership,Understanding,Item1,382,Encourages employees to approach if a problem arises.
-31,Communal Leadership,Understanding,Item2,383,"Listens when subordinates are having a personal
+31,Communal Leadership,Understanding,Item2,383,"Listens when subordinates are having a personal
+
 conflict."
-31,Communal Leadership,Compassionate,Item1,384,"Extends employees deadlines when they have important
+31,Communal Leadership,Compassionate,Item1,384,"Extends employees deadlines when they have important
+
 family commitments."
 31,Communal Leadership,Compassionate,Item2,385,In a personal crisis gives time off to employees.
 31,Communal Leadership,Sympathetic,Item1,386,Is accommodating when family emergencies arise.
-31,Communal Leadership,Sympathetic,Item2,387,"Expresses concern with subordinates that are going
+31,Communal Leadership,Sympathetic,Item2,387,"Expresses concern with subordinates that are going
+
 through difficult times."
-32,Paradoxical Leader Behavior,Maintaining short-term efficiency and long-term development,Item1,388,Ensures the business’s current efficiency while considering the need for future business development
+32,Paradoxical Leader Behavior,Maintaining short-term efficiency and long-term development,Item1,388,Ensures the business's current efficiency while considering the need for future business development
 32,Paradoxical Leader Behavior,Maintaining short-term efficiency and long-term development,Item2,389,Emphasizes both short-term business profitability and long-term continuity
 32,Paradoxical Leader Behavior,Maintaining short-term efficiency and long-term development,Item3,390,"Increases the effectiveness of current business models, but also introduces new models with future prospects"
 32,Paradoxical Leader Behavior,Maintaining short-term efficiency and long-term development,Item4,391,"Ensures current profits of existing businesses, but also insists on exploring new businesses with potential long-term gains"
@@ -433,7 +461,7 @@ through difficult times."
 32,Paradoxical Leader Behavior,Focus on shareholders and the stakeholder community,Item2,404,"Regards the firm as an independent unit, but also as one part of the stakeholder community"
 32,Paradoxical Leader Behavior,Focus on shareholders and the stakeholder community,Item3,405,"Takes a shareholder perspective, but also takes a stakeholder community perspective"
 32,Paradoxical Leader Behavior,Focus on shareholders and the stakeholder community,Item4,406,"Manifests the opposite nature of shareholder interests and stakeholder interests, but also seeks alignment among them"
-32,Paradoxical Leader Behavior,Focus on shareholders and the stakeholder community,Item5,407,"Seeks the firm’s unique value, but also attends to its value increment to the stakeholder community"
+32,Paradoxical Leader Behavior,Focus on shareholders and the stakeholder community,Item5,407,"Seeks the firm's unique value, but also attends to its value increment to the stakeholder community"
 33,Chinese CEO Leader Behavior,Being Creative and Risk- taking,Item1,408,Willing to take risks
 33,Chinese CEO Leader Behavior,Being Creative and Risk- taking,Item2,409,Being bold with innovation
 33,Chinese CEO Leader Behavior,Being Creative and Risk- taking,Item3,410,Willing to try new projects and ideas
@@ -448,8 +476,8 @@ through difficult times."
 33,Chinese CEO Leader Behavior,Articulating Vision,Item2,419,Articulating a bright future for employees
 33,Chinese CEO Leader Behavior,Articulating Vision,Item3,420,Clearly handling on the development of the company in the next five years
 33,Chinese CEO Leader Behavior,Articulating Vision,Item4,421,Emphasizing the long-term planning of the company
-33,Chinese CEO Leader Behavior,Showing Benevolence,Item1,422,Showing concerns for employee’s family member
-33,Chinese CEO Leader Behavior,Showing Benevolence,Item2,423,Showing concerns for employee’s personal life
+33,Chinese CEO Leader Behavior,Showing Benevolence,Item1,422,Showing concerns for employee's family member
+33,Chinese CEO Leader Behavior,Showing Benevolence,Item2,423,Showing concerns for employee's personal life
 33,Chinese CEO Leader Behavior,Showing Benevolence,Item3,424,Treating employees like family members
 33,Chinese CEO Leader Behavior,Showing Benevolence,Item4,425,Showing love and care for subordinates
 33,Chinese CEO Leader Behavior,Monitoring Operations,Item1,426,Having good control over different projects and plans
@@ -459,7 +487,7 @@ through difficult times."
 33,Chinese CEO Leader Behavior,Being Authoritative,Item2,430,Centralizing decision on him/herself
 33,Chinese CEO Leader Behavior,Being Authoritative,Item3,431,Making unilateral decisions and taking individual actions
 35,Unconventional Leader Behavior,NA,Item1,432,My leader often exhibited very unusual behavior that surprised other members of the group.
-35,Unconventional Leader Behavior,NA,Item2,433,There were times my leader’s behavior surprised me.
+35,Unconventional Leader Behavior,NA,Item2,433,There were times my leader's behavior surprised me.
 35,Unconventional Leader Behavior,NA,Item3,434,My leader behaved in a way that was inconsistent with my expectations.
 35,Unconventional Leader Behavior,NA,Item4,435,At times my leader startled me.
 35,Unconventional Leader Behavior,NA,Item5,436,My leader engaged in unconventional behavior in order to achieve our goals.
@@ -477,10 +505,12 @@ through difficult times."
 49,Ambidextrous Leadership,Opening,Item7,448,Encourages error learning
 49,Ambidextrous Leadership,Closing,Item1,449,Monitors and controls goal attainment
 49,Ambidextrous Leadership,Closing,Item2,450,Established routines
-49,Ambidextrous Leadership,Closing,Item3,451,"Takes corrective 
+49,Ambidextrous Leadership,Closing,Item3,451,"Takes corrective 
+
 action"
 49,Ambidextrous Leadership,Closing,Item4,452,Controls adherence to rules
-49,Ambidextrous Leadership,Closing,Item5,453,"Pays attention to uniform task
+49,Ambidextrous Leadership,Closing,Item5,453,"Pays attention to uniform task
+
 accomplishment"
 49,Ambidextrous Leadership,Closing,Item6,454,Sanctions errors
 49,Ambidextrous Leadership,Closing,Item7,455,Sticks to plans
@@ -492,33 +522,35 @@ accomplishment"
 50,People Management,Supportive HR Practices,Item6,461,I experience the following HR practices as being implemented to support me: vitality
 50,People Management,Supportive HR Practices,Item7,462,I experience the following HR practices as being implemented to support me: work-life balance
 50,People Management,Implementation tailor-made arrangements,Item1,463,My supervisor tailors employment conditions to my personal situation
-50,People Management,Implementation tailor-made arrangements,Item2,464,"My supervisor tailors employment conditions to my individual needs so I can
+50,People Management,Implementation tailor-made arrangements,Item2,464,"My supervisor tailors employment conditions to my individual needs so I can
+
 do a better job"
-50,People Management,Support of employees’ commitment,Item1,465,My supervisor shows an interest in how I do my job
-50,People Management,Support of employees’ commitment,Item2,466,My supervisor shows an interest in my personal functioning
-50,People Management,Support of employees’ commitment,Item3,467,"If my supervisor appreciates the job done by me, he/she does not let this pass
+50,People Management,Support of employees' commitment,Item1,465,My supervisor shows an interest in how I do my job
+50,People Management,Support of employees' commitment,Item2,466,My supervisor shows an interest in my personal functioning
+50,People Management,Support of employees' commitment,Item3,467,"If my supervisor appreciates the job done by me, he/she does not let this pass
+
 unnoticed"
-50,People Management,Support of employees’ commitment,Item4,468,My supervisor asks me if I can manage my job
-50,People Management,Support of employees’ career development,Item1,469,My supervisor informs me about opportunities for training and development
-50,People Management,Support of employees’ career development,Item2,470,My supervisor offers me opportunities to participate in training
-50,People Management,Support of employees’ career development,Item3,471,My supervisor supports me in utilizing opportunities for vertical mobility
-50,People Management,Support of employees’ career development,Item4,472,My supervisor supports me in utilizing opportunities for horizontal mobility
-50,People Management,Ability,Item1,473,I have sufficient knowledge of my team’s products and/or services
+50,People Management,Support of employees' commitment,Item4,468,My supervisor asks me if I can manage my job
+50,People Management,Support of employees' career development,Item1,469,My supervisor informs me about opportunities for training and development
+50,People Management,Support of employees' career development,Item2,470,My supervisor offers me opportunities to participate in training
+50,People Management,Support of employees' career development,Item3,471,My supervisor supports me in utilizing opportunities for vertical mobility
+50,People Management,Support of employees' career development,Item4,472,My supervisor supports me in utilizing opportunities for horizontal mobility
+50,People Management,Ability,Item1,473,I have sufficient knowledge of my team's products and/or services
 50,People Management,Ability,Item2,474,I am aware of the value of our products and/or services
 50,People Management,Ability,Item3,475,I have adequate knowledge to perform my tasks
 50,People Management,Ability,Item4,476,I have adequate skills to perform my tasks
-50,People Management,Commitment,Item1,477,I feel ‘emotionally attached’ to my team
+50,People Management,Commitment,Item1,477,I feel 'emotionally attached' to my team
 50,People Management,Commitment,Item2,478,My team has a great deal of personal meaning for me
 50,People Management,Commitment,Item3,479,I do not feel a strong sense of belonging to my team
-50,People Management,Commitment,Item4,480,I feel like ‘part of the family’ at my team
+50,People Management,Commitment,Item4,480,I feel like 'part of the family' at my team
 50,People Management,Autonomy,Item1,481,My job provides me with opportunities to use my knowledge and skills
 50,People Management,Autonomy,Item2,482,I feel comfortable in my job
 50,People Management,Autonomy,Item3,483,I have sufficient authority to perform my tasks
 50,People Management,Autonomy,Item4,484,I am provided with opportunities to develop my knowledge and skills
 50,People Management,Extra-role behavior,Item1,485,"I help new workers, even when not required to do so"
-50,People Management,Extra-role behavior,Item2,486,I don’t stay late if necessary to help out
+50,People Management,Extra-role behavior,Item2,486,I don't stay late if necessary to help out
 50,People Management,Extra-role behavior,Item3,487,I make suggestions for improvements
-50,People Management,Extra-role behavior,Item4,488,I don’t volunteer for things that are not part of the job
+50,People Management,Extra-role behavior,Item4,488,I don't volunteer for things that are not part of the job
 50,People Management,Extra-role behavior,Item5,489,I avoid extra duties and responsibilities
 50,People Management,Extra-role behavior,Item6,490,I seek out training and other ways of improving my performance at work
 53,Servant Leadership,Altruistic Calling,Item1,491,This person puts my best interests ahead of his/her own.
@@ -548,7 +580,7 @@ unnoticed"
 54,Ethical Leadership,NA,Item2,515,Communicates clear ethical standards for members.
 54,Ethical Leadership,NA,Item3,516,Sets an example of ethical behavior in his/her decisions and actions.
 54,Ethical Leadership,NA,Item4,517,Is honest and can be trusted to tell the truth.
-54,Ethical Leadership,NA,Item5,518,Keeps his/her actions consistent with his/her stated values (“walks the talk”).
+54,Ethical Leadership,NA,Item5,518,Keeps his/her actions consistent with his/her stated values ("walks the talk").
 54,Ethical Leadership,NA,Item6,519,Is fair and unbiased when assigning tasks to members.
 54,Ethical Leadership,NA,Item7,520,Can be trusted to carry out promises and commitments.
 54,Ethical Leadership,NA,Item8,521,Insists on doing what is fair and ethical even when it is not easy.
@@ -566,7 +598,8 @@ unnoticed"
 36,Intentions of Reciprocity,NA,Item5,533,"His behavior inspires me to carefully exercise my authority and power, and sacrifice my privileges, if the situation in the company requires it."
 37,Dual-Level Transformational Leadership - The Individual-Focused TFL Subscale,Communicating high expectations,Item1,534,Encourages me to set high goals for myself.
 37,Dual-Level Transformational Leadership - The Individual-Focused TFL Subscale,Communicating high expectations,Item2,535,Communicates high performance expectations to me.
-37,Dual-Level Transformational Leadership - The Individual-Focused TFL Subscale,Communicating high expectations,Item3,536,"Shows confidence in my ability to meet performance
+37,Dual-Level Transformational Leadership - The Individual-Focused TFL Subscale,Communicating high expectations,Item3,536,"Shows confidence in my ability to meet performance
+
 expectations."
 37,Dual-Level Transformational Leadership - The Individual-Focused TFL Subscale,Communicating high expectations,Item4,537,Demonstrates total confidence in me.
 37,Dual-Level Transformational Leadership - The Individual-Focused TFL Subscale,Communicating high expectations,Item5,538,Encourages me to live up to my potential.
@@ -584,42 +617,51 @@ expectations."
 37,Dual-Level Transformational Leadership - The Individual-Focused TFL Subscale,Personal recognition,Item3,550,Gives me special recognition when my work is very good.
 37,Dual-Level Transformational Leadership - The Individual-Focused TFL Subscale,Personal recognition,Item4,551,Acknowledges improvement in my quality of work.
 37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Emphasizing group identity,Item1,552,Encourages team members to take pride in our team.
-37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Emphasizing group identity,Item2,553,"Says things that make us feel proud to be members of this
+37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Emphasizing group identity,Item2,553,"Says things that make us feel proud to be members of this
+
 team."
 37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Emphasizing group identity,Item3,554,Says positive things about the team.
-37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Emphasizing group identity,Item4,555,"Encourages others to place the interests of the team ahead
+37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Emphasizing group identity,Item4,555,"Encourages others to place the interests of the team ahead
+
 of their own interests."
 37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Emphasizing group identity,Item5,556,Emphasizes the uniqueness of the team.
-37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Communicating a group vision,Item1,557,"Articulates a compelling vision of the future for our
+37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Communicating a group vision,Item1,557,"Articulates a compelling vision of the future for our
+
 team."
 37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Communicating a group vision,Item2,558,Talks optimistically about the future of our team.
 37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Communicating a group vision,Item3,559,Talks enthusiastically about what needs to be accomplished by our team.
-37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Communicating a group vision,Item4,560,"Communicates a clear direction of where our team is
+37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Communicating a group vision,Item4,560,"Communicates a clear direction of where our team is
+
 going."
 37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Team-building,Item1,561,Fosters collaboration among team members.
-37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Team-building,Item2,562,"Encourages group members to be “team players.”
+37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Team-building,Item2,562,"Encourages group members to be "team players."
+
 "
 37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Team-building,Item3,563,Develops a team attitude and spirit among team members.
 37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Team-building,Item4,564,Gets the team to work together for the same goal.
-37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Team-building,Item5,565,"Resolves friction among team members in the interest of
+37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Team-building,Item5,565,"Resolves friction among team members in the interest of
+
 teamwork."
 40,Abusive Supervision,NA,Item1,566,I ridiculed an employee.
 40,Abusive Supervision,NA,Item2,567,I gave an employee the silent treatment.
 40,Abusive Supervision,NA,Item3,568,I put an employee down in front of others.
 40,Abusive Supervision,NA,Item4,569,I reminded an employee of his/her past mistakes and failures.
-40,Abusive Supervision,NA,Item5,570,"I expressed anger at an employee when I was mad for another
+40,Abusive Supervision,NA,Item5,570,"I expressed anger at an employee when I was mad for another
+
 reason."
 40,Abusive Supervision,NA,Item6,571,I made negative comments about an employee to others.
 40,Abusive Supervision,NA,Item7,572,I was rude to an employee.
 40,Abusive Supervision,NA,Item8,573,I told an employee that he/she is incompetent.
-41,Leader Social Account With Moral Disengagement Language Measure,Moral justification,Item1,574,Attempted to justify the employee’s conduct in some way.
+41,Leader Social Account With Moral Disengagement Language Measure,Moral justification,Item1,574,Attempted to justify the employee's conduct in some way.
 41,Leader Social Account With Moral Disengagement Language Measure,Diffusion of responsibility,Item1,575,Found ways for the employee to not be held accountable for his or her behavior.
-41,Leader Social Account With Moral Disengagement Language Measure,Attribution of blame,Item1,576,"Used others as an excuse for the employee not acting
+41,Leader Social Account With Moral Disengagement Language Measure,Attribution of blame,Item1,576,"Used others as an excuse for the employee not acting
+
 better."
-41,Leader Social Account With Moral Disengagement Language Measure,Euphemistic labeling,Item1,577,Used language that made the employee’s conduct appear less negative.
-41,Leader Social Account With Moral Disengagement Language Measure,Advantageous comparison,Item1,578,"The leader compared the employee to someone else to
+41,Leader Social Account With Moral Disengagement Language Measure,Euphemistic labeling,Item1,577,Used language that made the employee's conduct appear less negative.
+41,Leader Social Account With Moral Disengagement Language Measure,Advantageous comparison,Item1,578,"The leader compared the employee to someone else to
+
 make the employee look better."
-41,Leader Social Account With Moral Disengagement Language Measure,Distortion of consequences,Item1,579,Used logic to say the employee’s behavior was not that bad.
+41,Leader Social Account With Moral Disengagement Language Measure,Distortion of consequences,Item1,579,Used logic to say the employee's behavior was not that bad.
 41,Leader Social Account With Moral Disengagement Language Measure,Displacement of responsibility,Item1,580,Indicated the employee should not be responsible for his or her actions.
 42,Paternalistic Leadership,Family atmosphere at work,Item1,581,Behaves like a family member (father/mother or elder brother/sister) towards his / her employees.
 42,Paternalistic Leadership,Family atmosphere at work,Item2,582,Provides advice to employees like a senior family member.
@@ -646,17 +688,17 @@ make the employee look better."
 62,Paternalistic Leadership,Benevolent leadership,Item2,603,My supervisor devotes all his/her energy to taking care of me.
 62,Paternalistic Leadership,Benevolent leadership,Item3,604,"Beyond work relations, my supervisor expresses concern about my daily life."
 62,Paternalistic Leadership,Benevolent leadership,Item4,605,My supervisor ordinarily shows a kind concern for my comfort.
-62,Paternalistic Leadership,Benevolent leadership,Item5,606,My supervisor will help me when I’m in an emergency.
+62,Paternalistic Leadership,Benevolent leadership,Item5,606,My supervisor will help me when I'm in an emergency.
 62,Paternalistic Leadership,Benevolent leadership,Item6,607,My supervisor takes very thoughtful care of subordinates who have spent a long time with him/her.
 62,Paternalistic Leadership,Benevolent leadership,Item7,608,My supervisor meets my needs according to my personal requests.
 62,Paternalistic Leadership,Benevolent leadership,Item8,609,My supervisor encourages me when I encounter arduous problems.
 62,Paternalistic Leadership,Benevolent leadership,Item9,610,My supervisor takes good care of my family members as well.
-62,Paternalistic Leadership,Benevolent leadership,Item10,611,My supervisor tries to understand what the cause is when I don’t perform well.
+62,Paternalistic Leadership,Benevolent leadership,Item10,611,My supervisor tries to understand what the cause is when I don't perform well.
 62,Paternalistic Leadership,Benevolent leadership,Item11,612,My supervisor handles what is difficult to do or manage in everyday life for me.
 62,Paternalistic Leadership,Moral leadership,Item1,613,My supervisor never avenges a personal wrong in the name of public interest when he/she is offended.
-62,Paternalistic Leadership,Moral leadership,Item2,614,My supervisor employs people according to their virtues and does not envy others’ abilities and virtues.
+62,Paternalistic Leadership,Moral leadership,Item2,614,My supervisor employs people according to their virtues and does not envy others' abilities and virtues.
 62,Paternalistic Leadership,Moral leadership,Item3,615,My supervisor uses his/her authority to seek special privileges for himself/herself.
-62,Paternalistic Leadership,Moral leadership,Item4,616,My supervisor doesn’t take the credit for my achievements and contributions for himself/herself.
+62,Paternalistic Leadership,Moral leadership,Item4,616,My supervisor doesn't take the credit for my achievements and contributions for himself/herself.
 62,Paternalistic Leadership,Moral leadership,Item5,617,My supervisor does not take advantage of me for personal gain.
 62,Paternalistic Leadership,Moral leadership,Item6,618,My supervisor does not use guanxi (personal relationships) or back-door practices to obtain illicit personal gains.
 62,Paternalistic Leadership,Authoritarian leadership,Item1,619,My supervisor asks me to obey his/her instructions completely.
@@ -665,7 +707,7 @@ make the employee look better."
 62,Paternalistic Leadership,Authoritarian leadership,Item4,622,My supervisor always behaves in a commanding fashion in front of employees.
 62,Paternalistic Leadership,Authoritarian leadership,Item5,623,I feel pressured when working with him/her.
 62,Paternalistic Leadership,Authoritarian leadership,Item6,624,My supervisor exercises strict discipline over subordinates.
-62,Paternalistic Leadership,Authoritarian leadership,Item7,625,My supervisor scolds us when we can’t accomplish our tasks.
+62,Paternalistic Leadership,Authoritarian leadership,Item7,625,My supervisor scolds us when we can't accomplish our tasks.
 62,Paternalistic Leadership,Authoritarian leadership,Item8,626,My supervisor emphasizes that our group must have the best performance of all the units in the organization.
 62,Paternalistic Leadership,Authoritarian leadership,Item9,627,"We have to follow his/her rules to get things done. If not, he/she punishes us severely."
 63,LBDQ Revised,Consideration,Item1,628,He does personal favors for group members.
@@ -735,11 +777,11 @@ make the employee look better."
 57,Instrumental Leadership,Outcome Monitoring,Item2,692,Assists me to learn from my mistakes
 57,Instrumental Leadership,Outcome Monitoring,Item3,693,Provides me with information concerning how mistakes can be avoided
 57,Instrumental Leadership,Outcome Monitoring,Item4,694,Provides me with constructive feedback about my mistakes
-59,Spiritual Leadership,Vision,Item1,695,I understand and am committed to my organization’s vision.
+59,Spiritual Leadership,Vision,Item1,695,I understand and am committed to my organization's vision.
 59,Spiritual Leadership,Vision,Item2,696,My workgroup has a vision statement that brings out the best in me.
-59,Spiritual Leadership,Vision,Item3,697,My organization’s vision inspires my best performance.
-59,Spiritual Leadership,Vision,Item4,698,I have faith in my organization’s vision for its employees.
-59,Spiritual Leadership,Vision,Item5,699,My organization’s vision is clear and compelling to me.
+59,Spiritual Leadership,Vision,Item3,697,My organization's vision inspires my best performance.
+59,Spiritual Leadership,Vision,Item4,698,I have faith in my organization's vision for its employees.
+59,Spiritual Leadership,Vision,Item5,699,My organization's vision is clear and compelling to me.
 59,Spiritual Leadership,Hope/Faith,Item1,700,"I have faith in my organization and I am willing to do ""whatever it takes"" to insure that it accomplishes its mission."
 59,Spiritual Leadership,Hope/Faith,Item2,701,I persevere and exert extra effort to help my organization succeed because I have faith in what it stands for
 59,Spiritual Leadership,Hope/Faith,Item3,702,I always do my best in my work because I have faith in my organization and its leaders.
@@ -760,39 +802,56 @@ make the employee look better."
 64,TMT Shared Leadership,NA,Item6,717,TMT members call each other to make critical decisions.
 64,TMT Shared Leadership,NA,Item7,718,TMT members encourage each other to jointly evaluate business performance.
 64,TMT Shared Leadership,NA,Item8,719,TMT members encourage each other to cooperate.
-43,People Management,Supportive HR practices,Item1,720,"I experience the following HR practices as being implemented to support me: 
+43,People Management,Supportive HR practices,Item1,720,"I experience the following HR practices as being implemented to support me: 
+
 I experience the following HR practices as being implemented to support my employees: training and development"
-43,People Management,Supportive HR practices,Item2,721,"I experience the following HR practices as being implemented to support me: 
+43,People Management,Supportive HR practices,Item2,721,"I experience the following HR practices as being implemented to support me: 
+
 I experience the following HR practices as being implemented to support my employees: transition to another job"
-43,People Management,Supportive HR practices,Item3,722,"I experience the following HR practices as being implemented to support me: 
+43,People Management,Supportive HR practices,Item3,722,"I experience the following HR practices as being implemented to support me: 
+
 I experience the following HR practices as being implemented to support my employees: appraisal"
-43,People Management,Supportive HR practices,Item4,723,"I experience the following HR practices as being implemented to support me: 
+43,People Management,Supportive HR practices,Item4,723,"I experience the following HR practices as being implemented to support me: 
+
 I experience the following HR practices as being implemented to support my employees: compensation and benefits"
-43,People Management,Supportive HR practices,Item5,724,"I experience the following HR practices as being implemented to support me: 
+43,People Management,Supportive HR practices,Item5,724,"I experience the following HR practices as being implemented to support me: 
+
 I experience the following HR practices as being implemented to support my employees: changes in job design (e.g., changes in tasks, career advice)"
-43,People Management,Supportive HR practices,Item6,725,"I experience the following HR practices as being implemented to support me: 
+43,People Management,Supportive HR practices,Item6,725,"I experience the following HR practices as being implemented to support me: 
+
 I experience the following HR practices as being implemented to support my employees: vitality (e.g., prevention and health)"
-43,People Management,Supportive HR practices,Item7,726,"I experience the following HR practices as being implemented to support me: 
+43,People Management,Supportive HR practices,Item7,726,"I experience the following HR practices as being implemented to support me: 
+
 I experience the following HR practices as being implemented to support my employees: work-life balance (e.g., flexible hours, leave, working from home)"
-43,People Management,Implementation of tailor-made arrangements,Item1,727,"My supervisor tailors employment conditions to my personal situation
-If it is required, I tailor employment conditions to an employee’s personal situation"
-43,People Management,Implementation of tailor-made arrangements,Item2,728,"My supervisor tailors employment conditions to my individual needs so I can do a better job 
+43,People Management,Implementation of tailor-made arrangements,Item1,727,"My supervisor tailors employment conditions to my personal situation
+
+If it is required, I tailor employment conditions to an employee's personal situation"
+43,People Management,Implementation of tailor-made arrangements,Item2,728,"My supervisor tailors employment conditions to my individual needs so I can do a better job 
+
 I tailor employment conditions to my employees' needs so they can do a better job"
-43,People Management,Support of employees' commitment,Item1,729,"My supervisor shows an interest in how I do my job
+43,People Management,Support of employees' commitment,Item1,729,"My supervisor shows an interest in how I do my job
+
 I show an interest in how employees do their job"
-43,People Management,Support of employees' commitment,Item2,730,"My supervisor shows an interest in my personal functioning 
+43,People Management,Support of employees' commitment,Item2,730,"My supervisor shows an interest in my personal functioning 
+
 I show an interest in employees' personal functioning"
-43,People Management,Support of employees' commitment,Item3,731,"If my supervisor appreciates the job done by me, he/she does not let this pass unnoticed 
+43,People Management,Support of employees' commitment,Item3,731,"If my supervisor appreciates the job done by me, he/she does not let this pass unnoticed 
+
 If I appreciate the job done by an employee, I do not let this pass unnoticed"
-43,People Management,Support of employees' commitment,Item4,732,"My supervisor asks me if I can manage my job 
+43,People Management,Support of employees' commitment,Item4,732,"My supervisor asks me if I can manage my job 
+
 I ask employees if they can manage their job"
-43,People Management,Support of employees' career development,Item1,733,"My supervisor informs me about opportunities for training and development
+43,People Management,Support of employees' career development,Item1,733,"My supervisor informs me about opportunities for training and development
+
 I inform employees about opportunities for training and development"
-43,People Management,Support of employees' career development,Item2,734,"My supervisor offers me opportunities to participate in training 
+43,People Management,Support of employees' career development,Item2,734,"My supervisor offers me opportunities to participate in training 
+
 I offer employees opportunities to participate in training"
-43,People Management,Support of employees' career development,Item3,735,"My supervisor supports me in utilizing opportunities for vertical mobility 
+43,People Management,Support of employees' career development,Item3,735,"My supervisor supports me in utilizing opportunities for vertical mobility 
+
 I support employees in utilizing opportunities for vertical mobility"
-43,People Management,Support of employees' career development,Item4,736,"My supervisor supports me in utilizing opportunities for horizontal mobility 
+43,People Management,Support of employees' career development,Item4,736,"My supervisor supports me in utilizing opportunities for horizontal mobility 
+
 I support employees in utilizing opportunities for horizontal mobility"
 45,Autocratic Leader Behavior,NA,Item1,737,This leader makes decision in an autocratic way
 45,Autocratic Leader Behavior,NA,Item2,738,This leader often pushes his/her opinions
@@ -887,3 +946,23 @@ I support employees in utilizing opportunities for horizontal mobility"
 7,Akron Leadership Questionnaire,NA,Item23,827,Withholds rewards
 7,Akron Leadership Questionnaire,NA,Item24,828,Criticizes harshly
 7,Akron Leadership Questionnaire,NA,Item25,829,Neglects details
+99,"Destructive Leadership","Destrudo-L","Item1",830,"Makes subordinates stupid"
+99,"Destructive Leadership","Destrudo-L","Item2",831,"Behaves arrogant"
+99,"Destructive Leadership","Destrudo-L","Item3",832,"Treats people differently"
+99,"Destructive Leadership","Destrudo-L","Item4",833,"Is unpleasant"
+99,"Destructive Leadership","Destrudo-L","Item5",834,"Shows violent tendencies"
+99,"Destructive Leadership","Destrudo-L","Item6",835,"Punishes subordinates who make mistakes or do not reach set goals"
+99,"Destructive Leadership","Destrudo-L","Item7",836,"Uses threats to get his/her way"
+99,"Destructive Leadership","Destrudo-L","Item8",837,"Puts unreasonable demands"
+99,"Destructive Leadership","Destrudo-L","Item9",838,"Takes the honor of subordinates' work"
+99,"Destructive Leadership","Destrudo-L","Item10",839,"Puts own needs ahead of the group's"
+99,"Destructive Leadership","Destrudo-L","Item11",840,"Does not trust his/her subordinates"
+99,"Destructive Leadership","Destrudo-L","Item12",841,"Does not keep promises"
+99,"Destructive Leadership","Destrudo-L","Item13",842,"Does not dare to confront others"
+99,"Destructive Leadership","Destrudo-L","Item14",843,"Does not show up among subordinates"
+99,"Destructive Leadership","Destrudo-L","Item15",844,"Does not show an active interest"
+99,"Destructive Leadership","Destrudo-L","Item16",845,"Does not take a grip on things"
+99,"Destructive Leadership","Destrudo-L","Item17",846,"Shows insecurity in his/her role"
+99,"Destructive Leadership","Destrudo-L","Item18",847,"Is bad at structuring an planning"
+99,"Destructive Leadership","Destrudo-L","Item19",848,"Gives unclear instructions"
+99,"Destructive Leadership","Destrudo-L","Item20",849,"Behaves confused"

@@ -22,11 +22,15 @@ import argparse
 from preprocess_leadership_data import (
     remove_stems, 
     remove_gendered_language, 
+    remove_specific_words,
+    is_fischer_sitkin_construct,
+    map_to_standard_construct,
     FISCHER_SITKIN_CONSTRUCTS,
     PROJECT_ROOT,
     DATA_DIR,
     PROCESSED_DIR
 )
+import re
 
 # Ensure processed directory exists
 os.makedirs(PROCESSED_DIR, exist_ok=True)
@@ -41,6 +45,9 @@ DATASET_VARIATIONS = {
     'focused_clean': 'Focused dataset with stems removed and gender-neutral language'
 }
 
+# Words to remove globally after other cleaning
+WORDS_TO_REMOVE_GLOBALLY = ['supervisor', 'I']
+
 def load_data():
     """Load the leadership measures dataset."""
     file_path = DATA_DIR / "Measures_text_long.csv"
@@ -49,37 +56,58 @@ def load_data():
     if not file_path.exists():
         raise FileNotFoundError(f"Cannot find data file: {file_path}")
     
-    # Load data
+    # Load data with explicit encoding
     print(f"Loading leadership measures from {file_path}")
-    df = pd.read_csv(file_path)
-    
-    # Basic data cleaning
+    try:
+        # Try UTF-8 first (most common)
+        df = pd.read_csv(file_path, encoding='utf-8')
+    except UnicodeDecodeError:
+        print("UTF-8 decoding failed, trying latin-1...")
+        # Fallback to latin-1 if UTF-8 fails
+        df = pd.read_csv(file_path, encoding='latin-1')
+        
+    # Basic data cleaning first
     df = df.dropna(subset=['Text'])  # Remove items with no text
-    
+
+    # === Fixes applied BEFORE generating ProcessedText ===
+    # Fix potential lingering encoding issues (e.g., â€ -> ")
+    # Note: This is a workaround; ideally, the source file encoding is known and correct.
+    for col in df.select_dtypes(include='object').columns:
+        if df[col].notna().any(): # Check if column has non-NA string values
+            df[col] = df[col].astype(str).str.replace('â€', '"', regex=False)
+
+    # === End of pre-processing fixes ===
+            
     print(f"Loaded {len(df)} leadership items across {df['Behavior'].nunique()} constructs")
     return df
 
-def is_fischer_sitkin_construct(behavior):
-    """Check if a behavior belongs to Fischer & Sitkin (2023) constructs."""
-    return any(
-        term.lower() in behavior.lower() 
-        for construct_terms in FISCHER_SITKIN_CONSTRUCTS.values() 
-        for term in construct_terms
-    )
-
-def map_to_standard_construct(behavior):
-    """Map behavior to standardized construct name."""
-    for construct, terms in FISCHER_SITKIN_CONSTRUCTS.items():
-        if any(term.lower() in behavior.lower() for term in terms):
-            return construct
-    return behavior  # Fallback to original if no match
+def capitalize_first(text):
+    """Capitalize the first letter of a string, handling empty strings."""
+    if text:
+        return text[0].upper() + text[1:]
+    return text
 
 def generate_datasets(df):
     """Generate all dataset variations."""
     datasets = {}
     
-    # 1. Complete dataset (original)
-    datasets['original'] = df.copy()
+    # IMPORTANT: Ensure Text column is clean BEFORE applying stem/gender removal
+    # The load_data function should have handled typo and encoding fixes.
+    
+    # === Special pre-processing for specific problematic stems BEFORE general stem removal ===
+    if 'Text' in df.columns:
+        # Target the specific alliance stem variations
+        alliance_pattern = r'^The manager(?:\(s\))? of this alliance:\s*' 
+        # Replace the pattern with empty string, then apply capitalize_first to the result
+        df['Text'] = df['Text'].astype(str).str.replace(alliance_pattern, '', regex=True, flags=re.IGNORECASE).apply(capitalize_first)
+        
+        # === Apply typo fix AFTER special stem removal ===
+        df['Text'] = df['Text'].astype(str).str.replace('Lps me', 'Helps me', regex=False)
+        # === End typo fix ===
+    # === End special pre-processing ===
+
+    # 1. Complete dataset (original) - Keep a copy of potentially fixed df
+    datasets['original'] = df.copy() 
     
     # 2. Complete dataset with stems removed
     datasets['original_no_stems'] = df.copy()
@@ -88,11 +116,22 @@ def generate_datasets(df):
     # 3. Complete dataset with stems removed and gender-neutral language
     datasets['original_clean'] = datasets['original_no_stems'].copy()
     datasets['original_clean']['ProcessedText'] = datasets['original_no_stems']['ProcessedText'].apply(remove_gendered_language)
+    # Apply global word removal AFTER gender neutralization
+    datasets['original_clean']['ProcessedText'] = datasets['original_clean']['ProcessedText'].apply(
+        lambda x: remove_specific_words(x, WORDS_TO_REMOVE_GLOBALLY)
+    )
+    # === Final typo fix directly on ProcessedText ===
+    datasets['original_clean']['ProcessedText'] = datasets['original_clean']['ProcessedText'].astype(str).str.replace('Lps me', 'Helps me', regex=False)
+    # === End final typo fix ===
     
     # 4. Create focused dataset with Fischer & Sitkin constructs
     mask = df['Behavior'].apply(is_fischer_sitkin_construct)
     focused_df = df[mask].copy()
-    focused_df['StandardConstruct'] = focused_df['Behavior'].apply(map_to_standard_construct)
+    # Use updated mapping function that considers Dimensions for LBDQ
+    focused_df['StandardConstruct'] = focused_df.apply(
+        lambda row: map_to_standard_construct(row['Behavior'], row.get('Dimensions', None)), 
+        axis=1
+    )
     datasets['focused'] = focused_df
     
     # 5. Focused dataset with stems removed
@@ -102,6 +141,13 @@ def generate_datasets(df):
     # 6. Focused dataset with stems removed and gender-neutral language
     datasets['focused_clean'] = datasets['focused_no_stems'].copy()
     datasets['focused_clean']['ProcessedText'] = datasets['focused_no_stems']['ProcessedText'].apply(remove_gendered_language)
+    # Apply global word removal AFTER gender neutralization
+    datasets['focused_clean']['ProcessedText'] = datasets['focused_clean']['ProcessedText'].apply(
+        lambda x: remove_specific_words(x, WORDS_TO_REMOVE_GLOBALLY)
+    )
+    # === Final typo fix directly on ProcessedText ===
+    datasets['focused_clean']['ProcessedText'] = datasets['focused_clean']['ProcessedText'].astype(str).str.replace('Lps me', 'Helps me', regex=False)
+    # === End final typo fix ===
     
     return datasets
 

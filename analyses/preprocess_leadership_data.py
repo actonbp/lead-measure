@@ -44,7 +44,7 @@ FISCHER_SITKIN_CONSTRUCTS = {
     
     # 2 negative styles
     'Abusive': ['abusive', 'abuse'],
-    'Destructive': ['destructive', 'destruction']
+    'Destructive': ['destructive', 'destruction', 'Destructive Leadership']
 }
 
 # Stem patterns to remove (common leader references)
@@ -55,6 +55,7 @@ STEM_PATTERNS = [
     r'^our (leader|manager|supervisor|boss|superior)',
     r'^this (leader|manager|supervisor|boss|superior)',
     r'^your (leader|manager|supervisor|boss|superior)',
+    r'^this person',
     
     # Department/team variations
     r'^my department\'?s? (leader|manager|supervisor|boss|superior)',
@@ -132,6 +133,31 @@ GENDERED_TERMS = {
     'ladies': 'people'
 }
 
+# Moved this function definition to top level
+def map_to_standard_construct(behavior, dimension):
+    """Map behavior (and dimension for LBDQ) to standardized construct name."""
+    # Handle LBDQ specifically using the Dimension column
+    if isinstance(behavior, str) and 'lbdq' in behavior.lower():
+        if isinstance(dimension, str):
+            dim_lower = dimension.lower()
+            if 'initiating structure' in dim_lower:
+                return 'Initiating Structure'
+            elif 'consideration' in dim_lower:
+                return 'Consideration'
+        # Fallback for LBDQ if dimension is missing or doesn't match expected values
+        # print(f"Warning: LBDQ item found ('{behavior}') but dimension '{dimension}' not recognized. Returning as 'LBDQ_Unknown'.")
+        return 'LBDQ_Unknown' # Assign specific unknown category 
+    
+    # Original logic for non-LBDQ behaviors
+    if isinstance(behavior, str):
+        behavior_lower = behavior.lower()
+        for construct, terms in FISCHER_SITKIN_CONSTRUCTS.items():
+            if any(term.lower() in behavior_lower for term in terms):
+                return construct
+                
+    # Fallback if no match found for non-LBDQ
+    return behavior 
+
 def load_leadership_data(file_path=None):
     """Load the leadership measures dataset."""
     if file_path is None:
@@ -151,28 +177,33 @@ def load_leadership_data(file_path=None):
     print(f"Loaded {len(df)} leadership items across {df['Behavior'].nunique()} constructs")
     return df
 
+def is_fischer_sitkin_construct(behavior):
+    """Check if a behavior belongs to Fischer & Sitkin (2023) constructs OR is LBDQ."""
+    if not isinstance(behavior, str):
+        return False
+        
+    behavior_lower = behavior.lower()
+    
+    # Explicitly include LBDQ
+    if 'lbdq' in behavior_lower:
+        return True
+        
+    # Check against keywords in the dictionary for other constructs
+    return any(
+        term.lower() in behavior_lower
+        for construct_terms in FISCHER_SITKIN_CONSTRUCTS.values() 
+        for term in construct_terms
+    )
+
 def filter_fischer_sitkin_constructs(df):
     """Filter to include only Fischer & Sitkin (2023) leadership constructs."""
     # Create a boolean mask for matching constructs
-    mask = df['Behavior'].apply(lambda x: any(
-        term.lower() in x.lower() 
-        for construct_terms in FISCHER_SITKIN_CONSTRUCTS.values() 
-        for term in construct_terms
-    ))
+    mask = df['Behavior'].apply(is_fischer_sitkin_construct)
     
     filtered_df = df[mask].copy()
     
-    # Map to standardized construct names for clarity
-    def map_to_standard_construct(behavior):
-        for construct, terms in FISCHER_SITKIN_CONSTRUCTS.items():
-            if any(term.lower() in behavior.lower() for term in terms):
-                return construct
-        return behavior  # Fallback to original if no match (shouldn't happen)
-    
-    filtered_df['StandardConstruct'] = filtered_df['Behavior'].apply(map_to_standard_construct)
-    
     print(f"Filtered to {len(filtered_df)} items from Fischer & Sitkin (2023) constructs")
-    print(f"Constructs included: {filtered_df['StandardConstruct'].unique()}")
+    print(f"Constructs included: {filtered_df['Behavior'].unique()}")
     
     return filtered_df
 
@@ -185,13 +216,17 @@ def remove_stems(text):
         match = re.match(pattern, lower_text, re.IGNORECASE)
         if match:
             # Remove the stem and clean up
-            text = text[match.end():].strip()
-            # Remove leading punctuation if present
-            text = re.sub(r'^[,.: ]+', '', text)
-            # Capitalize first letter
+            text = text[match.end():].strip() # Get text after stem and strip whitespace
+            # --- Restore more aggressive leading char cleanup ---
+            text = re.sub(r'^[^\w]+\b', '', text).strip() # Remove leading non-alphanumeric (should catch leading '(' if needed)
+            # text = re.sub(r'^[\'\"]s\b\s*', '', text).strip() # Keep this commented out for now
+            # text = re.sub(r'^[,.:;!?]+\s*', '', text).strip() # Keep this commented out for now
+            # --- End Restore --- 
+            
+            # Capitalize first letter if text remains
             if text:
                 text = text[0].upper() + text[1:]
-            break
+            break # Important: stop after first match
     
     return text
 
@@ -243,6 +278,22 @@ def remove_gendered_language(text):
     
     return ' '.join(result_words)
 
+def remove_specific_words(text, words_to_remove):
+    """Remove specific whole words from text (case-insensitive)."""
+    if not words_to_remove:
+        return text
+        
+    # Build a regex pattern like r'\b(word1|word2|word3)\b'
+    pattern = r'\b(?i)(?:{})'.format('|'.join(map(re.escape, words_to_remove))) + r'\b'
+    
+    # Replace matched words with an empty string
+    cleaned_text = re.sub(pattern, '', text)
+    
+    # Clean up potential extra spaces left by removal
+    cleaned_text = re.sub(r'\s{2,}', ' ', cleaned_text).strip()
+    
+    return cleaned_text
+
 def preprocess_dataset(df):
     """Apply preprocessing to create all dataset variations."""
     # 1. Original dataset (keep a copy)
@@ -284,7 +335,7 @@ def generate_dataset_report(datasets):
         report += f"- Constructs: {df['Behavior'].nunique()}\n"
         
         if 'fischer_sitkin' in name:
-            construct_counts = df['StandardConstruct'].value_counts().to_dict()
+            construct_counts = df['Behavior'].value_counts().to_dict()
             report += "- Construct counts:\n"
             for construct, count in construct_counts.items():
                 report += f"  - {construct}: {count} items\n"
