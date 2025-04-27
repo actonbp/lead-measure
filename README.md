@@ -69,6 +69,10 @@ The results of this analysis will have important implications for:
 - Potential redundancies in leadership constructs
 - Future directions for leadership assessment
 
+## Future Directions / To-Do
+
+- Analyze the potential impact of outdated language (e.g., 'foreman' in LBDQ) on embedding results and construct similarity.
+
 ## Contributors
 
 - Bryan Acton
