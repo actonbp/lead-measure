@@ -52,6 +52,15 @@ env/
 # Embeddings (typically large and can be regenerated)
 data/embeddings/
 
+# Model directories (very large, don't track)
+models/
+
+# Virtual environment (specific to this project)
+leadmeasure_env/
+
+# Large experiment results
+experiment_results/
+
 # Mac OS
 .DS_Store
 

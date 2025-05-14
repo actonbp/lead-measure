@@ -107,6 +107,16 @@ This script:
 - Training requires at least 16GB RAM
 - GPU acceleration is recommended but not required
 
+## Important Note on Large Directories
+
+Several directories contain large files that are not tracked in git:
+
+- `models/` - Contains model checkpoints and saved models (~172GB)
+- `leadmeasure_env/` - Python virtual environment 
+- `experiment_results/` - Contains experiment output files
+
+These directories are in `.gitignore` and should not be committed. When running the scripts, the required directories will be created automatically if they don't exist.
+
 ## Results and Implications
 
 The results of this analysis will have important implications for:

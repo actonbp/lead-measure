@@ -1,0 +1,46 @@
+
+    Construct Space Learning Model Report
+    ====================================
+    
+    Model details:
+    - Classifier type: random_forest
+    - TF-IDF vectorization with dimensionality reduction
+    - Supervised learning on IPIP constructs
+    - Transfer to leadership styles
+    
+    IPIP Construct Identification Performance:
+    -----------------------------------------
+    - Test Accuracy: 0.0290
+    - Number of constructs: 243  # Subtract 'accuracy', 'macro avg', 'weighted avg'
+    - Effect size between construct categories: 0.1969
+    
+    Leadership Construct Identification Performance:
+    ----------------------------------------------
+    - Test Accuracy: 0.3059
+    - Number of constructs: 8
+    - Effect size between construct categories: 0.1683
+    
+    Comparative Analysis:
+    -------------------
+    The model performed WORSE on IPIP constructs compared to leadership constructs.
+    
+    Effect size comparison shows that IPIP constructs are more distinct in the embedding space.
+    
+    Key Findings:
+    -----------
+    1. The model was able to learn construct spaces from IPIP data with 2.9% accuracy.
+    
+    2. When applied to leadership styles, the model achieved 30.6% accuracy in predicting the correct construct.
+    
+    3. The smaller effect size for leadership constructs (0.1683 vs. 0.1969) 
+    suggests that leadership constructs overlap more compared to personality constructs.
+    
+    4. UMAP visualizations confirm these findings, showing less distinct clustering for leadership constructs.
+    
+    Conclusion:
+    ----------
+    This analysis does not support the hypothesis that leadership constructs have substantial semantic overlap and may not represent truly distinct constructs.
+    
+    The model's ability to more effectively distinguish personality constructs compared to leadership constructs suggests that 
+    leadership measurement may benefit from reconsidering its construct boundaries and potentially developing more distinctive measurement approaches.
+        

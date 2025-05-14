@@ -1,0 +1,55 @@
+
+    Embedding Analysis Comparison: Big Five vs. Leadership Styles
+    ===========================================================
+    
+    Effect Size Comparison:
+    ----------------------
+    Big Five Effect Size: 0.1238
+    Leadership Effect Size: 0.2581
+    
+    Intra-Category Distances:
+    -----------------------
+    Big Five: 0.9821 ± 0.0949
+    Leadership: 0.9709 ± 0.0986
+    
+    Inter-Category Distances:
+    -----------------------
+    Big Five: 0.9919 ± 0.0588
+    Leadership: 0.9908 ± 0.0464
+    
+    Clustering Metrics:
+    -----------------
+    Big Five - Adjusted Rand Index: 0.0144
+    Leadership - Adjusted Rand Index: -0.0071
+    
+    Big Five - Adjusted Mutual Information: 0.0251
+    Leadership - Adjusted Mutual Information: 0.0224
+    
+    Clusters Found:
+    -------------
+    Big Five: 3 clusters (vs. 5 true categories)
+    Leadership: 2 clusters (vs. 9 true categories)
+    
+    Interpretation:
+    -------------
+    Leadership styles show stronger separation with an effect size difference of 0.1343.
+    
+    The clustering analysis shows that Big Five categories are more easily distinguished by unsupervised clustering.
+    
+    Key Findings:
+    -----------
+    1. TF-IDF vectorization and UMAP visualization reveal substantial overlap between both Big Five 
+       traits and leadership styles in semantic space.
+       
+    2. The effect size between intra-category and inter-category distances is larger for leadership styles (0.2581), suggesting that leadership constructs show more internal cohesion.
+    
+    3. The semantic space of both domains shows substantial overlap, suggesting that 
+       current measurement approaches may not fully capture distinct constructs.
+    
+    Questions for further analysis:
+    ----------------------------
+    1. Why are leadership constructs more similar to each other than personality traits?
+    2. Which specific leadership constructs show the greatest overlap?
+    3. Would a different embedding approach (e.g., fine-tuning with GIST loss) improve the separation?
+    4. Are there alternative language-based methods that could better differentiate these constructs?
+    

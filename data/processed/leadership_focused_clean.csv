@@ -29,15 +29,11 @@ MeasureID,Behavior,Dimensions,Item,Xnum,Text,StandardConstruct,ProcessedText
 4,Transformational,Charisma/Inspirational,Item5,33.0,Talks of values,Transformational,Talks of values
 4,Transformational,Charisma/Inspirational,Item6,34.0,Models ethical standards,Transformational,Models ethical standards
 4,Transformational,Charisma/Inspirational,Item7,35.0,Considers the moral/ethical,Transformational,Considers the moral/ethical
-4,Transformational,Charisma/Inspirational,Item8,36.0,"Emphasizes the
-
-collective mission",Transformational,Emphasizes the collective mission
+4,Transformational,Charisma/Inspirational,Item8,36.0,"Emphasizes the collective mission",Transformational,Emphasizes the collective mission
 4,Transformational,Charisma/Inspirational,Item9,37.0,Talks optimistically,Transformational,Talks optimistically
 4,Transformational,Charisma/Inspirational,Item10,38.0,Expresses confidence,Transformational,Expresses confidence
 4,Transformational,Charisma/Inspirational,Item11,39.0,Talks enthusiastically,Transformational,Talks enthusiastically
-4,Transformational,Intellectual Stimulation,Item1,40.0,"Arouses awareness
-
-about important issues",Transformational,Arouses awareness about important issues
+4,Transformational,Intellectual Stimulation,Item1,40.0,"Arouses awareness about important issues",Transformational,Arouses awareness about important issues
 4,Transformational,Intellectual Stimulation,Item2,41.0,Re-examines assumptions,Transformational,Re-examines assumptions
 4,Transformational,Intellectual Stimulation,Item3,42.0,Seeks different views,Transformational,Seeks different views
 4,Transformational,Intellectual Stimulation,Item4,43.0,Suggests new ways,Transformational,Suggests new ways
@@ -60,42 +56,16 @@ about important issues",Transformational,Arouses awareness about important issue
 6,Servant,Conceptual Skills,Item4,87.0,My manager can solve work problems with new or creative ideas.,Servant,Can solve work problems with new or creative ideas.
 6,Servant,Empowering,Item1,88.0,My manager gives me the responsibility to make important decisions about my job.,Servant,Gives me the responsibility to make important decisions about my job.
 6,Servant,Empowering,Item2,89.0,My manager encourages me to handle important work decisions on my own.,Servant,Encourages me to handle important work decisions on my own.
-6,Servant,Empowering,Item3,90.0,"My manager gives me the freedom to
-
-handle difficult situations in the way that I
-
-feel is best.",Servant,Gives me the freedom to handle difficult situations in the way that feel is best.
-6,Servant,Empowering,Item4,91.0,"When I have to make an important
-
-decision at work, I do not have to consult
-
-my manager first.",Servant,"When have to make an important decision at work, do not have to consult my manager first."
-6,Servant,Helping subordinates grow and succeed,Item1,92.0,"My manager makes my career
-
-development a priority.",Servant,Makes my career development a priority.
-6,Servant,Helping subordinates grow and succeed,Item2,93.0,"My manager is interested in making sure
-
-that I achieve my career goals.",Servant,Is interested in making sure that achieve my career goals.
-6,Servant,Helping subordinates grow and succeed,Item3,94.0,"My manager provides me with work
-
-experiences that enable me to develop
-
-new skills.",Servant,Provides me with work experiences that enable me to develop new skills.
-6,Servant,Helping subordinates grow and succeed,Item4,95.0,"My manager wants to know about my
-
-career goals.",Servant,Wants to know about my career goals.
-6,Servant,Putting subordinates first,Item1,96.0,"My manager seems to care more about
-
-my success than his/her own.",Servant,Seems to care more about my success than their own.
-6,Servant,Putting subordinates first,Item2,97.0,"My manager puts my best interests ahead
-
-of his/her own.",Servant,Puts my best interests ahead of their own.
-6,Servant,Putting subordinates first,Item3,98.0,"My manager sacrifices his/her own
-
-interests to meet my needs.",Servant,Sacrifices their own interests to meet my needs.
-6,Servant,Putting subordinates first,Item4,99.0,"My manager does what she/he can do to
-
-make my job easier.",Servant,Does what she/he can do to make my job easier.
+6,Servant,Empowering,Item3,90.0,"My manager gives me the freedom to handle difficult situations in the way that I feel is best.",Servant,Gives me the freedom to handle difficult situations in the way that feel is best.
+6,Servant,Empowering,Item4,91.0,"When I have to make an important decision at work, I do not have to consult my manager first.",Servant,"When have to make an important decision at work, do not have to consult my manager first."
+6,Servant,Helping subordinates grow and succeed,Item1,92.0,"My manager makes my career development a priority.",Servant,Makes my career development a priority.
+6,Servant,Helping subordinates grow and succeed,Item2,93.0,"My manager is interested in making sure that I achieve my career goals.",Servant,Is interested in making sure that achieve my career goals.
+6,Servant,Helping subordinates grow and succeed,Item3,94.0,"My manager provides me with work experiences that enable me to develop new skills.",Servant,Provides me with work experiences that enable me to develop new skills.
+6,Servant,Helping subordinates grow and succeed,Item4,95.0,"My manager wants to know about my career goals.",Servant,Wants to know about my career goals.
+6,Servant,Putting subordinates first,Item1,96.0,"My manager seems to care more about my success than his/her own.",Servant,Seems to care more about my success than their own.
+6,Servant,Putting subordinates first,Item2,97.0,"My manager puts my best interests ahead of his/her own.",Servant,Puts my best interests ahead of their own.
+6,Servant,Putting subordinates first,Item3,98.0,"My manager sacrifices his/her own interests to meet my needs.",Servant,Sacrifices their own interests to meet my needs.
+6,Servant,Putting subordinates first,Item4,99.0,"My manager does what she/he can do to make my job easier.",Servant,Does what she/he can do to make my job easier.
 6,Servant,Behaving ethically,Item1,100.0,My manager holds high ethical standards.,Servant,Holds high ethical standards.
 6,Servant,Behaving ethically,Item2,101.0,My manager is always honest.,Servant,Is always honest.
 6,Servant,Behaving ethically,Item3,102.0,My manager would not compromise ethical principles in order to achieve success.,Servant,Would not compromise ethical principles in order to achieve success.
@@ -291,15 +261,11 @@ make my job easier.",Servant,Does what she/he can do to make my job easier.
 9,Servant,Creating values for those outside of the organization,Item2,298.0,My department manager emphasizes the importance of giving back to the community.,Servant,Emphasizes the importance of giving back to the community.
 26,Group-Focused Transformational Leadership,Team-building,Item1,299.0,Our supervisor fosters collaboration among his/her subordinates.,Transformational,Fosters collaboration among their subordinates.
 26,Group-Focused Transformational Leadership,Team-building,Item2,300.0,Our supervisor encourages employees to be team,Transformational,Encourages employees to be team
-26,Group-Focused Transformational Leadership,Team-building,Item3,301.0,"Our supervisor develops a team attitude and spirit
-
-among his/her subordinates",Transformational,Develops a team attitude and spirit among their subordinates
+26,Group-Focused Transformational Leadership,Team-building,Item3,301.0,"Our supervisor develops a team attitude and spirit among his/her subordinates",Transformational,Develops a team attitude and spirit among their subordinates
 26,Group-Focused Transformational Leadership,Articulating a group vision,Item1,302.0,Our supervisor inspires us with his/her plans for the future,Transformational,Inspires us with their plans for the future
 26,Group-Focused Transformational Leadership,Articulating a group vision,Item2,303.0,Our supervisor provides us with a compelling vision to work toward,Transformational,Provides us with a compelling vision to work toward
 26,Group-Focused Transformational Leadership,Articulating a group vision,Item3,304.0,Our supervisor has a clear understanding of where we are going,Transformational,Has a clear understanding of where we are going
-26,Group-Focused Transformational Leadership,Fostering acceptance of group goals,Item1,305.0,"
-
-Our supervisor gets the group to work together for the same goal",Transformational,Our gets the group to work together for the same goal
+26,Group-Focused Transformational Leadership,Fostering acceptance of group goals,Item1,305.0,"Our supervisor gets the group to work together for the same goal",Transformational,Our gets the group to work together for the same goal
 26,Group-Focused Transformational Leadership,Fostering acceptance of group goals,Item2,306.0,Our supervisor is able to get others to commit to what we need to accomplish in our unit,Transformational,Is able to get others to commit to what we need to accomplish in our unit
 26,Individual-Focused Transformational Leadership,Individualized support,Item1,307.0,My supervisor shows respect for personal feelings,Transformational,Shows respect for personal feelings
 26,Individual-Focused Transformational Leadership,Individualized support,Item2,308.0,"My supervisor behaves in a manner, which is thoughtful of my personal needs",Transformational,"Behaves in a manner, which is thoughtful of my personal needs"
@@ -347,9 +313,7 @@ Our supervisor gets the group to work together for the same goal",Transformation
 54,Ethical Leadership,nan,Item15,528.0,Holds members accountable for using ethical practices in their work.,Ethical,Holds members accountable for using ethical practices in their work.
 37,Dual-Level Transformational Leadership - The Individual-Focused TFL Subscale,Communicating high expectations,Item1,534.0,Encourages me to set high goals for myself.,Transformational,Encourages me to set high goals for myself.
 37,Dual-Level Transformational Leadership - The Individual-Focused TFL Subscale,Communicating high expectations,Item2,535.0,Communicates high performance expectations to me.,Transformational,Communicates high performance expectations to me.
-37,Dual-Level Transformational Leadership - The Individual-Focused TFL Subscale,Communicating high expectations,Item3,536.0,"Shows confidence in my ability to meet performance
-
-expectations.",Transformational,Shows confidence in my ability to meet performance expectations.
+37,Dual-Level Transformational Leadership - The Individual-Focused TFL Subscale,Communicating high expectations,Item3,536.0,"Shows confidence in my ability to meet performance expectations.",Transformational,Shows confidence in my ability to meet performance expectations.
 37,Dual-Level Transformational Leadership - The Individual-Focused TFL Subscale,Communicating high expectations,Item4,537.0,Demonstrates total confidence in me.,Transformational,Demonstrates total confidence in me.
 37,Dual-Level Transformational Leadership - The Individual-Focused TFL Subscale,Communicating high expectations,Item5,538.0,Encourages me to live up to my potential.,Transformational,Encourages me to live up to my potential.
 37,Dual-Level Transformational Leadership - The Individual-Focused TFL Subscale,Follower development,Item1,539.0,Helps me develop my strengths.,Transformational,Helps me develop my strengths.
@@ -366,31 +330,21 @@ expectations.",Transformational,Shows confidence in my ability to meet performan
 37,Dual-Level Transformational Leadership - The Individual-Focused TFL Subscale,Personal recognition,Item3,550.0,Gives me special recognition when my work is very good.,Transformational,Gives me special recognition when my work is very good.
 37,Dual-Level Transformational Leadership - The Individual-Focused TFL Subscale,Personal recognition,Item4,551.0,Acknowledges improvement in my quality of work.,Transformational,Acknowledges improvement in my quality of work.
 37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Emphasizing group identity,Item1,552.0,Encourages team members to take pride in our team.,Transformational,Encourages team members to take pride in our team.
-37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Emphasizing group identity,Item2,553.0,"Says things that make us feel proud to be members of this
-
-team.",Transformational,Says things that make us feel proud to be members of this team.
+37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Emphasizing group identity,Item2,553.0,"Says things that make us feel proud to be members of this team.",Transformational,Says things that make us feel proud to be members of this team.
 37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Emphasizing group identity,Item3,554.0,Says positive things about the team.,Transformational,Says positive things about the team.
-37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Emphasizing group identity,Item4,555.0,"Encourages others to place the interests of the team ahead
-
-of their own interests.",Transformational,Encourages others to place the interests of the team ahead of their own interests.
+37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Emphasizing group identity,Item4,555.0,"Encourages others to place the interests of the team ahead of their own interests.",Transformational,Encourages others to place the interests of the team ahead of their own interests.
 37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Emphasizing group identity,Item5,556.0,Emphasizes the uniqueness of the team.,Transformational,Emphasizes the uniqueness of the team.
-37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Communicating a group vision,Item1,557.0,"Articulates a compelling vision of the future for our
-
-team.",Transformational,Articulates a compelling vision of the future for our team.
+37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Communicating a group vision,Item1,557.0,"Articulates a compelling vision of the future for our team.",Transformational,Articulates a compelling vision of the future for our team.
 37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Communicating a group vision,Item2,558.0,Talks optimistically about the future of our team.,Transformational,Talks optimistically about the future of our team.
 37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Communicating a group vision,Item3,559.0,Talks enthusiastically about what needs to be accomplished by our team.,Transformational,Talks enthusiastically about what needs to be accomplished by our team.
-37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Communicating a group vision,Item4,560.0,"Communicates a clear direction of where our team is
-
-going.",Transformational,Communicates a clear direction of where our team is going.
+37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Communicating a group vision,Item4,560.0,"Communicates a clear direction of where our team is going.",Transformational,Communicates a clear direction of where our team is going.
 37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Team-building,Item1,561.0,Fosters collaboration among team members.,Transformational,Fosters collaboration among team members.
 37,Dual-Level Transformational Leadership - The Group-Focused TFL Subscale,Team-building,Item2,562.0,"Encourages group members to be team players.""",Transformational,"Encourages group members to be team players."""
 40,Abusive Supervision,nan,Item1,566.0,I ridiculed an employee.,Abusive,ridiculed an employee.
 40,Abusive Supervision,nan,Item2,567.0,I gave an employee the silent treatment.,Abusive,gave an employee the silent treatment.
 40,Abusive Supervision,nan,Item3,568.0,I put an employee down in front of others.,Abusive,put an employee down in front of others.
 40,Abusive Supervision,nan,Item4,569.0,I reminded an employee of his/her past mistakes and failures.,Abusive,reminded an employee of their past mistakes and failures.
-40,Abusive Supervision,nan,Item5,570.0,"I expressed anger at an employee when I was mad for another
-
-reason.",Abusive,expressed anger at an employee when was mad for another reason.
+40,Abusive Supervision,nan,Item5,570.0,"I expressed anger at an employee when I was mad for another reason.",Abusive,expressed anger at an employee when was mad for another reason.
 40,Abusive Supervision,nan,Item6,571.0,I made negative comments about an employee to others.,Abusive,made negative comments about an employee to others.
 40,Abusive Supervision,nan,Item7,572.0,I was rude to an employee.,Abusive,was rude to an employee.
 40,Abusive Supervision,nan,Item8,573.0,I told an employee that he/she is incompetent.,Abusive,told an employee that they is incompetent.
