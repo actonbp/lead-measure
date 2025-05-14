@@ -1,0 +1,26 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+## Experiment Pipeline Script Details
+
+[analyses/embedding_experiment_pipeline.py](mdc:analyses/embedding_experiment_pipeline.py) is the primary script for running and evaluating different embedding configurations.
+
+**Key Configuration Arguments:**
+
+*   `--data_path`: Path to the input CSV (e.g., [data/ipip.csv](mdc:data/ipip.csv)).
+*   `--embedding_config`: Specifies the embedding source. Format: `type:identifier`
+    *   Local models: `local:model_name` (e.g., `local:all-mpnet-base-v2`)
+    *   API models: `api:provider:model_name` (e.g., `api:openai:text-embedding-3-large`)
+*   `--loss_function`: Loss used for fine-tuning local models (e.g., `GISTEmbedLoss`, `MultipleNegativesRankingLoss`, `None`).
+*   `--evaluation_methods`: List of evaluations to perform (e.g., `1-NN`, `distance`).
+*   `--output_dir`: Where to save results (model checkpoints, metrics JSON).
+*   `--api_key_env`: Name of the environment variable holding the API key (default: `OPENAI_API_KEY`). API keys should be stored in a [.env](mdc:.env) file (which is gitignored).
+
+**Workflow:**
+1.  Loads and splits data.
+2.  Selects embedding strategy (local fine-tuning, local base, or API).
+3.  Generates embeddings for train/test sets.
+4.  Runs specified evaluations (e.g., 1-NN accuracy, distance analysis).
+5.  Saves configuration and metrics to a JSON file in the output directory.

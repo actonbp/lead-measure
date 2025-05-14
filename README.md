@@ -61,6 +61,52 @@ If leadership constructs don't separate items effectively, what does? The final 
 4. Run preprocessing: `python analyses/generate_leadership_datasets.py`
 5. Generate embeddings: `python analyses/generate_leadership_embeddings.py`
 
+## GIST Loss Training Approach
+
+We're using the GIST (Guided In-batch Similarity Training) loss approach to train our embedding model:
+
+1. First, we train a model on IPIP personality items to learn how personality constructs are structured
+2. Then, we apply this pretrained model to leadership items to see if it can effectively distinguish leadership constructs
+
+### Running the Scripts
+
+#### Step 1: Generate IPIP pairs
+```bash
+python scripts/build_ipip_pairs.py
+```
+This creates anchor-positive pairs from IPIP personality items for GIST loss training.
+
+#### Step 2: Train and evaluate IPIP model
+```bash
+python scripts/evaluate_ipip_model.py
+```
+This script:
+- Loads the IPIP dataset and splits it into train (80%) and test (20%) sets
+- Trains a GIST model on the train set
+- Evaluates how well the model clusters test set items by personality construct
+- Generates visualizations and metrics showing clustering quality
+
+#### Step 3: Train full IPIP model
+```bash
+python scripts/train_gist_ipip.py
+```
+This trains a model on all IPIP data using GIST loss for later application to leadership items.
+
+#### Step 4: Apply model to leadership items
+```bash
+python scripts/apply_gist_to_leadership.py
+```
+This script:
+- Applies the trained GIST model to leadership items
+- Clusters leadership items and evaluates if constructs are semantically distinct
+- Generates visualizations and metrics comparing predicted clusters to true constructs
+- Tests the hypothesis that leadership constructs have substantial semantic overlap
+
+### Hardware Requirements
+
+- Training requires at least 16GB RAM
+- GPU acceleration is recommended but not required
+
 ## Results and Implications
 
 The results of this analysis will have important implications for:
