@@ -117,6 +117,38 @@ Several directories contain large files that are not tracked in git:
 
 These directories are in `.gitignore` and should not be committed. When running the scripts, the required directories will be created automatically if they don't exist.
 
+## Setting Up on a New Computer
+
+Follow these steps to set up and run the project on a new machine:
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/actonbp/lead-measure.git
+   cd lead-measure
+   ```
+
+2. **Set up the Python environment**
+   ```bash
+   # Create a virtual environment
+   python -m venv leadmeasure_env
+   
+   # Activate the virtual environment
+   # On Windows:
+   leadmeasure_env\Scripts\activate
+   # On macOS/Linux:
+   source leadmeasure_env/bin/activate
+   
+   # Install dependencies
+   pip install -r requirements.txt
+   ```
+
+3. **Run the scripts in order** as described in the "Running the Scripts" section above:
+   - First generate IPIP pairs
+   - Then train and evaluate the model
+   - Finally apply to leadership items
+
+All necessary directories will be created automatically by the scripts.
+
 ## Results and Implications
 
 The results of this analysis will have important implications for:
