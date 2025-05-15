@@ -1,0 +1,63 @@
+Leadership Construct Evaluation Metrics
+=====================================
+
+Model: ipip_mnrl_20250515_1328
+Data Size: 434 items
+Number of Constructs: 11
+
+Clustering Quality Metrics:
+- Adjusted Rand Index: 0.0685
+- Normalized Mutual Information: 0.2170
+- Cluster Purity: 0.3825
+
+Cluster Distance Metrics:
+- Average Distance Between Clusters: 2.0647
+- Minimum Distance Between Clusters: 1.3519
+- Maximum Distance Between Clusters: 2.9175
+
+Construct Overlap Analysis:
+- Average Similarity Between Constructs: 0.7837
+- Highly Similar Construct Pairs (>0.8 similarity):
+  - Destructive & Ethical: 0.9476
+  - Instrumental & Transformational: 0.9346
+  - Charismatic & Transformational: 0.9231
+  - Consideration & Initiating Structure: 0.9194
+  - Charismatic & Consideration: 0.9075
+  - Ethical & Servant: 0.9067
+  - Ethical & Transformational: 0.9058
+  - Destructive & Transformational: 0.9054
+  - Destructive & Initiating Structure: 0.9053
+  - Ethical & Instrumental: 0.9049
+  - Consideration & Destructive: 0.9037
+  - Consideration & Transformational: 0.9029
+  - Servant & Transformational: 0.9028
+  - Charismatic & Ethical: 0.8971
+  - Consideration & Ethical: 0.8923
+  - Charismatic & Servant: 0.8911
+  - Charismatic & Instrumental: 0.8900
+  - Destructive & Instrumental: 0.8898
+  - Consideration & Servant: 0.8898
+  - Empowering & Servant: 0.8840
+  - Ethical & Initiating Structure: 0.8797
+  - Charismatic & Destructive: 0.8743
+  - Initiating Structure & Transformational: 0.8716
+  - Initiating Structure & Instrumental: 0.8695
+  - Destructive & Servant: 0.8604
+  - Empowering & Transformational: 0.8573
+  - Charismatic & Initiating Structure: 0.8572
+  - Charismatic & Empowering: 0.8480
+  - Empowering & Instrumental: 0.8464
+  - Instrumental & Servant: 0.8439
+  - Authentic & Consideration: 0.8403
+  - Authentic & Charismatic: 0.8352
+  - Consideration & Instrumental: 0.8303
+  - Empowering & Initiating Structure: 0.8216
+  - Initiating Structure & Servant: 0.8208
+  - Authentic & Transformational: 0.8158
+  - Authentic & Empowering: 0.8144
+  - Empowering & Ethical: 0.8128
+  - Destructive & Empowering: 0.8112
+  - Consideration & Empowering: 0.8027
+  - Authentic & Servant: 0.8005
+
+Generated on 2025-05-15 15:25

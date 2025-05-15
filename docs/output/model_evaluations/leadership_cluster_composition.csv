@@ -1,0 +1,12 @@
+ClusterID,Size,MostCommonConstruct,MostCommonCount,MostCommonPct,SecondCommonConstruct,SecondCommonCount,SecondCommonPct,ThirdCommonConstruct,ThirdCommonCount,ThirdCommonPct
+0,32,Servant,9,28.125,Charismatic,7,21.875,Ethical,6,18.75
+1,81,Transformational,22,27.160493827160494,Consideration,14,17.28395061728395,Ethical,12,14.814814814814815
+2,34,Servant,18,52.94117647058823,Empowering,8,23.529411764705884,Ethical,3,8.823529411764707
+3,42,Initiating Structure,16,38.095238095238095,Consideration,12,28.571428571428573,Destructive,5,11.904761904761905
+4,31,Ethical,9,29.032258064516128,Transformational,8,25.806451612903224,Instrumental,6,19.35483870967742
+5,55,Ethical,14,25.454545454545453,Transformational,11,20.0,Servant,10,18.181818181818183
+6,28,Transformational,16,57.142857142857146,Servant,5,17.857142857142858,Ethical,2,7.142857142857143
+7,26,Servant,10,38.46153846153846,Transformational,7,26.923076923076923,Ethical,4,15.384615384615385
+8,40,Transformational,25,62.5,Empowering,4,10.0,Charismatic,3,7.5
+9,28,Transformational,9,32.142857142857146,Ethical,9,32.142857142857146,Destructive,4,14.285714285714286
+10,37,Ethical,18,48.648648648648646,Servant,9,24.324324324324323,Abusive,8,21.62162162162162

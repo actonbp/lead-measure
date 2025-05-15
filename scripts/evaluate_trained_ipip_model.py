@@ -1,30 +1,68 @@
-"""Evaluate a pre-trained GIST model on IPIP personality items.
+"""Evaluate a pre-trained model on IPIP personality items.
 
 This script:
 1. Loads the IPIP dataset and prepares the test set.
-2. Loads a GIST model that was previously trained (e.g., by train_gist_ipip.py).
+2. Loads a model that was previously trained (by train_ipip_mnrl.py or similar).
 3. Evaluates how well the model clusters test set items by personality construct.
+4. Reports comprehensive metrics and visualizations for model performance.
 
 Usage:
-    python scripts/evaluate_trained_ipip_model.py
+    python scripts/evaluate_trained_ipip_model.py [--model_path PATH] [--output_dir DIR]
+
+Arguments:
+    --model_path: Path to the trained model directory
+    --output_dir: Directory to save evaluation results
 """
 import pandas as pd
 import numpy as np
 from pathlib import Path
-from sklearn.metrics import adjusted_rand_score, normalized_mutual_info_score
+from sklearn.metrics import adjusted_rand_score, normalized_mutual_info_score, silhouette_score
+from sklearn.metrics import confusion_matrix, classification_report
 from sklearn.cluster import KMeans
 from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
+import seaborn as sns
 from datasets import Dataset # Only Dataset is needed from datasets for test_ds
 import random
+import argparse
+import json
+import os
 from collections import Counter, defaultdict
+from datetime import datetime
 from sentence_transformers import SentenceTransformer
+
+# Parse command line arguments
+parser = argparse.ArgumentParser(description="Evaluate a trained model on IPIP test data")
+parser.add_argument("--model_path", type=str, default=None, 
+                    help="Path to the trained model directory")
+parser.add_argument("--output_dir", type=str, default=None,
+                    help="Directory to save evaluation results")
+args = parser.parse_args()
+
+# Find the most recent model if not specified
+if args.model_path is None:
+    model_dirs = list(Path("models").glob("ipip_*"))
+    if model_dirs:
+        # Sort by modification time (newest first)
+        model_dirs.sort(key=lambda x: os.path.getmtime(x), reverse=True)
+        args.model_path = str(model_dirs[0])
+        print(f"Using most recent model: {args.model_path}")
+    else:
+        args.model_path = "sentence-transformers/all-mpnet-base-v2"
+        print(f"No trained models found. Using pre-trained model: {args.model_path}")
+
+# Create output directory
+if args.output_dir is None:
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M')
+    model_name = Path(args.model_path).name
+    args.output_dir = f"data/visualizations/ipip_evaluation_{model_name}_{timestamp}"
+
+RESULTS_DIR = Path(args.output_dir)
+RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
 # Configuration
 IPIP_CSV = "data/IPIP.csv" # Source of IPIP items
-TRAINED_MODEL_PATH = "models/gist_ipip_snowflake_cosine_100_epochs/checkpoint-5900" # Path to the 100-epoch Snowflake model
-RESULTS_DIR = Path("data/visualizations/trained_ipip_snowflake_cosine_100_epochs") # New results dir for 100-epoch run
-RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+TRAINED_MODEL_PATH = args.model_path
 
 # Set random seed for reproducibility (important for consistent test set)
 random.seed(42)
@@ -67,63 +105,229 @@ def evaluate_clustering(model, test_dataset):
     kmeans = KMeans(n_clusters=n_clusters, random_state=42, n_init="auto")
     predicted_clusters = kmeans.fit_predict(embeddings)
     
+    # Basic clustering metrics
     ari = adjusted_rand_score(true_label_ids, predicted_clusters)
     nmi = normalized_mutual_info_score(true_label_ids, predicted_clusters)
+    
+    # Calculate silhouette score if we have enough data
+    sil_score = 0
+    if len(embeddings) > n_clusters * 2:  # Need at least 2 samples per cluster
+        try:
+            sil_score = silhouette_score(embeddings, predicted_clusters)
+        except Exception as e:
+            print(f"Could not calculate silhouette score: {e}")
     
     print(f"Clustering metrics:")
     print(f"- Adjusted Rand Index: {ari:.4f}")
     print(f"- Normalized Mutual Information: {nmi:.4f}")
+    print(f"- Silhouette Score: {sil_score:.4f}")
     
+    # Calculate cluster homogeneity (purity)
     cluster_to_true_labels = defaultdict(list)
     for i, cluster_id in enumerate(predicted_clusters):
         cluster_to_true_labels[cluster_id].append(true_label_ids[i])
     
     purity = 0
-    for cluster_id, labels_in_cluster in cluster_to_true_labels.items(): # Renamed 'labels' to 'labels_in_cluster'
-        if not labels_in_cluster: continue # Should not happen with K-Means if all points assigned
-        most_common_label_in_cluster = Counter(labels_in_cluster).most_common(1)[0][0] # Renamed
-        correct_assignments = sum(1 for label in labels_in_cluster if label == most_common_label_in_cluster)
+    cluster_homogeneity = {}
+    for cluster_id, labels_in_cluster in cluster_to_true_labels.items():
+        if not labels_in_cluster: continue
+        label_counts = Counter(labels_in_cluster)
+        most_common_label = label_counts.most_common(1)[0][0]
+        correct_assignments = label_counts[most_common_label]
+        cluster_homogeneity[cluster_id] = correct_assignments / len(labels_in_cluster)
         purity += correct_assignments
     
     purity /= len(true_label_ids)
+    avg_homogeneity = sum(cluster_homogeneity.values()) / len(cluster_homogeneity)
     print(f"- Cluster Purity: {purity:.4f}")
+    print(f"- Average Cluster Homogeneity: {avg_homogeneity:.4f}")
     
+    # Calculate construct-to-cluster mapping
+    construct_to_cluster = {}
+    for label in unique_labels:
+        label_id = label_to_id[label]
+        label_indices = [i for i, l in enumerate(true_label_ids) if l == label_id]
+        cluster_assignments = [predicted_clusters[i] for i in label_indices]
+        most_common_cluster = Counter(cluster_assignments).most_common(1)[0][0]
+        construct_to_cluster[label] = most_common_cluster
+    
+    # Generate confusion matrix to visualize clustering quality
+    cm = confusion_matrix(true_label_ids, predicted_clusters)
+    
+    # Normalize by row (true labels)
+    cm_normalized = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
+    
+    plt.figure(figsize=(12, 10))
+    # If too many classes, limit what we show in the confusion matrix
+    if n_clusters > 20:
+        # Find most populated classes
+        label_counts = Counter(true_label_ids)
+        top_labels = [label for label, _ in label_counts.most_common(20)]
+        
+        # Only show top 20 in the confusion matrix
+        top_indices = [idx for idx, label in enumerate(range(n_clusters)) if label in top_labels]
+        cm_subset = cm_normalized[top_indices, :][:, top_indices]
+        
+        # Get label names for the top classes
+        top_label_names = [unique_labels[i] for i in top_indices]
+        
+        # Create heatmap
+        sns.heatmap(cm_subset, annot=False, cmap='Blues', 
+                    xticklabels=top_label_names, 
+                    yticklabels=top_label_names)
+        plt.title(f"Confusion Matrix (Top 20 Constructs) - {Path(TRAINED_MODEL_PATH).name}")
+    else:
+        # Show all classes
+        sns.heatmap(cm_normalized, annot=False, cmap='Blues', 
+                    xticklabels=unique_labels, 
+                    yticklabels=unique_labels)
+        plt.title(f"Confusion Matrix - {Path(TRAINED_MODEL_PATH).name}")
+    
+    plt.ylabel('True Construct')
+    plt.xlabel('Predicted Cluster')
+    plt.tight_layout()
+    plt.savefig(RESULTS_DIR / "confusion_matrix.png", dpi=300)
+    plt.close()
+    
+    # Calculate inter-cluster distances
+    centroids = kmeans.cluster_centers_
+    inter_cluster_distances = {}
+    for i in range(n_clusters):
+        for j in range(i+1, n_clusters):
+            distance = np.linalg.norm(centroids[i] - centroids[j])
+            inter_cluster_distances[(i, j)] = distance
+    
+    # Find the closest and furthest clusters
+    if inter_cluster_distances:
+        min_dist_pair = min(inter_cluster_distances.items(), key=lambda x: x[1])
+        max_dist_pair = max(inter_cluster_distances.items(), key=lambda x: x[1])
+        avg_dist = sum(inter_cluster_distances.values()) / len(inter_cluster_distances)
+        
+        print(f"Inter-cluster distances:")
+        print(f"- Average: {avg_dist:.4f}")
+        print(f"- Minimum: {min_dist_pair[1]:.4f} (between clusters {min_dist_pair[0][0]} and {min_dist_pair[0][1]})")
+        print(f"- Maximum: {max_dist_pair[1]:.4f} (between clusters {max_dist_pair[0][0]} and {max_dist_pair[0][1]})")
+    
+    # Generate t-SNE visualization
     try:
-        print("Generating t-SNE visualization (skip with Ctrl+C if memory is limited)...")
-        tsne = TSNE(n_components=2, random_state=42, perplexity=min(30, len(embeddings)-1)) # Adjust perplexity
-        embedded_tsne = tsne.fit_transform(embeddings) # Renamed 'embedded' to 'embedded_tsne'
+        print("Generating t-SNE visualization...")
+        tsne = TSNE(n_components=2, random_state=42, perplexity=min(30, len(embeddings)-1))
+        embedded_tsne = tsne.fit_transform(embeddings)
         
+        # True labels plot
         plt.figure(figsize=(12, 10))
-        unique_label_subset = unique_labels[:20] if len(unique_labels) > 20 else unique_labels
-        for i, label_val in enumerate(unique_label_subset): # Renamed 'label' to 'label_val'
-            idx = [j for j, l_val in enumerate(true_labels) if l_val == label_val] # Renamed 'l' to 'l_val'
-            plt.scatter(embedded_tsne[idx, 0], embedded_tsne[idx, 1], label=label_val, alpha=0.6, s=20)
+        # Select top constructs by frequency if too many
+        if len(unique_labels) > 20:
+            label_counts = Counter(true_labels)
+            top_labels = [label for label, _ in label_counts.most_common(20)]
+            
+            # Plot top labels
+            for label in top_labels:
+                idx = [j for j, l in enumerate(true_labels) if l == label]
+                plt.scatter(embedded_tsne[idx, 0], embedded_tsne[idx, 1], label=label, alpha=0.6, s=20)
+            
+            # Plot other labels in gray
+            other_idx = [j for j, l in enumerate(true_labels) if l not in top_labels]
+            plt.scatter(embedded_tsne[other_idx, 0], embedded_tsne[other_idx, 1], 
+                      color='gray', alpha=0.3, s=10, label='Other')
+        else:
+            # Plot all labels
+            for label in unique_labels:
+                idx = [j for j, l in enumerate(true_labels) if l == label]
+                plt.scatter(embedded_tsne[idx, 0], embedded_tsne[idx, 1], label=label, alpha=0.6, s=20)
         
-        if len(unique_label_subset) <= 20:
-            plt.legend(fontsize=8, markerscale=2)
+        if len(unique_labels) <= 20:
+            plt.legend(fontsize=8, markerscale=2, bbox_to_anchor=(1.05, 1), loc='upper left')
         plt.title(f"t-SNE of IPIP Items (True Labels) - Model: {Path(TRAINED_MODEL_PATH).name}")
         plt.tight_layout()
-        plt.savefig(RESULTS_DIR / "trained_ipip_tsne_true_labels.png", dpi=300)
-        plt.close() # Close plot to free memory
+        plt.savefig(RESULTS_DIR / "tsne_true_labels.png", dpi=300)
+        plt.close()
 
+        # Predicted clusters plot
         plt.figure(figsize=(12, 10))
-        # Ensure predicted_clusters is a list/array for consistent iteration
-        cluster_ids_to_plot = sorted(list(set(predicted_clusters)))[:20] if n_clusters > 20 else sorted(list(set(predicted_clusters)))
-
-        for cluster_id_val in cluster_ids_to_plot: # Renamed 'cluster_id' to 'cluster_id_val'
-            idx = [i for i, c_val in enumerate(predicted_clusters) if c_val == cluster_id_val] # Renamed 'c' to 'c_val'
-            plt.scatter(embedded_tsne[idx, 0], embedded_tsne[idx, 1], label=f"Cluster {cluster_id_val}", alpha=0.6, s=20)
+        for cluster_id in range(min(20, n_clusters)):
+            idx = [i for i, c in enumerate(predicted_clusters) if c == cluster_id]
+            plt.scatter(embedded_tsne[idx, 0], embedded_tsne[idx, 1], 
+                      label=f"Cluster {cluster_id}", alpha=0.6, s=20)
         
-        if n_clusters <= 20:
-            plt.legend(fontsize=8, markerscale=2)
+        plt.legend(fontsize=8, markerscale=2, bbox_to_anchor=(1.05, 1), loc='upper left')
         plt.title(f"t-SNE of IPIP Items (Predicted Clusters) - Model: {Path(TRAINED_MODEL_PATH).name}")
         plt.tight_layout()
-        plt.savefig(RESULTS_DIR / "trained_ipip_tsne_predicted_clusters.png", dpi=300)
-        plt.close() # Close plot
-    except (KeyboardInterrupt, MemoryError, ValueError) as e: # Added ValueError for perplexity issues
-        print(f"Skipping visualizations: {str(e)}")
+        plt.savefig(RESULTS_DIR / "tsne_predicted_clusters.png", dpi=300)
+        plt.close()
+        
+        # Combined visualization with both true and predicted clusters
+        plt.figure(figsize=(14, 12))
+        
+        # Create a mapping from true label to a color
+        cmap = plt.cm.get_cmap('tab20', len(unique_labels))
+        label_to_color = {label_id: cmap(i) for i, label_id in enumerate(range(len(unique_labels)))}
+        
+        # Plot each point
+        for i in range(len(embedded_tsne)):
+            true_label = true_label_ids[i]
+            color = label_to_color[true_label]
+            cluster_id = predicted_clusters[i]
+            
+            # Mark correctly clustered points with a special marker
+            correct_cluster = (construct_to_cluster.get(true_labels[i]) == cluster_id)
+            
+            plt.scatter(embedded_tsne[i, 0], embedded_tsne[i, 1], 
+                      color=color, alpha=0.7, s=40,
+                      edgecolors='black' if correct_cluster else 'red')
+        
+        plt.title(f"t-SNE of IPIP Items (Combined View) - Model: {Path(TRAINED_MODEL_PATH).name}")
+        plt.tight_layout()
+        plt.savefig(RESULTS_DIR / "tsne_combined.png", dpi=300)
+        plt.close()
+    except Exception as e:
+        print(f"Error generating visualizations: {str(e)}")
     
-    return {"ari": ari, "nmi": nmi, "purity": purity}
+    # Save the cluster composition for analysis
+    cluster_composition = []
+    for cluster_id in sorted(set(predicted_clusters)):
+        # Get indices of items in this cluster
+        cluster_indices = [i for i, c in enumerate(predicted_clusters) if c == cluster_id]
+        
+        # Get constructs for these items
+        cluster_constructs = [true_labels[i] for i in cluster_indices]
+        
+        # Count constructs in this cluster
+        construct_counts = Counter(cluster_constructs)
+        
+        # Get top constructs
+        top_constructs = construct_counts.most_common(3)
+        
+        # Calculate homogeneity
+        homogeneity = cluster_homogeneity.get(cluster_id, 0)
+        
+        # Create analysis entry
+        analysis_entry = {
+            "cluster_id": cluster_id,
+            "size": len(cluster_indices),
+            "homogeneity": homogeneity,
+            "most_common_construct": top_constructs[0][0] if top_constructs else "None",
+            "most_common_count": top_constructs[0][1] if top_constructs else 0,
+            "most_common_pct": (top_constructs[0][1] / len(cluster_indices) * 100) if top_constructs else 0,
+            "second_common_construct": top_constructs[1][0] if len(top_constructs) > 1 else "None",
+            "second_common_count": top_constructs[1][1] if len(top_constructs) > 1 else 0,
+            "second_common_pct": (top_constructs[1][1] / len(cluster_indices) * 100) if len(top_constructs) > 1 else 0,
+        }
+        
+        cluster_composition.append(analysis_entry)
+    
+    # Save cluster composition to CSV
+    composition_df = pd.DataFrame(cluster_composition)
+    composition_df.to_csv(RESULTS_DIR / "cluster_composition.csv", index=False)
+    
+    return {
+        "ari": ari, 
+        "nmi": nmi, 
+        "purity": purity,
+        "silhouette": sil_score,
+        "avg_homogeneity": avg_homogeneity,
+        "inter_cluster_distances": inter_cluster_distances
+    }
 
 def main():
     """Main function to load trained model and run evaluation."""
@@ -139,13 +343,53 @@ def main():
     metrics = evaluate_clustering(model, test_dataset)
     
     # Save metrics to file
-    metrics_file = RESULTS_DIR / "trained_ipip_evaluation_metrics.txt"
+    metrics_file = RESULTS_DIR / "evaluation_metrics.txt"
     with open(metrics_file, "w") as f:
-        f.write(f"Trained IPIP Model Evaluation Metrics (Model: {TRAINED_MODEL_PATH})\n")
-        f.write("===============================================================\n")
-        for key, value in metrics.items():
-            f.write(f"- {key.replace('_', ' ').capitalize()}: {value:.4f}\n")
+        model_name = Path(TRAINED_MODEL_PATH).name
+        f.write(f"IPIP Model Evaluation Metrics\n")
+        f.write("=========================\n\n")
+        f.write(f"Model: {model_name}\n")
+        f.write(f"Test Set Size: {len(test_dataset)} items\n")
+        f.write(f"Number of Constructs: {test_dataset['label'].nunique()}\n\n")
+        
+        f.write("Clustering Quality Metrics:\n")
+        f.write(f"- Adjusted Rand Index: {metrics['ari']:.4f}\n")
+        f.write(f"- Normalized Mutual Information: {metrics['nmi']:.4f}\n")
+        f.write(f"- Cluster Purity: {metrics['purity']:.4f}\n")
+        f.write(f"- Silhouette Score: {metrics['silhouette']:.4f}\n")
+        f.write(f"- Average Cluster Homogeneity: {metrics['avg_homogeneity']:.4f}\n\n")
+        
+        if 'inter_cluster_distances' in metrics and metrics['inter_cluster_distances']:
+            distances = list(metrics['inter_cluster_distances'].values())
+            avg_dist = sum(distances) / len(distances)
+            min_dist = min(distances)
+            max_dist = max(distances)
+            
+            f.write("Cluster Distance Metrics:\n")
+            f.write(f"- Average Distance Between Clusters: {avg_dist:.4f}\n")
+            f.write(f"- Minimum Distance Between Clusters: {min_dist:.4f}\n")
+            f.write(f"- Maximum Distance Between Clusters: {max_dist:.4f}\n\n")
+        
+        f.write(f"Generated on {datetime.now().strftime('%Y-%m-%d %H:%M')}\n")
+    
     print(f"Metrics saved to {metrics_file}")
+    
+    # Save configuration info
+    if Path(TRAINED_MODEL_PATH).is_dir() and (Path(TRAINED_MODEL_PATH) / "training_config.json").exists():
+        try:
+            with open(Path(TRAINED_MODEL_PATH) / "training_config.json", 'r') as f:
+                config = json.load(f)
+            
+            # Copy the training config to the results directory
+            with open(RESULTS_DIR / "training_config.json", 'w') as f:
+                json.dump(config, f, indent=2)
+            
+            print(f"Training configuration copied to results directory")
+        except Exception as e:
+            print(f"Could not load training configuration: {e}")
+    
+    print(f"\nEvaluation complete! Results saved to {RESULTS_DIR}")
+    return metrics
 
 if __name__ == "__main__":
     main() 
