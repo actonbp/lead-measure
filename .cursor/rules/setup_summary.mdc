@@ -1,5 +1,45 @@
 ---
-description:
+description: Project Setup Status and Environment Requirements (June 2025)
 globs:
-alwaysApply: false
+alwaysApply: true
 ---
+
+# PROJECT SETUP STATUS (June 2025)
+
+## Environment Status:
+✅ **Virtual Environment**: `leadmeasure_env/` configured with all dependencies
+✅ **Ivan's Scripts**: Complete implementation in `scripts/ivan_analysis/`
+✅ **Data Ready**: IPIP pairs generated and preprocessed
+✅ **Step 1 Complete**: 41,723 randomized pairs ready for training
+
+## Quick Environment Check:
+```bash
+# Activate environment
+source leadmeasure_env/bin/activate
+
+# Verify setup
+python scripts/ivan_analysis/run_analysis_steps.py --check
+```
+
+## Hardware Requirements:
+- **Minimum**: 8GB RAM, any GPU
+- **Recommended**: 16GB RAM, 16GB+ GPU memory for full performance
+- **Current Issue**: Training requires more GPU memory than available
+
+## Directory Structure:
+```
+scripts/ivan_analysis/
+├── build_pairs_randomized.py    ✅ COMPLETE
+├── train_with_tsdae.py          ⏳ READY (needs bigger GPU)
+├── visualize_and_analyze.py     ⏳ READY
+├── run_analysis_steps.py        ✅ COMPLETE
+├── SETUP.md                     ✅ COMPLETE
+└── requirements.txt             ✅ COMPLETE
+```
+
+## Key Files Generated:
+- `data/processed/ipip_pairs_randomized.jsonl` (41,723 pairs)
+- Status tracking in `scripts/ivan_analysis/.analysis_status.json`
+
+## Ready to Execute:
+All infrastructure is in place. Just need sufficient GPU memory to complete Step 2 training.

@@ -58,13 +58,33 @@ If leadership constructs don't separate items effectively, what does? The final 
 - `docs/`: Documentation and reports
 - `scripts/`: Utility scripts
 
-## Getting Started
+## 🚀 Getting Started - Ivan's Enhanced Analysis (June 2025)
 
-1. Clone this repository
-2. Install dependencies: `pip install -r requirements.txt`
-3. Create a `.env` file with any required API keys
-4. Run preprocessing: `python analyses/generate_leadership_datasets.py`
-5. Generate embeddings: `python analyses/generate_leadership_embeddings.py`
+### Current Status:
+- ✅ **Step 1 COMPLETED**: 41,723 randomized pairs generated
+- ❌ **Step 2 FAILED**: Training needs machine with 16GB+ GPU memory
+- ⏭️ **READY TO CONTINUE**: All setup complete, environment ready
+
+### Quick Start on New Machine:
+```bash
+# 1. Activate environment
+source leadmeasure_env/bin/activate
+
+# 2. Check setup
+python scripts/ivan_analysis/run_analysis_steps.py --check
+
+# 3. Run the critical training step
+make ivan-step2
+
+# 4. Complete analysis
+make ivan-step3
+make ivan-step4
+```
+
+### Expected Results:
+- **99.43%** construct separation accuracy (vs 81.66% baseline)
+- **Cohen's d = 2.487** (massive effect size)
+- Clear t-SNE visualizations showing construct relationships
 
 ## GIST Loss Training Approach
 

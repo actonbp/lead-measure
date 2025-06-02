@@ -1,5 +1,38 @@
 ---
-description:
+description: Ivan's Enhanced Analysis - Next Steps (June 2025)
 globs:
-alwaysApply: false
+alwaysApply: true
 ---
+
+# IVAN'S ENHANCED ANALYSIS - NEXT STEPS
+
+## What Ivan's Approach Achieves:
+- **99.43%** accuracy in construct separation (vs 81.66% baseline)
+- **Cohen's d = 2.487** (massive effect size)
+- Triple randomization eliminates ordering bias
+- TSDAE pre-training for domain adaptation
+- BGE-M3 model optimized for clustering
+
+## Current State:
+- Step 1 ✅ DONE: 41,723 randomized pairs generated
+- Step 2 ❌ FAILED: Training needs bigger GPU (16GB+)
+- Steps 3-4 ⏳ WAITING: Analysis and comparison ready
+
+## Immediate Commands:
+```bash
+# Quick status check
+python scripts/ivan_analysis/run_analysis_steps.py --status
+
+# Run the failed training step
+python scripts/ivan_analysis/run_analysis_steps.py --step 2
+
+# Or use Make commands
+make ivan-step2
+make ivan-step3  
+make ivan-step4
+```
+
+## After Completion:
+1. Apply enhanced model to leadership data
+2. Compare results with previous findings
+3. Generate comprehensive report with improved confidence

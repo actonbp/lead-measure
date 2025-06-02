@@ -1,0 +1,60 @@
+---
+description: Current project status and immediate next steps (June 2025)
+globs:
+alwaysApply: true
+---
+
+# CRITICAL STATUS UPDATE (June 2, 2025)
+
+## 🎯 IMMEDIATE NEXT ACTION FOR AI AGENT
+
+**PRIORITY**: Run Ivan's enhanced analysis on machine with sufficient GPU memory (16GB+ recommended)
+
+### Current Status:
+- ✅ **Step 1 COMPLETED**: Generated 41,723 randomized pairs (`data/processed/ipip_pairs_randomized.jsonl`)
+- ❌ **Step 2 FAILED**: Training stopped due to GPU memory limitations on current machine
+- ⏭️ **READY TO CONTINUE**: All setup complete, just need bigger GPU
+
+### Commands to Execute:
+
+**Option A - Step by Step (RECOMMENDED):**
+```bash
+# 1. Check environment
+source leadmeasure_env/bin/activate
+python scripts/ivan_analysis/run_analysis_steps.py --check
+
+# 2. Run the critical training step (the one that failed)
+python scripts/ivan_analysis/run_analysis_steps.py --step 2
+
+# 3. Complete analysis
+python scripts/ivan_analysis/run_analysis_steps.py --step 3
+python scripts/ivan_analysis/run_analysis_steps.py --step 4
+```
+
+**Option B - Make Commands:**
+```bash
+make ivan-check
+make ivan-step2    # The critical step that failed
+make ivan-step3
+make ivan-step4
+```
+
+**Option C - Complete Workflow:**
+```bash
+./scripts/run_ivan_analysis.sh
+```
+
+### Expected Results:
+- **99.43%** probability of correct same-construct ranking (vs 81.66% baseline)
+- **Cohen's d = 2.487** (massive effect size)
+- Clear t-SNE visualizations showing construct separation
+
+### Key Files Ready:
+- `scripts/ivan_analysis/` - Complete implementation ready to run
+- `scripts/ivan_analysis/SETUP.md` - Detailed setup instructions
+- `scripts/ivan_analysis/run_analysis_steps.py` - Step-by-step runner with validation
+- `Makefile` - Simple commands for execution
+
+### Hardware Requirements:
+- 16GB+ GPU memory for full batch sizes (96)
+- Or modify `scripts/ivan_analysis/train_with_tsdae.py` to reduce batch sizes further

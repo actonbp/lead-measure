@@ -4,18 +4,18 @@ This directory contains the current scripts for the leadership embedding analysi
 
 ## Primary Workflow
 
-The recommended workflow is to run the automated script:
+The recommended workflow is to run the refined automated script:
 
 ```bash
-chmod +x run_improved_workflow.sh
-./run_improved_workflow.sh
+chmod +x run_refined_workflow.sh
+./run_refined_workflow.sh
 ```
 
 This will execute all steps in sequence:
-1. Generate comprehensive balanced pairs
-2. Train with MultipleNegativesRankingLoss
-3. Compare different models' performance
-4. Apply the best model to leadership data
+1. Generate comprehensive balanced pairs with randomized positions
+2. Train with BGE-M3 model, TSDAE pre-training, and GIST loss
+3. Evaluate with comprehensive validation metrics
+4. Apply model to leadership constructs with detailed analysis
 
 ## Individual Scripts
 

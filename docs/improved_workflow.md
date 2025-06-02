@@ -1,6 +1,6 @@
 # Improved Leadership Embedding Analysis Workflow (May 2025)
 
-*Last Updated: May 15, 2025*
+*Last Updated: May 20, 2025*
 
 This document outlines the improved methodology for analyzing leadership measurement constructs using natural language processing and embedding techniques. These improvements address the performance bottlenecks identified in our initial approach.
 
@@ -10,90 +10,116 @@ Our analysis identified that the main bottlenecks in model performance were rela
 
 1. **Data Quality & Quantity**: Limited number of pairs for training
 2. **Training Signal**: Imbalanced representation of constructs
-3. **Loss Function**: GISTEmbedLoss may not be optimal for our dataset size
+3. **Model Selection**: Previous models were not optimized for clustering tasks
+4. **Pre-training Approach**: No domain adaptation for specialized text
 
 The improved workflow addresses these issues with:
 
-1. **Comprehensive Pair Generation**: Generate all possible within-construct pairs rather than just one per item
+1. **Comprehensive Pair Generation**: Generate all possible within-construct pairs with randomized positions
 2. **Balanced Training Data**: Rebalancing strategies to prevent over/under-representation of constructs
-3. **Alternative Loss Functions**: Using MultipleNegativesRankingLoss which works better with limited data
+3. **Optimized Model Selection**: Using `BAAI/bge-m3`, a model specifically optimized for clustering
+4. **TSDAE Pre-training**: Implementing denoising autoencoder pre-training for domain adaptation
+5. **Improved Training Efficiency**: 
+   - Larger batch sizes for GISTEmbedLoss
+   - FP16 mixed precision training
+   - Multi-phase incremental training
 
 ## Workflow Overview
 
-The complete workflow is automated in `scripts/run_improved_workflow.sh` and consists of these steps:
+The complete workflow is automated in `scripts/run_refined_workflow.sh` and consists of these steps:
 
-1. **Generate comprehensive anchor-positive pairs**
+1. **Generate comprehensive anchor-positive pairs with randomized positions**
    - Script: `build_ipip_pairs_improved.py`
    - Generates all possible within-construct pairs from IPIP items
+   - Randomizes the position of anchor and positive items
    - Implements rebalancing to ensure fair representation across constructs
    - Output: `data/processed/ipip_pairs_comprehensive.jsonl`
 
-2. **Train model with MultipleNegativesRankingLoss**
+2. **Train model with BGE-M3, TSDAE and GISTEmbedLoss**
    - Script: `train_ipip_mnrl.py`
-   - Uses the comprehensive pairs dataset
-   - Applies MultipleNegativesRankingLoss for more effective training with limited data
-   - Output: `models/ipip_mnrl/`
+   - Performs TSDAE pre-training for domain adaptation
+   - Uses the `BAAI/bge-m3` model optimized for clustering
+   - Applies GISTEmbedLoss with large batch sizes for more effective training
+   - Implements multi-phase training with fp16 precision
+   - Output: `models/ipip_gist_*/`
 
-3. **Compare model performance** 
-   - Script: `compare_model_performance.py`
-   - Evaluates and compares different models on both IPIP and leadership data
+3. **Evaluate model with comprehensive metrics** 
+   - Script: `evaluate_model_with_validation.py`
+   - Performs k-fold cross-validation for robust metrics
    - Calculates clustering metrics (ARI, NMI, purity)
-   - Outputs: Comparison metrics and visualizations
+   - Generates t-SNE visualizations and confusion matrices
+   - Outputs: Comprehensive evaluation metrics and visualizations
 
-4. **Apply best model to leadership data**
-   - Script: `apply_best_model_to_leadership.py`
-   - Automatically selects the best performing model based on IPIP ARI score
-   - Applies that model to leadership items
+4. **Apply model to leadership data**
+   - Script: `evaluate_mnrl_on_leadership.py`
+   - Applies the trained model to leadership items
    - Generates visualizations and analysis of leadership construct clustering
+   - Outputs: Leadership evaluation metrics and visualizations
 
-## Running the Improved Workflow
+5. **Compare embedding similarities**
+   - Scripts: `evaluate_model_with_validation.py`
+   - Analyzes the similarity of embeddings within vs. across constructs
+   - Performs statistical tests (paired t-test, Cohen's d)
+   - Calculates the probability of same-construct items having higher similarity
+   - Outputs: Similarity analysis reports and visualizations
 
-Simply run:
+## Running the Refined Workflow
+
+To execute the complete refined workflow:
 
 ```bash
-chmod +x scripts/run_improved_workflow.sh
-./scripts/run_improved_workflow.sh
+chmod +x scripts/run_refined_workflow.sh
+./scripts/run_refined_workflow.sh
 ```
 
 ## Key Scripts
 
-### 1. Comprehensive Pair Generation (`build_ipip_pairs_improved.py`)
+### 1. Comprehensive Pair Generation with Randomization (`build_ipip_pairs_improved.py`)
 
 This script addresses data quality by:
 - Generating all possible within-construct pairs instead of just one per item
+- Randomizing the position of anchor and positive items for better training
 - Implementing rebalancing strategies to prevent construct over/under-representation
 - Supporting different rebalancing methods:
   - `sampling`: Targets a balanced number of pairs per construct
   - `cap`: Simple cap on pairs per construct
   - `both`: Combined approach
 
-### 2. Alternative Loss Function Training (`train_ipip_mnrl.py`)
+### 2. Advanced Training with TSDAE Pre-training (`train_ipip_mnrl.py`)
 
-This script improves training by:
-- Using `MultipleNegativesRankingLoss` instead of `GISTEmbedLoss`
-- Each positive pair in a batch implicitly uses all other sentences as negatives
-- Enables more efficient use of batch data for stronger training signal
-- Works better with smaller datasets by maximizing the contrastive signal
+This script implements our new training approach:
+- Uses `BAAI/bge-m3` model specifically designed for clustering tasks
+- Performs TSDAE pre-training for domain adaptation before fine-tuning
+- Supports `GISTEmbedLoss` with configurable guide models
+- Implements multi-phase training with incremental epochs for better optimization
+- Larger batch sizes (96 vs. 32 previously) for more effective training
+- FP16 mixed precision training for memory efficiency and faster training
 
-### 3. Model Comparison (`compare_model_performance.py`)
+### 3. Comprehensive Evaluation (`evaluate_model_with_validation.py`)
 
-This script evaluates different approaches by:
-- Comparing multiple models on both IPIP and leadership data
-- Calculating clustering metrics (ARI, NMI, purity) for each approach
-- Generating visualizations to illustrate performance differences
-- Providing quantitative evidence for which approach works best
+This script provides rigorous model evaluation:
+- Performs k-fold cross-validation for more reliable metrics
+- Tests multiple clustering algorithms for robustness
+- Generates t-SNE visualizations for better interpretability
+- Creates detailed confusion matrices for cluster analysis
+- Calculates metrics like ARI, NMI, and purity
+- Analyzes embedding similarity within and across constructs
+- Performs statistical significance testing for similarity differences
 
-### 4. Best Model Application (`apply_best_model_to_leadership.py`)
+### 4. Leadership Construct Analysis (`evaluate_mnrl_on_leadership.py`)
 
 This script tests our research hypothesis by:
-- Automatically selecting the best-performing model on IPIP data
-- Applying it to leadership items
-- Calculating metrics that indicate whether leadership constructs form distinct clusters
-- Generating visualizations and detailed analysis
+- Applying the trained model to leadership items
+- Clustering leadership items and evaluating semantic distinctiveness
+- Generating visualizations showing relationships between leadership constructs
+- Calculating similarity metrics between leadership constructs
+- Creating detailed reports on construct overlap and cluster composition
 
 ## Evaluation Metrics
 
-To evaluate how well our models separate constructs, we use:
+We use multiple metrics to evaluate model performance:
+
+### Clustering Metrics
 
 - **Adjusted Rand Index (ARI)**: Measures how well the clustering matches the true labels
   - Perfect match = 1.0
@@ -106,10 +132,28 @@ To evaluate how well our models separate constructs, we use:
 - **Cluster Purity**: For each cluster, what fraction belongs to the most common construct
   - Higher values indicate more homogeneous clusters
 
+### Similarity Analysis Metrics
+
+- **Same vs. Different Construct Similarity**: Compare cosine similarity within and across constructs
+  - Higher within-construct similarity indicates better embedding quality
+
+- **Paired t-test**: Tests if the difference between same-construct and different-construct similarities is statistically significant
+  - Lower p-values indicate more confident results
+
+- **Cohen's d**: Effect size measurement for the similarity difference
+  - d > 0.8: Large effect
+  - d > 0.5: Medium effect
+  - d > 0.2: Small effect
+
+- **Probability(same > diff)**: The probability that a same-construct pair has higher similarity than a different-construct pair
+  - Values closer to 100% indicate better construct separation
+
 ## Expected Results
 
 If our hypothesis is correct:
 - IPIP personality constructs should form relatively distinct clusters (higher metrics)
-- Leadership constructs will show substantial overlap (lower metrics)
+- IPIP constructs should show statistically significant higher within-construct similarity
+- Leadership constructs will show substantial overlap (lower clustering metrics)
+- Leadership constructs will show less differentiation in similarity analysis
 
-This approach provides a more robust test of construct distinctiveness than our previous method. 
+The refined approach with TSDAE pre-training, the BGE-M3 model, and improved training procedures should provide a more robust and powerful test of construct distinctiveness than our previous methods. 
