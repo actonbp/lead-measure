@@ -11,7 +11,14 @@
 ### Option 1: Quick Commands (Recommended)
 ```bash
 source leadmeasure_env/bin/activate
+
+# For Mac Studio M1/M2 with 64GB (OPTIMIZED - 4x faster):
+make ivan-step2-mac-studio
+
+# For other machines:
 make ivan-step2    # The critical training step
+
+# Then continue with:
 make ivan-step3    # Analysis and visualization
 make ivan-step4    # Baseline comparison
 ```

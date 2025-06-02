@@ -13,13 +13,14 @@ help:
 	@echo "  make ivan-setup     - Set up Ivan's analysis environment"
 	@echo ""
 	@echo "Ivan's Analysis Commands:"
-	@echo "  make ivan-check     - Check environment for Ivan's analysis"
-	@echo "  make ivan-step1     - Generate randomized pairs"
-	@echo "  make ivan-step2     - Train model (TSDAE + GIST)"
-	@echo "  make ivan-step3     - Analyze IPIP embeddings"
-	@echo "  make ivan-step4     - Compare with baseline"
-	@echo "  make ivan-all       - Run complete Ivan pipeline"
-	@echo "  make ivan-clean     - Clean Ivan's analysis status"
+	@echo "  make ivan-check           - Check environment for Ivan's analysis"
+	@echo "  make ivan-step1           - Generate randomized pairs"
+	@echo "  make ivan-step2           - Train model (TSDAE + GIST)"
+	@echo "  make ivan-step2-mac-studio - Train optimized for Mac Studio M1/M2 64GB"
+	@echo "  make ivan-step3           - Analyze IPIP embeddings"
+	@echo "  make ivan-step4           - Compare with baseline"
+	@echo "  make ivan-all             - Run complete Ivan pipeline"
+	@echo "  make ivan-clean           - Clean Ivan's analysis status"
 	@echo ""
 	@echo "Utility Commands:"
 	@echo "  make clean          - Clean temporary files and caches"
@@ -55,6 +56,10 @@ ivan-step1:
 ivan-step2:
 	@echo "Running Step 2: Train model (this will take time)..."
 	python scripts/ivan_analysis/run_analysis_steps.py --step 2
+
+ivan-step2-mac-studio:
+	@echo "Running Step 2 optimized for Mac Studio M1/M2 64GB..."
+	python scripts/ivan_analysis/train_with_tsdae_mac_studio.py
 
 ivan-step3:
 	@echo "Running Step 3: Analyze IPIP embeddings..."

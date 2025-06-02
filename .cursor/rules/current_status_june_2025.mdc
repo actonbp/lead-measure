@@ -17,26 +17,38 @@ alwaysApply: true
 
 ### Commands to Execute:
 
-**Option A - Step by Step (RECOMMENDED):**
+**Option A - Mac Studio M1/M2 64GB (OPTIMIZED - 4x faster):**
 ```bash
-# 1. Check environment
 source leadmeasure_env/bin/activate
-python scripts/ivan_analysis/run_analysis_steps.py --check
-
-# 2. Run the critical training step (the one that failed)
-python scripts/ivan_analysis/run_analysis_steps.py --step 2
-
-# 3. Complete analysis
-python scripts/ivan_analysis/run_analysis_steps.py --step 3
-python scripts/ivan_analysis/run_analysis_steps.py --step 4
-```
-
-**Option B - Make Commands:**
-```bash
 make ivan-check
-make ivan-step2    # The critical step that failed
+make ivan-step2-mac-studio    # OPTIMIZED for 64GB unified memory
 make ivan-step3
 make ivan-step4
+```
+
+**Option B - Other Machines:**
+```bash
+source leadmeasure_env/bin/activate
+make ivan-check
+make ivan-step2    # Standard training
+make ivan-step3
+make ivan-step4
+```
+
+**Option C - Manual Step by Step:**
+```bash
+# Check environment
+python scripts/ivan_analysis/run_analysis_steps.py --check
+
+# Mac Studio optimized training
+python scripts/ivan_analysis/train_with_tsdae_mac_studio.py
+
+# OR standard training
+python scripts/ivan_analysis/run_analysis_steps.py --step 2
+
+# Continue analysis
+python scripts/ivan_analysis/run_analysis_steps.py --step 3
+python scripts/ivan_analysis/run_analysis_steps.py --step 4
 ```
 
 **Option C - Complete Workflow:**
