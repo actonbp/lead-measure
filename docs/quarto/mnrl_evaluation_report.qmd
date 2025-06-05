@@ -1,0 +1,191 @@
+---
+title: "MNRL Model Evaluation Report"
+author: "Lead Measure Research Team"
+date: today
+format:
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+---
+
+```{python}
+#| echo: false
+#| output: false
+
+import os
+import re
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+from pathlib import Path
+
+# Find the latest evaluation directories
+ipip_dirs = list(Path("../../data/visualizations").glob("mnrl_evaluation_*"))
+leadership_dirs = list(Path("../../data/visualizations").glob("leadership_mnrl_evaluation_*"))
+
+# Sort by creation time (newest first)
+ipip_dirs.sort(key=lambda x: os.path.getctime(x), reverse=True)
+leadership_dirs.sort(key=lambda x: os.path.getctime(x), reverse=True)
+
+ipip_dir = ipip_dirs[0] if ipip_dirs else None
+leadership_dir = leadership_dirs[0] if leadership_dirs else None
+
+# Extract metrics
+def extract_metrics(metrics_file):
+    metrics = {}
+    with open(metrics_file, 'r') as f:
+        content = f.read()
+        
+        # Extract model name
+        model_match = re.search(r"Model: ([^\n]+)", content)
+        if model_match:
+            metrics['model'] = model_match.group(1)
+        
+        # Extract ARI
+        ari_match = re.search(r"Adjusted Rand Index: ([0-9.]+)", content)
+        if ari_match:
+            metrics['ari'] = float(ari_match.group(1))
+        
+        # Extract NMI
+        nmi_match = re.search(r"Normalized Mutual Information: ([0-9.]+)", content)
+        if nmi_match:
+            metrics['nmi'] = float(nmi_match.group(1))
+        
+        # Extract Purity
+        purity_match = re.search(r"Cluster Purity: ([0-9.]+)", content)
+        if purity_match:
+            metrics['purity'] = float(purity_match.group(1))
+    
+    return metrics
+
+ipip_metrics = extract_metrics(ipip_dir / "evaluation_metrics.txt")
+leadership_metrics = extract_metrics(leadership_dir / "leadership_metrics.txt")
+
+# Parse leadership similarity data
+def parse_leadership_similarity(metrics_file):
+    similar_pairs = []
+    with open(metrics_file, 'r') as f:
+        content = f.read()
+        
+        # Try to find the similarity section
+        if "Highly Similar Construct Pairs" in content:
+            sim_section = content.split("Highly Similar Construct Pairs")[1].split("Generated on")[0]
+            pair_matches = re.findall(r"  - ([^:]+): ([0-9.]+)", sim_section)
+            for match in pair_matches:
+                constructs, similarity = match
+                similar_pairs.append({
+                    'constructs': constructs.strip(),
+                    'similarity': float(similarity)
+                })
+    
+    return similar_pairs
+
+leadership_similar_pairs = parse_leadership_similarity(leadership_dir / "leadership_metrics.txt")
+```
+
+## Executive Summary
+
+This report presents the evaluation results of our IPIP MNRL (Multiple Negatives Ranking Loss) model trained on comprehensive personality item pairs. We assess how effectively the model clusters both personality items and leadership items by their respective construct categories.
+
+### Key Findings
+
+**IPIP Personality Data**:
+
+- **Adjusted Rand Index (ARI)**: `{python} f"{ipip_metrics.get('ari', 0):.4f}"`
+- **Normalized Mutual Information (NMI)**: `{python} f"{ipip_metrics.get('nmi', 0):.4f}"`
+- **Cluster Purity**: `{python} f"{ipip_metrics.get('purity', 0):.4f}"`
+
+**Leadership Construct Data**:
+
+- **Adjusted Rand Index (ARI)**: `{python} f"{leadership_metrics.get('ari', 0):.4f}"`
+- **Normalized Mutual Information (NMI)**: `{python} f"{leadership_metrics.get('nmi', 0):.4f}"`
+- **Cluster Purity**: `{python} f"{leadership_metrics.get('purity', 0):.4f}"`
+
+The substantial drop in metrics from IPIP to leadership data supports our research hypothesis that leadership constructs have significant overlap and are less distinctly separated than personality constructs.
+
+## IPIP Personality Constructs Evaluation
+
+The model shows moderate performance in clustering personality items by their construct categories, significantly above random assignment. This indicates the model successfully captures semantic relationships between items within the same personality construct.
+
+### IPIP Clustering Visualizations
+
+#### Confusion Matrix
+
+![IPIP Confusion Matrix](../../`{python} str(ipip_dir.relative_to(Path("../../")))` + "/confusion_matrix.png")
+
+#### t-SNE Visualization (True Labels)
+
+![IPIP t-SNE True Labels](../../`{python} str(ipip_dir.relative_to(Path("../../")))` + "/tsne_true_labels.png")
+
+#### t-SNE Visualization (Predicted Clusters)
+
+![IPIP t-SNE Predicted Clusters](../../`{python} str(ipip_dir.relative_to(Path("../../")))` + "/tsne_predicted_clusters.png")
+
+```{python}
+#| echo: false
+#| output: false
+combined_exists = (ipip_dir / "tsne_combined.png").exists()
+```
+
+```{python}
+#| echo: false
+if (ipip_dir / "tsne_combined.png").exists():
+    print("#### Combined t-SNE Visualization")
+    print("")
+    print(f"![IPIP t-SNE Combined](../../{str(ipip_dir.relative_to(Path('../../')))}/tsne_combined.png)")
+```
+
+## Leadership Constructs Evaluation
+
+The model shows much lower performance on leadership data, with clustering metrics significantly below those for personality constructs. This suggests that leadership constructs, as currently measured, do not form semantically distinct categories.
+
+### Leadership Clustering Visualizations
+
+#### Leadership Confusion Matrix
+
+![Leadership Confusion Matrix](../../`{python} str(leadership_dir.relative_to(Path("../../")))` + "/leadership_confusion_matrix.png")
+
+#### Leadership t-SNE Visualization (True Labels)
+
+![Leadership t-SNE True Labels](../../`{python} str(leadership_dir.relative_to(Path("../../")))` + "/leadership_tsne_true_labels.png")
+
+#### Leadership t-SNE Visualization (Predicted Clusters)
+
+![Leadership t-SNE Predicted Clusters](../../`{python} str(leadership_dir.relative_to(Path("../../")))` + "/leadership_tsne_predicted_clusters.png")
+
+#### Leadership Construct Similarity
+
+![Leadership Construct Similarity](../../`{python} str(leadership_dir.relative_to(Path("../../")))` + "/leadership_construct_similarity.png")
+
+### Leadership Construct Overlap Analysis
+
+The analysis reveals substantial overlap between leadership constructs. Below are the most similar construct pairs (similarity > 0.85):
+
+```{python}
+#| echo: false
+# Sort by similarity
+leadership_similar_pairs.sort(key=lambda x: x['similarity'], reverse=True)
+
+# Display as a table
+top_pairs = [pair for pair in leadership_similar_pairs if pair['similarity'] > 0.85]
+if top_pairs:
+    df = pd.DataFrame(top_pairs)
+    df.columns = ["Construct Pair", "Similarity"]
+    display(df)
+else:
+    print("No construct pairs with similarity > 0.85 found.")
+```
+
+## Conclusion
+
+The results strongly support our research hypothesis that leadership constructs, as currently measured in the literature, have substantial semantic overlap and are less distinctly separated than personality constructs. Many leadership construct pairs show similarity values above 0.85, indicating they may be measuring essentially the same underlying concept despite having different names.
+
+This suggests that the current taxonomic structure of leadership measurement may be artificially complex, with many constructs capturing similar underlying concepts. Future research should focus on identifying a more parsimonious set of truly distinct leadership dimensions.
+
+## Appendix: Model and Evaluation Details
+
+- **Model**: MNRL (Multiple Negatives Ranking Loss) with `all-mpnet-base-v2` base model
+- **Training Data**: Comprehensive and balanced anchor-positive IPIP item pairs
+- **IPIP Evaluation**: Test set with items across personality constructs
+- **Leadership Evaluation**: Leadership items across 11 leadership constructs

@@ -1,0 +1,153 @@
+---
+description: APA 7th Edition Formatting Standards and Quarto Integration
+globs: ["**/*.qmd"]
+alwaysApply: false
+---
+
+# APA 7th Edition Formatting Standards
+
+## Critical Compilation Command
+
+### ALWAYS Use This Exact Command
+```bash
+# ✅ CORRECT - Produces APA formatting
+quarto render academic_paper.qmd --to apaquarto-docx
+
+# ❌ NEVER use generic docx output
+# quarto render academic_paper.qmd --to docx
+```
+
+## Document Structure Requirements
+
+### YAML Header (Required)
+```yaml
+format:
+  apaquarto-docx:
+    default: true
+bibliography: references.bib
+csl: _extensions/wjschne/apaquarto/apa.csl
+```
+
+### Title Page Elements
+- **Title**: Sentence case, under 12 words when possible
+- **Running Head**: Max 50 characters, all caps
+- **Author Information**: Name, email, ORCID, institutional affiliation
+- **Abstract**: 150-250 words with keywords
+
+### Section Hierarchy
+```
+# Level 1: Main Sections (Introduction, Method, Results, Discussion)
+## Level 2: Major Subsections
+### Level 3: Minor Subsections
+#### Level 4: Paragraph-level headings
+##### Level 5: Rarely used
+```
+
+## Citation Standards
+
+### In-Text Citation Patterns
+```
+Single author: [@smith2024]
+Multiple authors: [@smith2024; @jones2023]
+Page numbers: [@smith2024, p. 15]
+Author as part of sentence: @smith2024 found that...
+Secondary citation: [@smith2024, as cited in @jones2023]
+```
+
+### Reference List Requirements
+- Hanging indent (automatic with template)
+- Alphabetical order by first author surname
+- DOI included when available
+- Proper capitalization (sentence case for titles)
+
+## Table and Figure Formatting
+
+### Table Placement
+- Tables automatically moved to end of document
+- Use "INSERT TABLE X ABOUT HERE" placeholders in text
+- Number consecutively (Table 1, Table 2, etc.)
+- Include descriptive titles above tables
+
+### Table Creation
+```
+**Table 1**
+
+*Descriptive Title in Italics*
+
+| Column 1 | Column 2 | Column 3 |
+|----------|----------|----------|
+| Data     | Data     | Data     |
+| Data     | Data     | Data     |
+
+*Note*. Include table notes as needed.
+```
+
+### Figure Placement
+- Similar to tables, moved to end automatically
+- Use "INSERT FIGURE X ABOUT HERE" placeholders
+- Include descriptive captions below figures
+- Number consecutively
+
+## Typography Standards
+
+### Automatic Formatting (via apaquarto)
+- **Font**: Times New Roman, 12-point
+- **Spacing**: Double-spaced throughout
+- **Margins**: 1-inch on all sides
+- **Page Numbers**: Top right corner
+- **Running Head**: Top left corner
+
+### Manual Formatting Elements
+- **Emphasis**: Use *italics* not **bold** in academic text
+- **Numbers**: Spell out numbers below 10, except in Method sections
+- **Abbreviations**: Define on first use, then use consistently
+
+## Common APA Elements
+
+### Abstract Structure
+```
+Purpose: Brief statement of research objective
+Method: Participants, materials, procedure summary
+Results: Key findings with statistics
+Conclusions: Implications and significance
+Keywords: 3-5 terms for indexing
+```
+
+### Method Section Components
+- **Participants**: Demographics, recruitment, sample size
+- **Materials**: Instruments, apparatus, stimuli
+- **Procedure**: Step-by-step description
+- **Data Analysis**: Statistical approach and software
+
+### Results Section Guidelines
+- Report statistics with exact p-values when possible
+- Include effect sizes and confidence intervals
+- Reference tables and figures in text
+- Maintain objective tone
+
+### Discussion Structure
+- Interpretation of findings
+- Theoretical and practical implications
+- Study limitations and future directions
+- Conclusion paragraph
+
+## Quality Assurance Checklist
+
+### Before Submission
+- [ ] Document compiles without errors
+- [ ] Tables appear at end of document
+- [ ] All citations have corresponding references
+- [ ] Running head is under 50 characters
+- [ ] Abstract is 150-250 words
+- [ ] Proper APA heading hierarchy used
+- [ ] Statistical reporting follows APA guidelines
+
+### Common Errors to Avoid
+- Using generic Word formatting instead of apaquarto
+- Missing or incorrect citation format
+- Tables embedded in text instead of at end
+- Inconsistent heading levels
+- Missing DOIs in references
+- Incorrect title case in references
+
+@academic_paper.qmd

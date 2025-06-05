@@ -1,0 +1,128 @@
+---
+description: AI-Assisted Academic Writing Template for APA Research Papers
+globs: ["**/*.qmd", "**/*.bib", "**/*.md"]
+alwaysApply: true
+---
+
+# AI Academic Writing Assistant
+
+## Project Purpose
+This repository provides a complete template for AI-assisted academic writing that produces publication-quality APA 7th edition documents. The system combines modern document preparation (Quarto) with intelligent writing assistance (AI) to streamline the academic writing process.
+
+## Core Functionality
+
+### APA Document Generation
+- **Primary Goal**: Generate properly formatted APA documents from minimal setup
+- **Key Command**: `quarto render academic_paper.qmd --to apaquarto-docx`
+- **Output**: Professional Word document with APA 7th edition formatting
+- **Success Criteria**: Tables at end, proper citations, title page, running head
+
+### Template Structure
+- `academic_paper.qmd` - Main manuscript template with sample content
+- `references.bib` - Bibliography in BibTeX format with sample citations
+- `_extensions/wjschne/apaquarto/` - APA formatting system (REQUIRED)
+
+## Academic Writing Standards
+
+### APA 7th Edition Requirements
+- **Title Page**: Running head, author information, institutional affiliation
+- **Abstract**: 150-250 words with keywords
+- **Main Text**: Introduction, Method, Results, Discussion, Conclusion
+- **Citations**: In-text format [@author2024] and complete reference list
+- **Tables/Figures**: Moved to end with "INSERT TABLE X ABOUT HERE" placeholders
+
+### Content Guidelines
+- **Academic Tone**: Formal, objective, evidence-based writing
+- **Structure**: Clear section hierarchy with appropriate headings
+- **Citations**: Support all claims with appropriate references
+- **Methods**: Detailed enough for replication
+- **Results**: Objective presentation of findings
+- **Discussion**: Interpretation, implications, limitations
+
+## AI Assistant Guidelines
+
+### Writing Support Priorities
+1. **APA Compliance**: Ensure all formatting follows APA 7th edition
+2. **Academic Quality**: Maintain scholarly tone and rigor
+3. **Citation Accuracy**: Proper in-text citations and bibliography entries
+4. **Structural Coherence**: Logical flow and organization
+5. **Content Development**: Assist with academic argumentation
+
+### Common Academic Tasks
+- Generate section content following academic conventions
+- Create proper APA citations and bibliography entries
+- Develop tables and figures with appropriate formatting
+- Review for academic tone and clarity
+- Suggest improvements for argument structure
+- Ensure method descriptions are complete and replicable
+
+### Content Creation Patterns
+```
+Introduction: Literature review → Gap identification → Research questions
+Method: Participants → Materials → Procedure → Analysis
+Results: Descriptive → Inferential → Tables/Figures
+Discussion: Interpretation → Implications → Limitations → Future directions
+```
+
+## Technical Standards
+
+### Document Compilation
+```bash
+# CRITICAL: Always use APA extension
+quarto render academic_paper.qmd --to apaquarto-docx
+
+# Verify success: Check for proper APA formatting
+# - Title page with running head
+# - Tables moved to document end
+# - Proper citation formatting
+# - Reference list in APA style
+```
+
+### Bibliography Management
+- Add entries to `references.bib` in BibTeX format
+- Use standard entry types: @article, @book, @incollection, @manual
+- Include DOI when available
+- Maintain consistent formatting
+
+### Quality Assurance
+- Test compilation before major changes
+- Verify APA formatting in output document
+- Check citation-reference consistency
+- Validate table and figure placement
+
+## Collaboration Features
+
+### Version Control Ready
+- Git-friendly plain text format
+- Separate content from formatting
+- Easy diff and merge operations
+- Collaborative editing support
+
+### Template Expansion
+- Adaptable for different research types
+- Extensible citation system
+- Customizable content sections
+- Reusable formatting framework
+
+## Success Indicators
+
+### Immediate Success
+- Template compiles to APA Word document without errors
+- All citations resolve properly
+- Tables appear at document end with placeholders in text
+- Output matches APA 7th edition standards
+
+### Writing Quality
+- Academic tone and style maintained
+- Proper section structure and flow
+- Evidence-based arguments with citations
+- Clear and concise expression
+
+### Efficiency Gains
+- Reduced time spent on formatting
+- Consistent APA compliance
+- Streamlined citation management
+- Focus on content development
+
+@academic_paper.qmd
+@references.bib

@@ -1,0 +1,239 @@
+---
+title: "IPIP MNRL Model Evaluation Report"
+author: "Lead Measure Research Team"
+date: today
+format:
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+    fig-width: 9
+    fig-height: 7
+execute:
+  echo: false
+---
+
+```{python}
+#| label: setup
+#| include: false
+import pandas as pd
+import re
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+from pathlib import Path
+import glob
+import os
+import sys
+
+# Set the path to the evaluation results
+results_path = "data/visualizations/mnrl_evaluation_20250515_1525"
+```
+
+# Executive Summary
+
+This report presents the evaluation results of our IPIP MNRL (Multiple Negatives Ranking Loss) model trained on comprehensive personality item pairs. We assess how effectively the model clusters personality items by their construct categories on a held-out test set.
+
+## Key Findings
+
+```{python}
+#| label: metrics
+# Read the metrics file
+with open(f"{results_path}/evaluation_metrics.txt", "r") as f:
+    metrics_text = f.read()
+
+# Extract key metrics using regex
+ari_match = re.search(r"Adjusted Rand Index: ([0-9.]+)", metrics_text)
+nmi_match = re.search(r"Normalized Mutual Information: ([0-9.]+)", metrics_text)
+purity_match = re.search(r"Cluster Purity: ([0-9.]+)", metrics_text)
+model_match = re.search(r"Model: ([^\n]+)", metrics_text)
+test_size_match = re.search(r"Test Set Size: ([0-9]+)", metrics_text)
+num_constructs_match = re.search(r"Number of Constructs: ([0-9]+)", metrics_text)
+
+# Get the values
+ari = float(ari_match.group(1)) if ari_match else 0
+nmi = float(nmi_match.group(1)) if nmi_match else 0
+purity = float(purity_match.group(1)) if purity_match else 0
+model_name = model_match.group(1) if model_match else "Unknown"
+test_size = int(test_size_match.group(1)) if test_size_match else 0
+num_constructs = int(num_constructs_match.group(1)) if num_constructs_match else 0
+
+# Create a brief assessment based on metrics
+if ari > 0.7:
+    assessment = "Excellent"
+elif ari > 0.5:
+    assessment = "Very Good"
+elif ari > 0.3:
+    assessment = "Good"
+elif ari > 0.1:
+    assessment = "Fair"
+else:
+    assessment = "Poor"
+```
+
+- **Model**: `{python} model_name`
+- **Test Set**: `{python} test_size` items across `{python} num_constructs` personality constructs
+- **Performance**: `{python} assessment` clustering alignment with true constructs
+- **Key Metrics**:
+  - Adjusted Rand Index (ARI): `{python} f"{ari:.4f}"` (higher is better, perfect=1.0)
+  - Normalized Mutual Information (NMI): `{python} f"{nmi:.4f}"` (higher is better, perfect=1.0)
+  - Cluster Purity: `{python} f"{purity:.4f}"` (higher is better, perfect=1.0)
+
+# Model Details
+
+The MNRL model uses Multiple Negatives Ranking Loss for training, which creates a more efficient contrastive learning signal from the available training data. This approach is especially effective for smaller datasets as it implicitly treats all other items in a batch as negatives for each positive pair.
+
+## Training Approach
+
+- **Base Model**: sentence-transformers/all-mpnet-base-v2
+- **Training Data**: Comprehensive and balanced anchor-positive IPIP item pairs
+- **Loss Function**: MultipleNegativesRankingLoss
+- **Batch Size**: 32
+- **Epochs**: 10
+
+# Evaluation Metrics
+
+## Clustering Quality
+
+The evaluation assesses how well the model's embeddings naturally cluster into the ground truth personality constructs:
+
+```{python}
+#| label: metrics_table
+metrics_df = pd.DataFrame({
+    "Metric": ["Adjusted Rand Index (ARI)", "Normalized Mutual Information (NMI)", "Cluster Purity"],
+    "Value": [f"{ari:.4f}", f"{nmi:.4f}", f"{purity:.4f}"],
+    "Interpretation": [
+        "Measures cluster agreement adjusted for chance. Values range from -1 to 1, with 1 indicating perfect agreement.",
+        "Measures mutual information between clusters and true labels. Values range from 0 to 1, with 1 indicating perfect correlation.",
+        "For each cluster, what percentage belongs to the most common true construct. Higher values indicate more homogeneous clusters."
+    ]
+})
+
+metrics_df
+```
+
+# Visualizations
+
+## Confusion Matrix
+
+The confusion matrix shows how items from each true construct (rows) are distributed across predicted clusters (columns). Darker colors indicate higher percentages.
+
+```{python}
+#| label: confusion_matrix
+#| fig-cap: "Confusion matrix showing the relationship between true constructs and predicted clusters."
+confusion_path = f"{results_path}/confusion_matrix.png"
+if os.path.exists(confusion_path):
+    img = mpimg.imread(confusion_path)
+    plt.figure(figsize=(10, 8))
+    plt.imshow(img)
+    plt.axis('off')
+    plt.tight_layout()
+else:
+    print("Confusion matrix visualization not available")
+```
+
+## t-SNE Visualizations
+
+t-SNE (t-distributed Stochastic Neighbor Embedding) reduces the high-dimensional embedding space to 2D for visualization while preserving local relationships.
+
+### True Construct Labels
+
+```{python}
+#| label: tsne_true
+#| fig-cap: "t-SNE visualization with points colored by their true construct labels."
+tsne_true_path = f"{results_path}/tsne_true_labels.png"
+if os.path.exists(tsne_true_path):
+    img = mpimg.imread(tsne_true_path)
+    plt.figure(figsize=(10, 8))
+    plt.imshow(img)
+    plt.axis('off')
+    plt.tight_layout()
+else:
+    print("t-SNE true labels visualization not available")
+```
+
+### Predicted Clusters
+
+```{python}
+#| label: tsne_predicted
+#| fig-cap: "t-SNE visualization with points colored by their predicted cluster assignments."
+tsne_predicted_path = f"{results_path}/tsne_predicted_clusters.png"
+if os.path.exists(tsne_predicted_path):
+    img = mpimg.imread(tsne_predicted_path)
+    plt.figure(figsize=(10, 8))
+    plt.imshow(img)
+    plt.axis('off')
+    plt.tight_layout()
+else:
+    print("t-SNE predicted clusters visualization not available")
+```
+
+### Combined Visualization
+
+```{python}
+#| label: tsne_combined
+#| fig-cap: "Combined t-SNE visualization showing both true construct labels and predicted clusters."
+tsne_combined_path = f"{results_path}/tsne_combined.png"
+if os.path.exists(tsne_combined_path):
+    img = mpimg.imread(tsne_combined_path)
+    plt.figure(figsize=(10, 8))
+    plt.imshow(img)
+    plt.axis('off')
+    plt.tight_layout()
+else:
+    print("Combined t-SNE visualization not available")
+```
+
+# Conclusion and Next Steps
+
+```{python}
+#| label: conclusion
+# Generate appropriate conclusion based on metrics
+if ari > 0.5:
+    conclusion = f"""The MNRL model shows **strong performance** in clustering personality items by their constructs, with an ARI of {ari:.4f}. This suggests the model effectively captures the semantic relationships between items within the same construct.
+
+Next steps should include:
+1. Applying this model to leadership constructs to test our research hypothesis
+2. Comparing these results with previous approaches (GIST loss, triplet loss)
+3. Further analyzing cases where the model struggles to correctly cluster items"""
+elif ari > 0.3:
+    conclusion = f"""The MNRL model shows **good performance** in clustering personality items by their constructs, with an ARI of {ari:.4f}. This represents significant improvement over chance clustering, suggesting the model captures meaningful semantic relationships.
+
+Next steps should include:
+1. Applying this model to leadership constructs to test our research hypothesis
+2. Comparing these results with previous approaches (GIST loss, triplet loss)
+3. Exploring ways to further improve model performance through hyperparameter tuning or alternative architectures"""
+else:
+    conclusion = f"""The MNRL model shows **moderate performance** in clustering personality items by their constructs, with an ARI of {ari:.4f}. While this is better than random clustering, there is room for improvement.
+
+Next steps should include:
+1. Investigating whether certain constructs are consistently confused
+2. Testing additional training approaches or model architectures
+3. Carefully applying the model to leadership data with appropriate caution in interpretation"""
+```
+
+`{python} conclusion`
+
+# Appendix: Files and Replication
+
+This evaluation was conducted using the following files:
+
+```{python}
+#| label: files
+# List the key files used in the evaluation
+print("Model File:")
+print(f"- {model_name}")
+print("\nEvaluation Script:")
+print("- scripts/evaluate_mnrl_model.py")
+print("\nData Files:")
+print("- data/IPIP.csv - IPIP personality items with construct labels")
+print("\nOutput Files:")
+print(f"- {results_path}/evaluation_metrics.txt")
+print(f"- {results_path}/confusion_matrix.png")
+print(f"- {results_path}/tsne_true_labels.png")
+print(f"- {results_path}/tsne_predicted_clusters.png")
+print(f"- {results_path}/tsne_combined.png")
+```
+
+---
+
+Generated on `{python} import datetime; print(datetime.datetime.now().strftime('%Y-%m-%d'))`

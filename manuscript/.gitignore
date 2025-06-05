@@ -1,0 +1,86 @@
+# Academic Writing Template - .gitignore
+# ===========================================
+
+# Quarto rendering outputs (keep main outputs, exclude temp files)
+/.quarto/
+_freeze/
+_publish/
+
+# Document outputs (include main .docx, exclude temp files)
+academic_paper.pdf
+academic_paper.html
+academic_paper.tex
+~$*.docx
+~$*.doc
+
+# LaTeX temporary files (if using PDF output)
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# R-related files (if using R chunks)
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# Python files (if using Python chunks)
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+venv/
+env/
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Backup files
+*.bak
+*.backup
+
+# Temporary files
+*.tmp
+*.temp
+
+# ===========================================
+# KEEP THESE IMPORTANT FILES (negative patterns)
+# ===========================================
+
+# Keep main manuscript output
+!academic_paper.docx
+
+# Keep all template and configuration files
+!academic_paper.qmd
+!references.bib
+!README.md
+!CLAUDE.md
+
+# Keep APA extension (CRITICAL for formatting)
+!_extensions/
+!_extensions/**/*
+
+# Keep Cursor AI rules
+!.cursor/
+!.cursor/rules/
+!.cursor/rules/*.mdc

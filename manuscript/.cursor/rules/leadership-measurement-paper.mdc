@@ -1,0 +1,130 @@
+---
+description: Leadership Measurement Research Paper - Specific Context and Guidelines
+globs: ["**/leadership_measurement_paper.qmd", "**/leadership_measurement_paper.docx"]
+alwaysApply: true
+---
+
+# Leadership Measurement Research Paper Context
+
+## Project Purpose
+This manuscript reports the findings of a comprehensive empirical analysis comparing semantic distinctiveness between leadership and personality constructs using advanced NLP techniques.
+
+## VALIDATED RESEARCH FINDINGS (June 4, 2025)
+
+### Core Research Question
+Do leadership measurement constructs show semantic distinctiveness comparable to established personality constructs?
+
+### Methodology Summary
+- **Contrastive learning approach**: TSDAE pre-training + GIST loss fine-tuning
+- **Rigorous validation**: 80/20 construct-level holdout testing
+- **Statistical comparison**: Cosine similarity analysis with paired t-tests
+- **Model**: BGE-M3 with triple-randomized pair generation
+
+### FINAL VALIDATED RESULTS
+- **IPIP Holdout Constructs**: 87.4% separation accuracy (Cohen's d = 1.116)
+- **Leadership Constructs**: 62.9% separation accuracy (Cohen's d = 0.368)
+- **Statistical Test**: t(853.99) = 43.49, p < 2.22e-16
+- **Effect Size Interpretation**: Large vs Small-Medium effect
+- **Performance Gap**: 24.5 percentage points difference
+
+### Key Research Implications
+1. **Empirical Evidence**: Leadership constructs show significant semantic overlap
+2. **Methodological Rigor**: Holdout validation eliminates training bias
+3. **Construct Validity**: Questions distinctiveness of current leadership theories
+4. **Practical Impact**: Suggests need for construct consolidation
+
+## Manuscript Structure Requirements
+
+### Abstract (150-250 words)
+- **Background**: Construct proliferation concerns in leadership research
+- **Method**: NLP-based semantic analysis with holdout validation
+- **Results**: 87.4% vs 62.9% separation accuracy (p < 2.22e-16)
+- **Conclusions**: Leadership constructs show poor semantic distinctiveness
+- **Keywords**: leadership measurement, construct validity, semantic analysis, NLP
+
+### Introduction
+- Literature review on construct proliferation in leadership research
+- Gap: Lack of empirical testing of semantic distinctiveness
+- Research questions and hypotheses about construct overlap
+
+### Method
+- **Participants**: 3,320 IPIP items (246 constructs), 434 leadership items (11 constructs)
+- **Materials**: Validated personality and leadership measurement instruments
+- **Procedure**: Holdout validation with contrastive learning
+- **Analysis**: Cosine similarity comparison with statistical testing
+
+### Results
+- **Primary Analysis**: 87.4% IPIP vs 62.9% leadership accuracy
+- **Effect Sizes**: Cohen's d = 1.116 vs 0.368
+- **Statistical Significance**: t(853.99) = 43.49, p < 2.22e-16
+- **Construct Coherence**: Most coherent constructs comparison
+- **Visualization**: t-SNE comparison showing clustering differences
+
+### Discussion
+- **Interpretation**: Leadership constructs lack semantic distinctiveness
+- **Implications**: Need for construct consolidation vs proliferation
+- **Limitations**: Domain-specific analysis, single methodology
+- **Future Directions**: Alternative taxonomies, dimensional approaches
+
+## Key Visualization
+**Primary Figure**: `../data/visualizations/construct_holdout_validation/top5_coherent_constructs_tsne.png`
+- Shows cleanest comparison of most coherent constructs
+- Demonstrates tighter clustering for personality vs leadership constructs
+- Caption should emphasize statistical validation and effect sizes
+
+## Statistical Reporting Standards
+
+### Effect Size Reporting
+- Cohen's d with 95% confidence intervals
+- Interpretation: 0.2 (small), 0.5 (medium), 0.8 (large)
+- IPIP: Large effect (d = 1.116)
+- Leadership: Small-medium effect (d = 0.368)
+
+### Statistical Tests
+- Paired t-test for construct separation accuracy
+- Report: t(df) = statistic, p-value, Cohen's d
+- Example: t(853.99) = 43.49, p < 2.22e-16, d = 0.747
+
+### Sample Descriptions
+- IPIP: 427 holdout items from 50 constructs (never seen during training)
+- Leadership: 434 items from 11 constructs (novel domain)
+- Training: 3,374 IPIP items from 196 constructs
+
+## APA Format Requirements
+
+### Citations Needed
+- Original construct validation papers for leadership measures
+- NLP methodology papers (sentence transformers, contrastive learning)
+- Construct validity literature and measurement theory
+- Previous meta-analyses on leadership construct overlap
+
+### Tables for Appendix
+- Table 1: Descriptive statistics by construct type
+- Table 2: Most coherent constructs by domain
+- Table 3: Complete statistical comparison results
+
+### Figure Placement
+- Figure 1: t-SNE comparison (main text reference)
+- Figure caption: Detailed description of methodology and findings
+- "INSERT FIGURE 1 ABOUT HERE" placeholder in results section
+
+## Compilation Commands
+```bash
+# Primary compilation (APA Word format)
+quarto render leadership_measurement_paper.qmd --to apaquarto-docx
+
+# Preview (HTML format)
+quarto render leadership_measurement_paper.qmd --to html
+
+# Check references
+grep "@" leadership_measurement_paper.qmd
+```
+
+## Quality Checklist
+- [ ] All statistics match validated results (87.4% vs 62.9%)
+- [ ] Effect sizes properly interpreted (large vs small-medium)  
+- [ ] Statistical tests correctly reported with df and p-values
+- [ ] Key visualization properly referenced and described
+- [ ] APA format compliance (title page, running head, references)
+- [ ] Academic tone and scholarly language throughout
+- [ ] Clear research implications and practical significance

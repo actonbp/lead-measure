@@ -1,0 +1,23 @@
+
+Repository Cleanup Report
+========================
+
+Files moved to logs/: 12
+Scripts archived: 0
+Empty directories removed: 158
+
+Current structure:
+├── logs/              # All log files
+├── temp/              # Temporary files
+├── scripts/
+│   ├── ivan_analysis/ # Main pipeline (USE THIS)
+│   ├── archive/       # Original deprecated scripts
+│   └── archive_old/   # Recently deprecated scripts
+└── ...
+
+Next steps:
+1. Use unified pipeline: scripts/ivan_analysis/
+2. Old scripts preserved in archive directories
+3. Logs organized in logs/ directory
+
+Repository is now cleaner and better organized!
