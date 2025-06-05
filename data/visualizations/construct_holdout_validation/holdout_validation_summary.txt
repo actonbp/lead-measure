@@ -1,0 +1,42 @@
+
+Holdout Validation Results Summary
+==================================
+
+Training Information:
+- Model trained on 80% of IPIP data (training split)
+- Evaluated on 20% IPIP holdout (novel personality items)
+- Evaluated on leadership items (novel leadership items)
+
+IPIP Holdout Performance:
+-------------------------
+- Number of items: 427
+- Number of constructs: 50
+- Same construct similarity: 0.4242 ± 0.1844
+- Different construct similarity: 0.1887 ± 0.1376
+- Cohen's d: 1.116
+- Probability of correct ranking: 87.35%
+
+Leadership Performance:
+----------------------
+- Number of items: 434
+- Number of constructs: 11
+- Same construct similarity: 0.3481 ± 0.1479
+- Different construct similarity: 0.2839 ± 0.1228
+- Cohen's d: 0.368
+- Probability of correct ranking: 62.90%
+
+Performance Comparison:
+----------------------
+- IPIP accuracy: 87.35%
+- Leadership accuracy: 62.90%
+- Difference: 24.45 percentage points
+
+Key Findings:
+-------------
+1. The model shows different performance on holdout IPIP vs leadership items
+2. Effect size (Cohen's d) for IPIP: 1.116 (large)
+3. Effect size (Cohen's d) for Leadership: 0.368 (small)
+
+Interpretation:
+--------------
+This validates that leadership constructs have significantly more semantic overlap than personality constructs, even when controlling for training bias.

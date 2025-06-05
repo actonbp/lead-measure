@@ -1,0 +1,5 @@
+Metric,Baseline,Trained
+Probability(same > diff),78.08%,94.70%
+Cohen's d,0.827,1.562
+t-statistic,28.982,54.715
+p-value,4.271e-141,0.000e+00

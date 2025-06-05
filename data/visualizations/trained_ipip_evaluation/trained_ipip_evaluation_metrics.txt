@@ -1,0 +1,5 @@
+Trained IPIP Model Evaluation Metrics (Model: models/gist_ipip/checkpoint-295)
+===============================================================
+- Ari: 0.0577
+- Nmi: 0.7546
+- Purity: 0.3876

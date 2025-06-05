@@ -1,0 +1,2 @@
+n_comparisons,same_construct_mean,same_construct_std,diff_construct_mean,diff_construct_std,t_statistic,p_value,cohens_d,probability_same_higher,mean_difference
+1227,0.6296509,0.10465159,0.5315983,0.07573297,28.981647300413833,4.271331174081634e-141,0.82737184,0.7807660961695192,0.09805259

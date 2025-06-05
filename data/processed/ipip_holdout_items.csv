@@ -1,0 +1,844 @@
+text,label,index
+Don't like crowded events.,Gregariousness,60
+Feel comfortable around people,Gregariousness,2452
+Enjoy being part of a loud crowd.,Gregariousness,67
+Love large parties.,Gregariousness,113
+Keep others at a distance.,Gregariousness,304
+Make friends easily.,Gregariousness,333
+Start conversations.,Gregariousness,372
+Am the last to laugh at a joke.,Gregariousness,23
+Joke around a lot.,Gregariousness,93
+Prefer to be alone.,Gregariousness,2866
+Worry about what people think of me.,Anxiety,1256
+Am always worried about something.,Anxiety,1218
+Get upset easily.,Anxiety,2526
+Feel crushed by setbacks.,Anxiety,78
+Am easily startled.,Anxiety,1307
+Feel threatened easily.,Anxiety,82
+Am relaxed most of the time.,Anxiety,2486
+Panic easily.,Anxiety,1460
+Am not easily bothered by things.,Anxiety,13
+Seldom get emotional.,Emotionality,2886
+Have a good word for everyone.,Emotionality,89
+Am easily put out.,Emotionality,5
+Am not easily affected by my emotions.,Emotionality,2743
+Get caught up in my problems.,Emotional Stability,1139
+Readily overcome setbacks.,Emotional Stability,130
+Seldom get mad.,Emotional Stability,1165
+Get angry easily.,Emotional Stability,1138
+Panic easily.,Emotional Stability,1163
+Often feel blue.,Emotional Stability,121
+Love order and regularity.,Orderliness,2847
+Continue until everything is perfect.,Orderliness,45
+Am easily talked into doing silly things.,Orderliness,2254
+Keep things tidy.,Orderliness,1062
+Am exacting in my work.,Orderliness,6
+Try to do too difficult things.,Orderliness,2424
+Follow a schedule.,Orderliness,673
+Reveal little about myself.,Reserve,134
+Am open about myself to others.,Reserve,19
+Can take strong measures.,Dominance,38
+Take control of things.,Dominance,151
+Want to be in charge.,Dominance,167
+Want to control the conversation.,Dominance,1829
+Demand attention,Dominance,2445
+Do most of the talking.,Dominance,2448
+Put people under pressure.,Assertiveness,1765
+Can take strong measures.,Assertiveness,39
+Am the first to act.,Assertiveness,1008
+Never challenge things.,Assertiveness,120
+Come up with a solution right away.,Assertiveness,579
+Do a lot in my spare time.,Assertiveness,605
+Take control of things.,Assertiveness,152
+Seek to influence others.,Assertiveness,2884
+Impose my will on others.,Assertiveness,1715
+See myself as a good leader.,Assertiveness,1091
+Am willing to talk about myself.,Complexity,1571
+Can see different points of view.,Complexity,1592
+Am not interested in theoretical discussions.,Complexity,16
+Believe in the importance of art.,Complexity,30
+Enjoy bringing people together.,Warmth,68
+Get along well with others,Warmth,2453
+Rarely smile.,Warmth,820
+Don't like to get involved in other people's problems.,Warmth,61
+Talk to a lot of different people at parties.,Friendliness,155
+Avoid contacts with others.,Friendliness,537
+Enjoy being part of a group.,Friendliness,2669
+Start conversations.,Friendliness,145
+Am hard to get to know.,Friendliness,498
+Am quiet around strangers.,Friendliness,21
+Believe that others have good intentions.,Distrust,32
+Believe that people are basically moral.,Distrust,33
+Feel short-changed in life.,Distrust,2673
+Get others to do my duties.,Dutifulness,2806
+Disregard rules.,Dutifulness,604
+Don't think laws apply to me.,Dutifulness,641
+Pay no attention to my appearance.,Dutifulness,803
+Enjoy being reckless.,Dutifulness,2186
+Love to come up with objections.,Dutifulness,2374
+Seek danger.,Dutifulness,2401
+Misrepresent the facts.,Dutifulness,2855
+Make plans and stick to them.,Dutifulness,1746
+Don't talk a lot,Introversion,2451
+Seek quiet.,Introversion,137
+Enjoy silence.,Introversion,72
+Enjoy my privacy.,Introversion,71
+Am quiet around strangers,Introversion,2441
+Spend time reflecting on things.,Intellect,1168
+Am quick to understand things.,Intellect,1007
+Am good at many things.,Intellect,1117
+Avoid philosophical discussions.,Intellect,1012
+Tend to analyze things.,Intellect,156
+Have a rich vocabulary.,Intellect,428
+Love to read challenging material.,Intellect,1158
+Reflect on things before acting.,Intellect,131
+Will not probe deeply into a subject.,Intellect,462
+Consider myself an average person.,Intellect,44
+Love flowers.,Sensitivity,112
+Cry during movies.,Sensitivity,47
+Show my gratitude.,Sensitivity,2408
+Obstruct others' plans.,Sensitivity,2382
+Do not enjoy going to art museums.,Imagination,610
+Experience my emotions intensely.,Imagination,3411
+Do unexpected things.,Imagination,57
+Swim against the current.,Imagination,147
+Believe in the importance of art.,Imagination,546
+Do not like art.,Imagination,613
+Suspect hidden motives in others.,Agreeableness,2964
+Am easy to satisfy.,Agreeableness,2914
+Think of others first.,Agreeableness,1172
+Accept people as they are.,Agreeableness,172
+Inquire about others' well-being.,Agreeableness,1149
+Am easily offended.,Agreeableness,187
+Make people feel at ease.,Agreeableness,443
+Feel others' emotions.,Agreeableness,424
+Believe that I am better than others.,Agreeableness,2925
+Am on good terms with nearly everyone.,Agreeableness,1122
+Do too little work.,Achievement-striving,2664
+Hang around doing nothing.,Achievement-striving,284
+Go straight for the goal.,Achievement-striving,2809
+Try to surpass others' accomplishments.,Achievement-striving,3540
+Want to be in charge.,Achievement-striving,3544
+Undertake few things on my own.,Achievement-striving,2426
+Demand quality.,Achievement-striving,2775
+Remain calm under pressure.,Deliberateness,359
+Make rash decisions.,Deliberateness,334
+Am relaxed most of the time.,Humor/Playfulness,206
+Seldom joke around.,Humor/Playfulness,2404
+Am not known for my sense of humor.,Humor/Playfulness,3589
+Try to have fun in all kinds of situations.,Humor/Playfulness,3793
+Have a lot of fun.,Humor/Playfulness,285
+Need protection.,Self-Sufficiency,337
+Believe that events in my life are determined only by me.,Self-Sufficiency,218
+Mess things up.,Methodicalness,335
+Leave things unfinished.,Methodicalness,307
+Want to have the last word.,Adaptability,389
+Am a bad loser.,Adaptability,179
+Hate surprises.,Adventurousness,1699
+Seldom joke around.,Adventurousness,1790
+Am open to change.,Adventurousness,1558
+Engage in exciting adventures,Adventurousness,3220
+Be a long-distance bicycle rider,Adventurousness,3179
+Don't like to travel.,Adventurousness,258
+Believe that I am important.,Adventurousness,1583
+Carry out my plans.,Industriousness/Perseverance/Persistence,1024
+Finish things despite obstacles in the way.,Industriousness/Perseverance/Persistence,3698
+Am under constant pressure.,Industriousness/Perseverance/Persistence,209
+Put work above pleasure.,Industriousness/Perseverance/Persistence,354
+Do not tend to stick with what I decide to do.,Industriousness/Perseverance/Persistence,3657
+Always know what I am doing.,Industriousness/Perseverance/Persistence,987
+Do more than what's expected of me.,Industriousness/Perseverance/Persistence,3394
+Am always on the go.,Industriousness/Perseverance/Persistence,3336
+Feel comfortable around people.,Extraversion,1133
+Have difficulty expressing my feelings.,Extraversion,430
+Never at a loss for words.,Extraversion,445
+Am not good at getting people to like me.,Extraversion,200
+Am skilled in handling social situations.,Extraversion,207
+Express myself easily.,Extraversion,269
+Make friends easily.,Extraversion,442
+Bottle up my feelings.,Extraversion,1125
+Need things explained only once.,Resourcefulness,340
+Can perform a wide variety of tasks.,Resourcefulness,223
+Give up easily.,Resourcefulness,282
+Can manage many things at the same time.,Resourcefulness,221
+Have difficulty understanding abstract ideas.,Intellectual Openness,1055
+Avoid difficult reading material.,Intellectual Openness,1009
+Believe in the importance of art.,Intellectual Openness,1015
+Am open to change.,Intellectual Openness,205
+Do not like poetry.,Intellectual Openness,1028
+Seldom daydream.,Intellectual Openness,1093
+Love to be the center of attention.,Exhibitionism,1449
+Dislike being the center of attention.,Exhibitionism,2279
+Am likely to show off if I get the chance.,Exhibitionism,195
+Don't enjoy being in the spotlight.,Exhibitionism,1360
+Judge people by their appearance.,Unpretentiousness,299
+Change myself to suit others.,Unpretentiousness,231
+Act quickly without thinking.,Calmness,1526
+Am easy to satisfy.,Calmness,2160
+Take things as they come.,Calmness,870
+Believe in human goodness.,Calmness,1580
+Rarely complain.,Calmness,355
+Get angry easily.,Calmness,277
+Have a sharp tongue.,Calmness,2200
+Speak ill of others.,Calmness,2231
+Worry about things.,Calmness,2435
+Dislike taking responsibility for making decisions.,Leadership,238
+Never at a loss for words.,Leadership,787
+Wait for others to lead the way.,Leadership,383
+Organize a political campaign,Leadership,3238
+Am not highly motivated to succeed.,Leadership,202
+Am easily discouraged.,Leadership,2158
+Am the first to act.,Leadership,530
+Take the initiative.,Leadership,2234
+Have little to say.,Leadership,706
+Take charge.,Leadership,863
+Have a poor vocabulary.,Comprehension,287
+Skip difficult words while reading.,Comprehension,1792
+Love to read challenging material.,Comprehension,330
+Feel it's OK that some people don't like me.,Independence,271
+Don't care what others think.,Independence,252
+Do not enjoy watching dance performances.,Culture,244
+Believe in the importance of art.,Culture,217
+Do not like concerts.,Culture,245
+Visited an art exhibition.,Culture,3128
+Go my own way.,Reclusiveness,283
+Don't like being away from civilization.,Reclusiveness,256
+Ate dinner alone.,Reclusiveness,2972
+Like to be alone.,Reclusiveness,319
+Believe in one true religion.,Conservatism,2650
+Believe that there is no absolute right and wrong.,Conservatism,2654
+Believe in the importance of art.,Conservatism,2651
+Dislike movies with happy Hollywood endings.,Conservatism,3390
+Don't consider myself religious.,Conservatism,2666
+Will agree to anything.,Docility,392
+Don't let others take credit for my work.,Docility,255
+Put off unpleasant tasks.,Conscientiousness,812
+Return borrowed items.,Conscientiousness,831
+Find it difficult to get down to work.,Conscientiousness,1136
+Take tasks too lightly.,Conscientiousness,869
+Leave my belongings around.,Conscientiousness,1153
+Do things in a half-way manner.,Conscientiousness,420
+Like to tidy up.,Conscientiousness,1154
+Don't put my mind on the task at hand.,Conscientiousness,2940
+Follow a schedule.,Conscientiousness,1137
+Carry out my plans.,Conscientiousness,2929
+Know that I am not a special person.,Attractiveness,439
+Get things done quickly.,Attractiveness,427
+Want to be told I am right.,Negative-Valence,460
+Interfere in other people's business.,Negative-Valence,435
+Believe that the end justifies the means.,Morality,3372
+Pretend to be concerned for others.,Morality,2869
+Only talk about my own interests.,Morality,798
+Misuse power.,Morality,3479
+Use others for my own ends.,Morality,2907
+Like harmony in my life.,Morality,738
+Prefer to deal with strangers in a formal manner.,Self-disclosure,807
+Reveal little about myself.,Self-disclosure,3507
+Joke around a lot.,Self-disclosure,711
+Say little.,Self-disclosure,3510
+Feel desperate.,Happiness,2189
+Am often down in the dumps.,Happiness,1556
+Feel attacked by others.,Happiness,1660
+Am comfortable in unfamiliar situations.,Happiness,1532
+Am filled with doubts about things.,Happiness,494
+Keep up an appearance.,Cool-headedness,721
+Lose my temper.,Cool-headedness,2370
+Want everything to add up perfectly.,Cool-headedness,902
+Can't stand being contradicted.,Cool-headedness,569
+Am able to control my cravings.,Moderation,471
+Rarely overindulge.,Moderation,819
+Have a poor vocabulary.,Quickness,2198
+Like to read.,Quickness,2209
+Can handle a lot of information.,Quickness,559
+Quick to understand things.,Quickness,2219
+Am relaxed most of the time.,Tranquility,527
+Am not easily stirred.,Tranquility,511
+Experience my emotions intensely.,Tranquility,659
+Shirk my duties.,Purposefulness,849
+Don't see things through.,Purposefulness,639
+Make a mess of things.,Purposefulness,769
+Know how to cope.,Toughness,724
+Often eat too much.,Toughness,2383
+Am calm even in tense situations.,Toughness,478
+Am afraid of many things.,Toughness,2244
+Feel crushed by setbacks.,Toughness,665
+Automatically take charge.,Toughness,2173
+Am comfortable in unfamiliar situations.,Poise,480
+Remain calm under pressure.,Poise,1774
+Retreat from others.,Poise,830
+Pay attention to details.,Poise,1759
+Am deeply moved by others' misfortunes.,Sympathy,482
+Demand a lot from others.,Sympathy,590
+Don't fall for sob stories.,Sympathy,628
+Look down on any weakness.,Sympathy,758
+Seldom get mad.,Stability,843
+Am relaxed most of the time.,Stability,2170
+Live in a world of my own.,Stability,1735
+Do things that others find strange.,Stability,1634
+Make enemies.,Stability,1744
+Rarely get irritated.,Stability,2221
+React intensely.,Impulse-Control,821
+Make a mess of things.,Impulse-Control,3476
+Habitually blow my chances.,Impulse-Control,3441
+Easily resist temptations.,Impulse-Control,3405
+Do crazy things.,Impulse-Control,2288
+Like to act on a whim.,Impulse-Control,2362
+Cry easily.,Imperturbability,588
+Am easily moved to tears.,Imperturbability,489
+Take precautions.,Cautiousness,868
+Tend to dislike impulsive people.,Cautiousness,876
+Choose my words with care.,Cautiousness,2771
+Act without thinking.,Cautiousness,2730
+Have a good word for everyone.,Pleasantness,692
+Have a sharp tongue.,Pleasantness,2345
+Find it hard to forgive others.,Pleasantness,671
+Trust what people say.,Pleasantness,886
+Am exacting in my work.,Efficiency,493
+Follow through with my plans.,Efficiency,676
+Find it difficult to get down to work.,Efficiency,670
+Carry the conversation to a higher level.,Ingenuity,572
+Quickly think up new ideas.,Ingenuity,815
+Am good at many things.,Ingenuity,496
+Take no time for others.,Understanding,865
+Appreciate the viewpoints of others.,Understanding,534
+Wait for my turn.,Provocativeness,900
+Can't stand confrontations.,Provocativeness,570
+Don't mind being the center of attention.,Provocativeness,636
+Let people pull my leg.,Rationality,737
+Believe in a logical answer for everything.,Rationality,544
+Get a head start on others.,Rationality,678
+Am not happy until all the details are taken care of.,Perfectionism,1320
+Complete tasks successfully.,Perfectionism,1840
+Question my ability to do my work properly.,Perfectionism,1851
+Have an eye for detail.,Perfectionism,2017
+Detect mistakes.,Perfectionism,1961
+Seldom feel blue.,Perfectionism,1853
+Continue until everything is perfect.,Perfectionism,584
+Rarely get irritated.,Empathy,2392
+Have a good word for everyone.,Empathy,3443
+Feel little concern for others.,Empathy,941
+Try to stay in touch with myself.,Empathy,893
+Treat people as inferiors.,Empathy,884
+Rarely complain.,Empathy,2391
+Make people feel welcome.,Empathy,3477
+Don't understand people who get emotional.,Empathy,2513
+Am deeply moved by others' misfortunes.,Empathy,2474
+Consider myself an average person.,Creativity/Originality,583
+Like to think of new ways to do things.,Creativity/Originality,3757
+Seldom experience sudden intuitive insights.,Creativity/Originality,2086
+Design Internet web pages,Creativity/Originality,3215
+Love to think up new ways of doing things.,Creativity/Originality,2050
+Avoid philosophical discussions.,Creativity/Originality,539
+Am able to come up with new and different ideas.,Creativity/Originality,3564
+Played a musical instrument.,Creativity/Originality,3057
+Am not considered to have new and different ideas.,Creativity/Originality,3583
+Select art works for a museum,Creativity/Originality,3253
+Know how things work.,Creativity/Originality,2205
+Painted a picture.,Creativity/Originality,3049
+Love to chat.,Sociability,2048
+Act comfortably with others.,Sociability,1525
+Enjoy being part of a group.,Sociability,1983
+Amuse my friends.,Sociability,2172
+Seem to derive less enjoyment from interacting with people than others do.,Sociability,2085
+Make friends easily.,Sociability,2054
+Find it difficult to approach others.,Sociability,1672
+Love action.,Sociability,2211
+Enjoy being part of a loud crowd.,Sociability,646
+Want to mean something to others.,Tenderness,908
+Believe crying helps me feel better.,Tenderness,543
+Show my feelings.,Tenderness,852
+Oppose authority.,Nurturance,799
+Put people under pressure.,Nurturance,813
+Believe only in myself.,Nurturance,547
+Examine my motives constantly.,Introspection/Private Self-Consciousness,1265
+Can't stand being alone.,Introspection/Private Self-Consciousness,568
+Don't try to figure myself out.,Introspection/Private Self-Consciousness,1263
+Do things at my own pace.,Introspection/Private Self-Consciousness,619
+Try to understand myself.,Introspection/Private Self-Consciousness,2425
+Look for hidden meanings in things.,Cooperation,2210
+Act wild and crazy.,Cooperation,2156
+Rarely overindulge.,Cooperation,2222
+Break rules.,Cooperation,2175
+Play tricks on others.,Cooperation,804
+Enjoy crude jokes.,Cooperation,649
+Have a sharp tongue.,Cooperation,2816
+Seldom notice details.,Organization,845
+Keep track of a companyÕs inventory,Organization,3230
+Often forget to put things back in their proper place.,Organization,2061
+Be a purchasing agent,Organization,3189
+Monitor business expenses,Organization,3237
+Be an office manager,Organization,3200
+Develop an office filing system,Organization,3217
+Think ahead.,Organization,880
+Follow through on my commitments.,Organization,675
+Speak loudly.,Talkativeness,854
+Make myself the center of attention.,Talkativeness,773
+Enjoy discussing movies and books with others.,Reflection,650
+See beauty in things that others might not notice.,Reflection,835
+Do not like poetry.,Depth,1629
+Am interested in many things.,Depth,1544
+Want to increase my knowledge.,Depth,1831
+Approach others in a positive manner.,Depth,1575
+Come up with good solutions.,Competence,1602
+Meet challenges.,Competence,779
+Give up easily.,Competence,3440
+Am not sure where my life is going.,Competence,2166
+Learn quickly.,Competence,731
+Do just enough work to get by.,Competence,2182
+Am easily offended.,Competence,1537
+Am upset by the misfortunes of strangers.,Responsive Distress,928
+Am not easily disturbed by events.,Responsive Distress,923
+Rarely think about how I feel.,Attention to Emotions,973
+Am usually aware of the way that I'm feeling.,Attention to Emotions,929
+Usually end up laughing if the people around me are laughing.,Responsive Joy,984
+Dislike being around happy people when I'm feeling sad.,Responsive Joy,936
+"Make decisions based on facts, not feelings.",Emotion-based Decision-making,961
+"Base my goals in life on inspiration, rather than logic.",Emotion-based Decision-making,930
+"Keep my feelings to myself, regardless of how unhappy I am.",Negative Expressivity,953
+Show my sadness.,Negative Expressivity,978
+Insult people.,Positive Expressivity,1058
+Hate to seem pushy.,Positive Expressivity,1051
+Am out for my own personal gain.,Positive Expressivity,1005
+Love a good fight.,Positive Expressivity,1071
+Rarely get irritated.,Neuroticism,1082
+Am very pleased with myself.,Neuroticism,2921
+Keep my emotions under control.,Neuroticism,1059
+Rarely lose my composure.,Neuroticism,1084
+Feel threatened easily.,Neuroticism,1037
+Am not embarrassed easily.,Neuroticism,1002
+Seldom feel blue.,Neuroticism,1095
+Rarely complain.,Anger,2873
+Get angry easily.,Anger,1043
+Keep my cool.,Anger,2826
+Rarely lose my composure.,Anger,1085
+Feel short-changed in life.,Vitality/Enthusiasm/Zest,2322
+Prefer to participate fully rather than view life from the sidelines.,Vitality/Enthusiasm/Zest,3774
+Am not a very enthusiastic person.,Vitality/Enthusiasm/Zest,999
+Keep others at a distance.,Vitality/Enthusiasm/Zest,1061
+Warm up quickly to others.,Vitality/Enthusiasm/Zest,1109
+Reveal little about myself.,Vitality/Enthusiasm/Zest,1088
+Am inclined to forgive others.,Compassion,3345
+Get even with others.,Compassion,3433
+CanÕt be bothered with otherÕs needs.,Compassion,1023
+Inquire about others' well-being.,Compassion,1057
+Can become tearful thinking of the goodness of others.,Aesthetic Appreciation/Artistic Interests,3630
+Seldom daydream.,Aesthetic Appreciation/Artistic Interests,1094
+Have not created something of beauty in the last year.,Aesthetic Appreciation/Artistic Interests,3728
+Enjoy the beauty of nature.,Aesthetic Appreciation/Artistic Interests,1033
+Feel it's important to live in a world of beauty.,Aesthetic Appreciation/Artistic Interests,3689
+Do not like art.,Aesthetic Appreciation/Artistic Interests,1967
+Would never cheat on my taxes.,Impression-Management,1214
+Would never take things that aren't mine.,Impression-Management,1215
+Am likely to show off if I get the chance.,Impression-Management,1179
+Don't always practice what I preach.,Impression-Management,1187
+Have a low opinion of myself.,Self-deception,1192
+Just know that I will be a success.,Self-deception,1195
+Like to take responsibility for making decisions.,Cognitive-Failures,1199
+Often forget things.,Cognitive-Failures,1201
+Get stressed out easily.,Behavioral Inhibition/Activation System,1235
+Am always worried about something.,Behavioral Inhibition/Activation System,1217
+Get so happy or energetic that I am almost giddy.,Excitement-seeking,1234
+Love action.,Excitement-seeking,2843
+Rarely get caught up in the excitement.,Excitement-seeking,1249
+Feel excited or happy for no apparent reason.,Excitement-seeking,1232
+Push myself very hard to succeed.,Ambition/Drive,1247
+Want to be in charge.,Ambition/Drive,1254
+Do unexpected things.,Risk-taking/Sensation-Seeking/Thrill-Seeking,2139
+Act wild and crazy.,Risk-taking/Sensation-Seeking/Thrill-Seeking,2131
+Have persuaded others to do something really adventurous or crazy.,Risk-taking/Sensation-Seeking/Thrill-Seeking,1239
+Rarely enjoy behaving in a silly manner.,Risk-taking/Sensation-Seeking/Thrill-Seeking,1248
+Do crazy things.,Risk-taking/Sensation-Seeking/Thrill-Seeking,1229
+Might enjoy the thrill of being lost at sea.,Risk-taking/Sensation-Seeking/Thrill-Seeking,2144
+Seek danger.,Risk-taking/Sensation-Seeking/Thrill-Seeking,2556
+Would never go riding down a stretch of rapids in a canoe.,Risk-taking/Sensation-Seeking/Thrill-Seeking,2154
+Would never go hang gliding or bungee jumping.,Risk-taking/Sensation-Seeking/Thrill-Seeking,1257
+Avoid dangerous situations.,Risk-taking/Sensation-Seeking/Thrill-Seeking,1225
+Need reassurance.,Public Self-consciousness,1270
+Am not concerned with making a good impression.,Public Self-consciousness,1260
+Am not easily bothered by things.,Public Self-consciousness,1261
+Try to avoid complex people.,Need for Cognition,1288
+Need things explained only once.,Need for Cognition,1287
+Am a firm believer in thinking things through.,Non-Planfulness,1291
+Act without planning.,Non-Planfulness,1289
+Believe people should fend for themselves.,Callousness,2442
+Care about others.,Callousness,1349
+Am a cold-hearted person.,Callousness,1290
+Have done many things for which I could have been (or was) arrested.,Norm Violation,1410
+Have a rebellious side that gets me into trouble.,Norm Violation,1400
+Am considered to be kind of eccentric.,Peculiarity,1302
+Neglect my duties.,Irresponsibility,1453
+Cannot be counted on to get things done.,Irresponsibility,1348
+Have noticed that I put my work ahead of too many other things.,Workaholism,1418
+Am able to describe my feelings easily.,Emotional Detachment,1296
+Think it's best to keep my emotions to myself.,Emotional Detachment,1485
+Can control objects with my mind.,Irrational Beliefs,1343
+Believe I have supernatural powers.,Irrational Beliefs,1335
+Am afraid that my life will be cut short by illness.,Health Anxiety,1298
+Worry about my health.,Health Anxiety,1496
+Get jealous easily.,Relationship Insecurity,1395
+Am paralyzed by a fear of rejection.,Relationship Insecurity,1325
+Have trouble getting interested in things.,Anhedonia,1421
+Have a lot of fun.,Anhedonia,1398
+Am an honest person.,Manipulativeness,1301
+Like to trick people into doing things for me.,Manipulativeness,1444
+Believe that most questions have one right answer.,Rigidity,1339
+Have fixed opinions.,Rigidity,1412
+Let others finish what they are saying.,Submissiveness,2457
+Need others to help run my life,Submissiveness,1452
+Easily lose my train of thought.,Cognitive Problems,1364
+Am easily disoriented.,Cognitive Problems,1305
+Quickly lose interest in the tasks I start.,Non-Perseverance,1464
+Finish what I start.,Non-Perseverance,1384
+Enjoy a good brawl.,Hostile Aggression,1365
+Hurt people.,Hostile Aggression,1426
+Am pretty trusting of others' motives.,Mistrust,1326
+Feel like people often are out to get something from me.,Mistrust,1373
+Had a poor appetite.,Depression,3274
+Am very pleased with myself.,Depression,2751
+Felt that people disliked me.,Depression,3273
+Felt that everything I did was an effort.,Depression,3271
+Felt depressed.,Depression,3265
+Look at the bright side of life.,Depression,1445
+Am often down in the dumps.,Depression,2747
+Feel desperate.,Depression,2799
+Sometimes get lost in my daydreams.,Fantasy Proneness,1477
+Sometimes have extremely vivid pictures in my head.,Fantasy Proneness,1478
+Believe that I am always right.,Grandiosity,1337
+Treat people as inferiors.,Grandiosity,1487
+Have unpredictable emotions and moods.,Affective Lability,1422
+Know how to cope.,Affective Lability,1436
+See little need for romance in my life.,Romantic Disinterest,1471
+Love the feeling of being intimately close with someone.,Romantic Disinterest,1448
+Find it difficult to approach others.,Social Withdrawal,1380
+Do not feel close to people.,Social Withdrawal,1356
+"I feel as if my body, or a part of it, has disappeared.",Unusual Experiences,1428
+Sometimes think the TV is talking directly to me.,Unusual Experiences,1480
+Have thoughts of injuring myself.,Self-harm,1420
+Have urges to cut myself.,Self-harm,1423
+Shoot my mouth off.,Rudeness,1474
+Ridicule people.,Rudeness,1469
+Get into moods where I feel very speeded up and irritable.,Hypomanic Mood Intensity,1510
+Feel emotions with extreme intensity.,Hypomanic Mood Intensity,1508
+Am often so restless that it is impossible for me to sit still.,Hypomanic Mood Intensity,1502
+Would be nervous playing the clown in front of other people.,Hypomanic Exhibitionism,1520
+Like to be thought of as a normal kind of person.,Hypomanic Exhibitionism,1514
+Can play many roles convincingly.,Hypomanic Exhibitionism,1505
+Am annoyed by others' mistakes.,Tolerance,3337
+Take things as they come,Tolerance,2466
+Think of others first,Tolerance,2468
+Acknowledge others' accomplishments.,Tolerance,1523
+Get irritated easily.,Tolerance,3434
+Don't like the idea of change.,Tolerance,2509
+Believe that I am better than others.,Responsibility,2493
+Hurt people.,Responsibility,2539
+Act according to my conscience.,Responsibility,1524
+Return extra change when a cashier makes a mistake.,Responsibility,1778
+Can always say enough is enough.,Self-control/Self-regulation,3628
+Do my tasks only just before they need to be done.,Self-control/Self-regulation,3647
+Can't resist eating candy or cookies if they are around.,Self-control/Self-regulation,3639
+Am a highly disciplined person.,Self-control/Self-regulation,3561
+Do not exercise on a regular basis.,Self-control/Self-regulation,3650
+Am easily intimidated.,Forcefulness,1536
+Am not embarrassed easily.,Forcefulness,1552
+Often express doubts.,Good Nature,1752
+See other people as my competitors.,Good Nature,1783
+Get annoyed with others' behaviors.,Politeness,1681
+Do things behind other people's backs.,Politeness,1632
+Back out at the last moment.,Politeness,1577
+Avoid responsibilities.,Self-discipline,1576
+Find it difficult to get down to work.,Self-discipline,1673
+Like to organize things.,Self-discipline,1733
+Start tasks right away.,Self-discipline,2892
+Feel short-changed in life.,Security,2324
+Do things that others find strange.,Security,2294
+Carry out my plans.,Security,1595
+Rarely overindulge.,Security,2393
+Am guided by my moods.,Temperance,1542
+Grumble about things.,Temperance,1695
+Am not bothered by disorder.,Disorderliness,1545
+Continue until everything is perfect.,Disorderliness,1607
+Am often in a bad mood.,Amiability,1557
+Have days when I'm mad at the world.,Amiability,1706
+See difficulties everywhere.,Hope/Optimism,1782
+Am not sure where my life is going.,Hope/Optimism,3353
+Can clearly picture in my mind what I want to happen in my future.,Hope/Optimism,3631
+Am often in a bad mood.,Hope/Optimism,3294
+Am resigned to my fate.,Hope/Optimism,3365
+Keep my cool.,Hope/Optimism,1718
+Feel comfortable with myself.,Hope/Optimism,3296
+Often feel blue.,Hope/Optimism,3301
+Can manage many things at the same time.,Self-efficacy,3380
+Know how to get things done.,Self-efficacy,2830
+Undertake few things on my own.,Self-efficacy,1823
+Am sure of my ground.,Self-efficacy,2750
+Think quickly.,Self-efficacy,1811
+Can tackle anything.,Self-efficacy,3382
+Believe in one true religion.,Liberalism,2758
+Tend to vote for conservative political candidates.,Liberalism,1808
+Believe that too much tax money goes to support artists.,Liberalism,1585
+Seek danger.,Timidity,1786
+Stick to the rules.,Timidity,1797
+Feel that my interests change quickly.,Planfulness,1668
+Don't bother to make an effort.,Planfulness,1636
+Make rash decisions.,Planfulness,2704
+Often make last-minute plans.,Planfulness,2708
+Come up with alternatives.,Insight,1601
+Say nothing new.,Insight,1780
+Cry easily.,Sentimentality,1609
+Dislike competing with others.,Sentimentality,1615
+Seldom feel weepy while reading the sad part of a story.,Sentimentality,2087
+Enjoy games of strategy.,Sentimentality,1651
+Have a soft heart.,Sentimentality,3444
+Want everything to be just right.,Need for Order and Cleanliness,1855
+Like order.,Need for Order and Cleanliness,1848
+Dislike looking at my body.,Physical Attractiveness,1859
+Attract attention from the opposite sex.,Physical Attractiveness,1857
+Get upset by unpleasant thoughts that come into my mind.,Obsessive-Compulsive Symptoms,1865
+Wash my hands more often than is necessary.,Obsessive-Compulsive Symptoms,1876
+Check on things more often than necessary.,Obsessive-Compulsive Symptoms,1858
+Felt as though I was looking at the world through a fog so thatÊpeople and objects appeared far away or unclear.,Dissociation,1878
+Felt like I was dreaming when I was awake.,Dissociation,1880
+Had the experience of looking in a mirror and not recognizingÊmyself.,Dissociation,1901
+"Had the experience of feeling that other people, objects, and theÊworld around me were not real.",Dissociation,1900
+Find that in certain situations I am able to do things withÊamazing ease and spontaneity that would usually be difficultÊfor me.,Dissociation,1883
+Found evidence that I had done things that I did not rememberÊdoing.,Dissociation,1885
+Felt that I could not move my hands or feet.,Dissociation,1881
+Find fault with everything.,Gentleness,1993
+Speak ill of others.,Gentleness,2092
+Think before I speak.,Prudence,3786
+Have never deliberately hurt anyone.,Prudence,3723
+Don't know why I do some of the things I do.,Prudence,1976
+Make rash decisions.,Prudence,2056
+Make careless mistakes.,Prudence,2053
+Find it necessary to please the people who have power.,Sincerity,1996
+Put on a show to impress people.,Sincerity,2070
+Am good at taking advice.,Flexibility,1921
+Am hard to reason with.,Flexibility,1924
+Admit when I am wrong.,Equity/Fairness,3554
+Would feel very badly for a long time if I were to steal from someone.,Equity/Fairness,2121
+Would never take things that aren't mine.,Equity/Fairness,2127
+Would never cheat on my taxes.,Equity/Fairness,2125
+Am committed to principles of justice and equality.,Equity/Fairness,3570
+Would fear walking in a high-crime part of a city.,Fearfulness,2120
+Would never go riding down a stretch of rapids in a canoe.,Fearfulness,2126
+Do things that others find strange.,Unconventionality,1970
+Know that my ideas sometimes surprise people.,Unconventionality,2032
+Get upset easily.,Patience,2006
+Rarely get irritated.,Patience,2076
+Stop when work becomes too difficult.,Diligence,2095
+Hang around doing nothing.,Diligence,2008
+Have leadership abilities.,Social Boldness,2022
+Have a strong personality.,Social Boldness,2015
+Am on good terms with nearly everyone.,Forgiveness/Mercy,2263
+Hold a grudge.,Forgiveness/Mercy,2026
+Accept apologies easily.,Forgiveness/Mercy,2240
+Get even with others.,Forgiveness/Mercy,2002
+Find it hard to forgive others.,Forgiveness/Mercy,1995
+Try to forgive and forget.,Forgiveness/Mercy,2107
+Am interested in science.,Inquisitiveness,1927
+Will not probe deeply into a subject.,Inquisitiveness,2115
+Boast about my virtues.,Modesty/Humility,1949
+Don't call attention to myself.,Modesty/Humility,3661
+Am more capable than most others.,Modesty/Humility,1931
+Like to attract attention.,Modesty/Humility,2039
+Don't act is if I'm a special person.,Modesty/Humility,3658
+Would never be described as arrogant.,Modesty/Humility,3804
+Love luxury.,Greed Avoidance,2046
+Wish to stay young forever.,Greed Avoidance,2116
+Bottle up my feelings.,Expressiveness,1950
+Talk a lot.,Expressiveness,2100
+Feel healthy and vibrant most of the time.,Liveliness,1989
+Maintain high energy throughout the day.,Liveliness,2051
+Let myself be influenced by others.,Conformity/Dependence/Need for approval,2036
+Give in to no one.,Conformity/Dependence/Need for approval,3439
+Believe only in myself.,Conformity/Dependence/Need for approval,3370
+Need protection.,Conformity/Dependence/Need for approval,2057
+Do what others want me to do.,Conformity/Dependence/Need for approval,3399
+Want to be liked.,Conformity/Dependence/Need for approval,2113
+Have a natural talent for influencing people.,Social-confidence,2531
+Lack the talent for influencing people.,Social-confidence,2541
+Often feel uncomfortable around others.,Social-confidence,2551
+Played cards.,Interest in Game-Playing,3061
+Don't pay attention.,Interest in Game-Playing,2304
+Am easily distracted.,Interest in Game-Playing,2251
+Know immediately what to do.,Self-confidence,2360
+Think highly of myself.,Self-confidence,2419
+Am preoccupied with myself.,Rumination,2264
+Withhold information from others.,Rumination,2434
+Have read a lot.,Love of Reading,2351
+Read quickly.,Love of Reading,2394
+Bought a book.,Love of Reading,2991
+Spent more than 10 minutes thinking about what to wear.,Appearance-Consciousness,3106
+Bought a fashionable item of clothing.,Appearance-Consciousness,2993
+Believe that people are essentially evil.,Trust,2762
+Distrust people.,Trust,2287
+Am nice to store clerks.,Trust,3348
+Pretend to be concerned for others.,Trust,3493
+Make up word puzzles,Language Mastery,3235
+Be a foreign correspondent,Language Mastery,3176
+Be a professor of English,Language Mastery,3188
+Want to know the reasons why.,Curiosity,2430
+Think that my life is extremely interesting.,Curiosity,3787
+Find it difficult to entertain myself.,Curiosity,3696
+Want to see things for myself.,Curiosity,2432
+Have an eye for detail.,Curiosity,2347
+Disliked math in school.,Problem-solving,2285
+Like to solve complex problems.,Problem-solving,2366
+Enjoy games of strategy.,Problem-solving,2310
+Enjoy my work.,Self-acceptance,2312
+Feel comfortable with myself.,Self-acceptance,2316
+Feel lucky most of the time.,Self-acceptance,2320
+Would describe my experiences as somewhat dull.,Variety-seeking,2436
+Am open to change.,Variety-seeking,3357
+Like to begin new things.,Variety-seeking,3463
+Cut others to pieces.,Disparagement,2444
+Can manage many things at the same time.,Activity-Level,2495
+React slowly.,Activity-Level,2877
+Do too little work.,Activity-Level,2506
+Do a lot in my spare time.,Activity-Level,2501
+Tend to vote for conservative political candidates.,Traditionalism,2561
+Tend to vote for liberal political candidates.,Traditionalism,2562
+Do not like concerts.,Intellectual-Breadth,2504
+Love to read challenging material.,Intellectual-Breadth,2546
+Do not like poetry.,Intellectual-Complexity,2505
+Believe in the importance of art.,Intellectual-Complexity,2492
+Hate being the center of attention.,Machiavellianism,2530
+Have a natural talent for influencing people.,Machiavellianism,2532
+Believe that my success depends on ability rather than luck.,Locus of Control,2594
+Believe some people are born lucky.,Locus of Control,2588
+Make a decision and move on.,Locus of Control,2628
+Feel that my life lacks direction.,Locus of Control,2618
+Believe that my success depends on ability rather than luck.,"Locus of Control,Internal",2592
+Believe that unfortunate events occur because of bad luck.,"Locus of Control,Internal",2599
+Am not sure where my life is going.,"Locus of Control,Chance",2582
+Believe that unfortunate events occur because of bad luck.,"Locus of Control,Chance",2600
+Believe that my success depends on ability rather than luck.,"Locus of Control,Rational",2591
+Remember my failures more easily than my successes.,"Locus of Control,External",2629
+Feel comfortable with myself.,"Locus of Control,External",2610
+Always admit it when I make a mistake.,Unlikely Virtues,2635
+Am always ready to start afresh.,Unlikely Virtues,2639
+Always know why I do things.,Unlikely Virtues,2637
+Have some bad habits.,Unlikely Virtues,2688
+Often feel blue.,Joyfulness,2707
+Have a low opinion of myself.,Joyfulness,2681
+Am willing to try anything once.,Risk-avoidance,2647
+Seek danger.,Risk-avoidance,2717
+Hold a grudge.,Belligerence,2690
+Have a sharp tongue.,Belligerence,2683
+Never splurge.,Immoderation,2858
+Easily resist temptations.,Immoderation,2788
+Am not embarrassed easily.,Self-consciousness,2745
+Stumble over my words.,Self-consciousness,2895
+Become overwhelmed by events.,Vulnerability,2756
+Remain calm under pressure.,Vulnerability,2879
+Be a physical therapist,Altruism,3183
+"Be a minister, priest, rabbi or other religious teacher",Altruism,3182
+Care for sick people,Altruism,3205
+Look down on others.,Altruism,2841
+Be a doctor or nurse,Altruism,3174
+Am not easily amused.,Cheerfulness,2744
+Seldom joke around.,Cheerfulness,2888
+Have a rich vocabulary.,Openness To Experience,2949
+Tend to vote for liberal political candidates.,Openness To Experience,2966
+Have a vivid imagination.,Openness To Experience,2951
+Get excited by new ideas.,Openness To Experience,2948
+Ordered food to be delivered.,Interest in Food,3048
+Ate too much.,Interest in Food,2976
+Listened to a religious program on the radio or TV.,Spirituality/Religiousness,3038
+Am who I am because of my faith.,Spirituality/Religiousness,3607
+Keep my faith even during hard times.,Spirituality/Religiousness,3736
+Discussed religion or spirituality.,Spirituality/Religiousness,3014
+Wrote a love letter.,Interest in Romance,3165
+Dined by candle light.,Interest in Romance,3013
+Signed a petition.,Interest in Political Activism,3102
+Attended a town meeting.,Interest in Political Activism,2983
+Played a team sport.,Interest in Sports,3058
+Played tennis or golf.,Interest in Sports,3063
+Made a bed.,Interest in Home-Making,3044
+Cooked a meal.,Interest in Home-Making,3009
+Bathed or groomed a pet animal.,Interest in Pets,2987
+Played with a pet animal.,Interest in Pets,3065
+Drank in a bar or night club.,Interest in Drinking,3020
+Went to a casino.,Interest in Gambling,3153
+Gambled on a slot machine or video poker game.,Interest in Gambling,3026
+Traded something in my collection.,Interest in Collecting,3115
+Rode a motorcycle.,Interest in Vehicles,3096
+Bought a self-help book.,Interest in Self-Improvement,2994
+Cared for a potted plant.,Interest in Gardening,3002
+Planted or transplanted a plant.,Interest in Gardening,3054
+Bought or sold real estate.,Interest in Money,2996
+Read a book on a financial topic.,Interest in Money,3076
+Used eBay to buy or sell something.,Interest in Shopping,3123
+Spent an hour or more in a non-grocery store.,Interest in Shopping,3105
+Recycled one or more items.,Interest in Environmentalism,3095
+Composted food scraps or yard waste.,Interest in Environmentalism,3008
+Exercised for 40 minutes or longer.,Interest in Exercise,3024
+Went running or jogging.,Interest in Exercise,3150
+Used an mp3 player or Ipod.,Interest in Music,3121
+Shopped in a music store.,Interest in Music,3100
+Took a child on an outing.,Interest in Children,3111
+Let a child win a game.,Interest in Children,3036
+Don't read nonfiction books for fun.,Love of Learning,3672
+Read poetry.,Love of Learning,3089
+Am a true life-long learner.,Love of Learning,3563
+Looked something up in an encyclopedia.,Love of Learning,3041
+Played a computer game.,Interest in Computing,3056
+Used a computer.,Interest in Computing,3119
+Wrote poetry.,Interest in Journaling,3168
+Wrote a thank-you note.,Interest in Journaling,3167
+Made an entry on a personal web-page.,Interest in Social Media,3046
+Watched a television reality show.,Interest in Watching Television,3134
+Recorded a television program.,Interest in Watching Television,3094
+Went sightseeing.,Interest in Travel,3151
+"Stayed in a hotel, motel, or resort.",Interest in Travel,3108
+Went backpacking or camping.,Interest in Outdoor Activities,3141
+Went on a picnic.,Interest in Outdoor Activities,3148
+Solve complex puzzles,Science Interest,3255
+Be a mathematician,Science Interest,3180
+Be a forest ranger,Construction/Mechanical Interests,3177
+Care for cattle or horses,Construction/Mechanical Interests,3204
+Know my strengths.,Self-esteem,3290
+Feel comfortable with myself.,Self-esteem,3286
+Put on a show to impress people.,Self-monitoring,3309
+Would not be a good comedian.,Self-monitoring,3312
+Have been told I'm not listening when others are speaking to me.,ADHD,3322
+Forget things.,ADHD,3321
+Don't finish the things that I start.,ADHD,3316
+Am quiet around strangers.,Social-discomfort,3363
+Find it difficult to approach others.,Social-discomfort,3422
+Am not in the mood for anything.,Satisfaction,3350
+See events as unavoidable.,Satisfaction,3512
+Am passionate about causes.,Romanticism,3360
+Express childlike joy.,Romanticism,3412
+Like to watch figure skating.,Femininity,3467
+Am not interested in other people's problems.,Femininity,3352
+Take risks.,Harm-Avoidance,3525
+Would never go hang gliding or bungee jumping.,Harm-Avoidance,3551
+Cheat to get ahead.,Rebelliousness,3387
+Resist authority.,Rebelliousness,3502
+Need a push to get started.,Initiative,3480
+Get to work at once.,Initiative,3438
+Have an eye for detail.,Recklessness,3445
+Think twice before doing something.,Recklessness,3530
+Never abuse my credit.,Extravagance,3482
+Have taken frequent stands in the face of strong opposition.,Bravery/Courage/Valor,3732
+Have overcome pain and disappointment.,Bravery/Courage/Valor,3729
+Do not stand up for my beliefs.,Bravery/Courage/Valor,3656
+Don't think about more possibilities than the one I like first.,Judgment/Open-mindedness,3677
+Am a firm believer in thinking things through.,Judgment/Open-mindedness,3557
+Know what to say to make people feel good.,Social/Personal/Emotional Intelligence,3749
+Have the ability to make others feel interesting.,Social/Personal/Emotional Intelligence,3733
+Do not see the need to acknowledge others who are good to me.,Gratitude,3655
+Feel a profound sense of appreciation every day.,Gratitude,3686
+Keep to myself.,Teamwork/Citizenship,3740
+Am an extremely loyal person.,Teamwork/Citizenship,3568
+Don't talk badly to outsiders about my own group.,Teamwork/Citizenship,3674
+Have an excellent view of the world.,Wisdom/Perspective,3715
+Consider myself to be a wise person.,Wisdom/Perspective,3643
+Keep my promises.,Honesty/Integrity/Authenticity,3737
+Am true to my own values.,Honesty/Integrity/Authenticity,3601
+Am told that I am down to earth.,Honesty/Integrity/Authenticity,3600
+Love to let others share the spotlight.,Kindness/Generosity,3764
+Love to make other people happy.,Kindness/Generosity,3765
+Feel isolated from other people.,Capacity for Love,3688
+Know someone whom I really care about as a person.,Capacity for Love,3742

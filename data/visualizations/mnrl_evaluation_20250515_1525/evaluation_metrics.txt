@@ -1,0 +1,18 @@
+IPIP MNRL Model Evaluation Metrics
+===============================
+
+Model: ipip_mnrl_20250515_1328
+Test Set Size: 761 items
+Number of Constructs: 220
+
+Clustering Quality Metrics:
+- Adjusted Rand Index: 0.2507
+- Normalized Mutual Information: 0.8206
+- Cluster Purity: 0.5650
+
+Cluster Distance Metrics:
+- Average Distance Between Clusters: 3.4542
+- Minimum Distance Between Clusters: 1.0868
+- Maximum Distance Between Clusters: 5.0040
+
+Generated on 2025-05-15 15:25

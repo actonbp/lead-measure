@@ -1,0 +1,92 @@
+{
+  "item_level": {
+    "accuracy_difference": 0.07720666430343848,
+    "accuracy_difference_ci": [
+      0.019186015597305914,
+      0.13368530662885503
+    ],
+    "proportion_test_z": 2.6637204335298903,
+    "proportion_test_p": 0.007728175980836527,
+    "effect_size_comparison_z": 3.033981375424166,
+    "effect_size_comparison_p": 0.0024134932924118058,
+    "ipip_cohens_d_ci": [
+      0.6108684716259002,
+      0.8545403304065705
+    ],
+    "leadership_cohens_d_ci": [
+      0.31399663068150413,
+      0.5808445634713278
+    ],
+    "ipip_holdout_results": {
+      "dataset": "IPIP Holdout",
+      "n_items": 520,
+      "n_constructs": 177,
+      "same_label_mean": 0.3532419204711914,
+      "same_label_std": 0.17416521906852722,
+      "diff_label_mean": 0.1860014647245407,
+      "diff_label_std": 0.14599929749965668,
+      "t_statistic": 16.7082297991628,
+      "p_value": 1.8349062342317705e-50,
+      "cohens_d": 0.7327044010162354,
+      "probability_correct": 0.7615384615384615
+    },
+    "leadership_results": {
+      "dataset": "Leadership",
+      "n_items": 434,
+      "n_constructs": 11,
+      "same_label_mean": 0.3294890224933624,
+      "same_label_std": 0.15120290219783783,
+      "diff_label_mean": 0.2413492202758789,
+      "diff_label_std": 0.1302148401737213,
+      "t_statistic": 9.320962740204877,
+      "p_value": 5.937976002024935e-19,
+      "cohens_d": 0.447420597076416,
+      "probability_correct": 0.684331797235023
+    }
+  },
+  "construct_level": {
+    "accuracy_difference": 0.2445040417012918,
+    "accuracy_difference_ci": [
+      0.18693812797461662,
+      0.29995467250887664
+    ],
+    "proportion_test_z": 8.28725937330422,
+    "proportion_test_p": 2.220446049250313e-16,
+    "effect_size_comparison_z": 7.444886370774898,
+    "effect_size_comparison_p": 9.703349235223868e-14,
+    "ipip_cohens_d_ci": [
+      0.9812507463895522,
+      1.2502894567049303
+    ],
+    "leadership_cohens_d_ci": [
+      0.2343111810812844,
+      0.5011591138711081
+    ],
+    "ipip_holdout_results": {
+      "dataset": "IPIP Construct Holdout",
+      "n_items": 427,
+      "n_constructs": 50,
+      "same_label_mean": 0.4242013692855835,
+      "same_label_std": 0.1843998283147812,
+      "diff_label_mean": 0.18870355188846588,
+      "diff_label_std": 0.13757452368736267,
+      "t_statistic": 23.05624928063237,
+      "p_value": 6.122103752736809e-77,
+      "cohens_d": 1.1157701015472412,
+      "probability_correct": 0.8735362997658079
+    },
+    "leadership_results": {
+      "dataset": "Leadership",
+      "n_items": 434,
+      "n_constructs": 11,
+      "same_label_mean": 0.3480887711048126,
+      "same_label_std": 0.14786827564239502,
+      "diff_label_mean": 0.28390181064605713,
+      "diff_label_std": 0.12277837842702866,
+      "t_statistic": 7.660903807860284,
+      "p_value": 1.2203515230209787e-13,
+      "cohens_d": 0.3677351474761963,
+      "probability_correct": 0.6290322580645161
+    }
+  }
+}

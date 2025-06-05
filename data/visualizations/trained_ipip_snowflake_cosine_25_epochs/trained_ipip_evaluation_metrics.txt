@@ -1,0 +1,5 @@
+Trained IPIP Model Evaluation Metrics (Model: models/gist_ipip_snowflake_cosine/checkpoint-1475)
+===============================================================
+- Ari: 0.0704
+- Nmi: 0.7612
+- Purity: 0.4008

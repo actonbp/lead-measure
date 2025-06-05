@@ -1,0 +1,28 @@
+{
+  "ipip_holdout": {
+    "dataset": "IPIP Construct Holdout",
+    "n_items": 427,
+    "n_constructs": 50,
+    "same_label_mean": 0.4242013692855835,
+    "same_label_std": 0.1843998283147812,
+    "diff_label_mean": 0.18870355188846588,
+    "diff_label_std": 0.13757452368736267,
+    "t_statistic": 23.05624928063237,
+    "p_value": 6.122103752736809e-77,
+    "cohens_d": 1.1157701015472412,
+    "probability_correct": 0.8735362997658079
+  },
+  "leadership": {
+    "dataset": "Leadership",
+    "n_items": 434,
+    "n_constructs": 11,
+    "same_label_mean": 0.3480887711048126,
+    "same_label_std": 0.14786827564239502,
+    "diff_label_mean": 0.28390181064605713,
+    "diff_label_std": 0.12277837842702866,
+    "t_statistic": 7.660903807860284,
+    "p_value": 1.2203515230209787e-13,
+    "cohens_d": 0.3677351474761963,
+    "probability_correct": 0.6290322580645161
+  }
+}

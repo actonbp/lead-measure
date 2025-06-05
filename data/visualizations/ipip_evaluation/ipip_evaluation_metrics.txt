@@ -1,0 +1,12 @@
+IPIP Model Evaluation Metrics
+===========================
+Dataset: IPIP with 3043 training samples, 761 test samples
+Model: sentence-transformers/all-mpnet-base-v2 trained with GIST loss
+Guide model: sentence-transformers/all-MiniLM-L6-v2
+
+Adjusted Rand Index: 0.0473
+Normalized Mutual Information: 0.7512
+Cluster Purity: 0.3745
+
+Higher values indicate better clustering quality (max=1.0).
+Generated on 2025-05-14 17:52

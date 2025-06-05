@@ -1,0 +1,26 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+## Project Goal and Approach
+
+This project determined if leadership measurement constructs are semantically distinct or redundant compared to established personality constructs (IPIP).
+
+**VALIDATED METHODOLOGY (Ivan's Enhanced Pipeline):**
+1. **Triple-randomized pair generation**: Eliminates ordering bias in contrastive learning
+2. **TSDAE pre-training + GIST loss fine-tuning**: Domain adaptation with BGE-M3 model  
+3. **Rigorous holdout validation**: 80/20 construct-level splits prevent training bias
+4. **Statistical evaluation**: Cosine similarity analysis with Cohen's d effect sizes
+
+**FINAL VALIDATED RESULTS:**
+- **IPIP holdout constructs**: 87.4% separation accuracy (Cohen's d = 1.116)
+- **Leadership constructs**: 62.9% separation accuracy (Cohen's d = 0.368)
+- **Statistical significance**: t(853.99) = 43.49, p < 2.22e-16
+- **Research conclusion**: Leadership constructs show significant semantic overlap
+
+**KEY FILES:**
+- **Main pipeline**: `scripts/ivan_analysis/run_complete_pipeline.sh`
+- **Best visualization**: `data/visualizations/construct_holdout_validation/top5_coherent_constructs_tsne.png`
+- **Manuscript**: `manuscript/leadership_measurement_paper.qmd`
+- **Validated model**: `models/gist_construct_holdout_unified_final`

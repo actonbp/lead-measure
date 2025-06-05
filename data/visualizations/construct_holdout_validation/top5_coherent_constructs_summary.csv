@@ -1,0 +1,11 @@
+domain,construct,mean_similarity,n_items
+IPIP,Interest in Collecting,0.7203088,5
+IPIP,Interest in Watching Television,0.69050056,7
+IPIP,Interest in Sports,0.62285465,6
+IPIP,Interest in Outdoor Activities,0.61865145,7
+IPIP,Interest in Drinking,0.61847633,5
+Leadership,Abusive,0.575501,8
+Leadership,Instrumental,0.44772243,16
+Leadership,Authentic,0.42387703,14
+Leadership,Empowering,0.41945267,17
+Leadership,Initiating Structure,0.39737937,34
