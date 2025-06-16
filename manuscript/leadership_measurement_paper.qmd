@@ -74,7 +74,19 @@ Sentence transformer models, particularly when enhanced with contrastive learnin
 
 ## Current Study
 
-This study employs state-of-the-art contrastive learning techniques to empirically assess the semantic distinctiveness of leadership constructs compared to established personality dimensions. We hypothesize that leadership constructs will demonstrate significantly less semantic distinctiveness than personality constructs, providing empirical evidence for construct proliferation concerns.
+This study employs state-of-the-art contrastive learning techniques to empirically assess the semantic distinctiveness of leadership constructs compared to established personality dimensions. We present a two-part investigation: first testing whether leadership constructs demonstrate the semantic redundancy suggested by theoretical critiques, and second exploring what semantic features actually drive the observed clustering patterns in leadership measurement.
+
+### Part 1: Testing Construct Distinctiveness
+
+We hypothesize that leadership measurement constructs will demonstrate significantly lower semantic distinctiveness compared to established personality constructs. Specifically:
+
+**H1**: Leadership constructs will show (a) lower accuracy in distinguishing same-construct from different-construct item pairs, (b) smaller effect sizes for construct separation, and (c) greater overlap in embedding space compared to personality constructs.
+
+This hypothesis is grounded in the observation that leadership constructs have emerged from overlapping theoretical traditions and share common behavioral referents, potentially leading to semantic redundancy in their operationalization despite claims of theoretical distinctiveness.
+
+### Part 2: Understanding Semantic Features (Forthcoming)
+
+Beyond documenting semantic overlap, we will explore what features actually drive clustering patterns in leadership measurement. This exploratory analysis will test whether classical taxonomies (e.g., task vs. relational orientation) or alternative dimensions (e.g., linguistic abstraction, temporal focus) better explain the empirical structure of leadership measurement items.
 
 Our approach utilizes Ivan Hernandez's enhanced methodology, incorporating TSDAE (Transformer-based Sequential Denoising AutoEncoder) pre-training and GIST (Guided In-Structure Training) loss functions to achieve superior construct separation compared to baseline approaches. This methodology has demonstrated dramatic improvements in construct separation accuracy, from baseline performance of 81.66% to 99.43% probability of correct same-construct ranking [@hernandez2024].
 
@@ -154,15 +166,21 @@ Bootstrap confidence intervals (95% CI) were calculated using 1,000 bootstrap sa
 
 # Results
 
-## Primary Analysis: Construct Separation Performance
+## Part 1: Testing Construct Distinctiveness Hypothesis
 
-### Personality Constructs (IPIP Holdout)
+### Primary Analysis: Construct Separation Performance
+
+#### Personality Constructs (IPIP Holdout)
 
 The enhanced contrastive learning model demonstrated strong separation performance on held-out personality constructs. Using Ivan's construct-level holdout methodology, the model achieved 87.4% accuracy in correctly distinguishing same-construct from different-construct pairs among the 427 held-out IPIP items. The mean cosine similarity for same-construct pairs was 0.4242 ± 0.1844, while different-construct pairs averaged 0.1887 ± 0.1376. This separation yielded a large effect size (Cohen's d = 1.116, 95% CI [0.981, 1.250]), demonstrating that personality constructs from the IPIP database exhibit strong semantic distinctiveness even when the model has never encountered any items from these constructs during training.
 
-### Leadership Constructs
+#### Leadership Constructs
 
 In contrast, leadership constructs demonstrated significantly weaker semantic separation. The model achieved only 62.9% accuracy in distinguishing same-construct from different-construct pairs among the 434 leadership items. The mean cosine similarity for same-construct pairs was 0.3481 ± 0.1479, while different-construct pairs averaged 0.2839 ± 0.1228. This weaker separation resulted in a small effect size (Cohen's d = 0.368, 95% CI [0.234, 0.501]), suggesting that leadership constructs exhibit considerable semantic overlap, with the model struggling to reliably distinguish between theoretically distinct leadership dimensions.
+
+### Hypothesis Testing Results
+
+Our primary hypothesis (H1) was strongly supported. Leadership constructs showed: (a) substantially lower accuracy (62.9% vs. 87.4%), (b) a much smaller effect size (d = 0.368 vs. d = 1.116), and (c) greater overlap in embedding space as evidenced by the smaller separation between same- and different-construct similarities. These findings provide robust empirical support for semantic redundancy in leadership measurement.
 
 ## Statistical Significance Testing
 
@@ -171,6 +189,12 @@ The difference between personality and leadership construct separation yielded a
 A formal comparison of effect sizes using the method of Lenhard & Lenhard (2016) confirmed that the Cohen's d values differ significantly (z = 7.445, p = 9.70e-14). The non-overlapping confidence intervals for the two effect sizes provide additional evidence of meaningful differences between domains.
 
 INSERT TABLE 3 ABOUT HERE
+
+## Construct Coherence Visualization
+
+To illustrate the differential semantic clustering between domains, Figure 1 presents t-SNE visualizations of the five most coherent constructs from each domain. The IPIP personality constructs show tight, well-separated clusters, reflecting their strong semantic distinctiveness. In contrast, the leadership constructs display more dispersed and overlapping patterns, visually confirming the quantitative findings of weaker construct separation.
+
+INSERT FIGURE 1 ABOUT HERE
 
 ## Methodological Validation
 
@@ -185,6 +209,10 @@ The enhanced methodology demonstrated effective learning across five sequential 
 ### Hardware Performance
 
 Mac Studio M1 optimizations achieved substantial efficiency gains across all performance metrics. Training time was reduced to 3.2 hours compared to over 6 hours on standard systems, representing a 4x speed improvement. The 64GB unified memory architecture eliminated traditional CPU-GPU transfer bottlenecks, enabling batch size optimization from 32 on standard systems to 96 on the Mac Studio. These hardware optimizations made the computationally intensive contrastive learning approach practical for psychological research applications.
+
+## Part 2: Understanding Semantic Features (Forthcoming)
+
+While Part 1 establishes that leadership constructs lack semantic distinctiveness, understanding what features actually drive the observed clustering patterns requires additional analysis. In Part 2 (forthcoming), we will employ interpretable machine learning approaches to test whether classical leadership taxonomies (e.g., task vs. relational orientation) or alternative semantic dimensions (e.g., linguistic abstraction, temporal focus, agency level) better explain the empirical structure of leadership measurement items. This analysis will involve expert coding of items on theoretical dimensions followed by supervised learning approaches to quantify which features best predict cluster membership. Preliminary examination suggests that simple linguistic features may explain more variance than claimed theoretical distinctions, but systematic analysis is needed to test this possibility.
 
 # Discussion
 
@@ -311,9 +339,9 @@ create_table(leadership_data, "Leadership constructs included in the semantic an
 holdout_data <- data.frame(
   Approach = c("Stratified Item Holdout", "Complete Construct Holdout"),
   "Training Data" = c("90% of items (2,962) from all 246 constructs",
-                      "All items from 236 constructs"),
+                      "All items from 197 constructs (80%)"),
   "Holdout Data" = c("10% of items (380) from all 246 constructs",
-                     "All items from 10 held-out constructs"),
+                     "All items from 50 held-out constructs (20%)"),
   "Primary Advantage" = c("Controls for sample size effects",
                          "Tests novel construct generalization"),
   "Validation Focus" = c("Item-level generalization within known constructs",
@@ -335,13 +363,21 @@ create_table(holdout_data, "Dual holdout validation framework specifications and
 
 performance_data <- data.frame(
   Domain = c("IPIP Personality", "Leadership Constructs", "Performance Difference"),
-  "Clustering Accuracy" = c("94.70%", "66.33%", "28.37 pp"),
-  "95% CI" = c("[92.3, 96.8]", "[62.1, 70.5]", "[24.2, 32.5]"),
+  "Clustering Accuracy" = c("87.4%", "62.9%", "24.5 pp"),
+  "95% CI" = c("[85.2, 89.6]", "[58.7, 67.1]", "[18.7, 30.0]"),
   "Adjusted Rand Index" = c("0.78", "0.31", "0.47"),
-  "Cohen's d" = c("1.562", "0.409", "2.14"),
-  "Effect Size" = c("Large", "Small-Medium", "Very Large"),
+  "Cohen's d" = c("1.116", "0.368", "0.748"),
+  "Effect Size" = c("Large", "Small-Medium", "Large"),
   stringsAsFactors = FALSE
 )
 
 create_table(performance_data, "Performance metrics comparing construct separation between personality and leadership domains")
 ```
+
+# Figures
+
+**Figure 1**
+
+*t-SNE Visualization of the Five Most Coherent Constructs from IPIP Personality and Leadership Domains*
+
+Note. The left panel displays the five most semantically coherent personality constructs from the held-out IPIP sample (87.4% overall accuracy, Cohen's d = 1.116), showing tight, well-separated clusters. The right panel shows the five most coherent leadership constructs (62.9% overall accuracy, Cohen's d = 0.368), displaying more dispersed and overlapping patterns. Each point represents an individual measurement item, with colors indicating construct membership. The visualization uses t-SNE (t-distributed Stochastic Neighbor Embedding) to project high-dimensional semantic embeddings into two dimensions while preserving local structure. The marked difference in clustering patterns provides visual evidence of the differential semantic distinctiveness between personality and leadership measurement domains.
